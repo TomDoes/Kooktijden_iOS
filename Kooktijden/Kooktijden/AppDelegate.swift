@@ -4,7 +4,8 @@
 //
 //  Created by Tom Doesburg on 7/11/14.
 //  Copyright (c) 2014 De appothekers. All rights reserved.
-//
+//  
+//  Comment geplaatst!
 
 import UIKit
 
