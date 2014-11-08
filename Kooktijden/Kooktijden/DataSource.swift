@@ -27,19 +27,26 @@ class DataSource {
         
         for food in foods {
             var foodItem = FoodItem()
+            
             foodItem.id = food[Expression<Int>("id")]!
             foodItem.nameEN = food[Expression<String>("name_EN")]
+            foodItem.nameNL = food[Expression<String>("name_NL")]
+            foodItem.descriptionEN = food[Expression<String>("description_EN")]
+            foodItem.descriptionNL = food[Expression<String>("description_NL")]
+            foodItem.cookingTimeMin = food[Expression<Int>("cooking_time_min")]!
+            foodItem.cookingTimeMax = food[Expression<Int>("cooking_time_max")]!
+
             items.append(foodItem)
         }
     
         return items
     }
-    func writeFoods() {
-        let statement = db.prepare("INSERT INTO foods (name_EN) VALUES (?)")
-        for food in ["poop", "banaan"] {
-            statement.run(food)
-        }
-    }
+//    func writeFoods() {
+//        let statement = db.prepare("INSERT INTO foods (name_EN) VALUES (?)")
+//        for food in ["poop", "banaan"] {
+//            statement.run(food)
+//        }
+//    }
 
 }
 
