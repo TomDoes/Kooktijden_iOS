@@ -29,8 +29,8 @@ class DataSource {
             var foodItem = FoodItem()
             
             foodItem.id = food[Expression<Int>("id")]!
-            foodItem.nameEN = food[Expression<String>("name_EN")]
-            foodItem.nameNL = food[Expression<String>("name_NL")]
+            foodItem.nameEN = food[Expression<String>("name_EN")]!
+            foodItem.nameNL = food[Expression<String>("name_NL")]!
             foodItem.descriptionEN = food[Expression<String>("description_EN")]
             foodItem.descriptionNL = food[Expression<String>("description_NL")]
             foodItem.cookingTimeMin = food[Expression<Int>("cooking_time_min")]!

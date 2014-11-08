@@ -21,6 +21,13 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Foods"
+        
+        var nib = UINib(nibName: "FoodItemTableViewCell", bundle: nil)
+        
+        foodListTableView.registerNib(nib, forCellReuseIdentifier: "foodCell")
+        
         self.tableData = dataSource.getFoods()
         self.foodListTableView!.reloadData()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,11 +39,13 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "FoodCell")
+        
+        var cell:FoodItemTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("foodCell") as FoodItemTableViewCell
+
         
         let rowData: FoodItem = self.tableData[indexPath.row] as FoodItem
         
-        cell.textLabel.text = rowData.nameEN
+        cell.loadItem(rowData)
         
         return cell
 
