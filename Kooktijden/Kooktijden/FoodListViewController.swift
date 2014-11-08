@@ -10,13 +10,15 @@ import UIKit
 
 class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let kCellIdentifier: String = "FoodItemCell"
+    
     @IBOutlet weak var foodListTableView: UITableView!
     
     var dataSource = DataSource()
-    var tableData = []
+    var foodItems = [FoodItem]()
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
+        return foodItems.count
     }
     
     override func viewDidLoad() {
@@ -49,6 +51,20 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         return cell
 
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // Get the row data for the selected row
+        let foodItem = self.foodItems[indexPath.row]
+        
+        var name: String = foodItem.nameEN!
+        var id: Int = foodItem.id
+        
+        var alert: UIAlertView = UIAlertView()
+        alert.title = name
+        alert.message = name
+        alert.addButtonWithTitle("Ok")
+        alert.show()
     }
     
     
