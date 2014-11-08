@@ -20,24 +20,16 @@ class DataSource {
     }
     
     func getFoods() -> [FoodItem] {
+        var items: [FoodItem] = []
         
-        let id = Expression<Int>("id")
-        let nameEn = Expression<String>("nameEn")
         
         let foods = db["foods"]
-        for food in foods {
-            println(food[id])
-        }
-
         
-        var items: [FoodItem] = []
-        for row in db.prepare("SELECT * FROM foods") {
+        for food in foods {
             var foodItem = FoodItem()
-            //foodItem.id = row[0]
-            //foodItem.nameEN = row[1]
+            foodItem.id = food[Expression<Int>("id")]!
+            foodItem.nameEN = food[Expression<String>("name_EN")]
             items.append(foodItem)
-            println("id: \(row[0]), food: \(row[1])")
-
         }
     
         return items
