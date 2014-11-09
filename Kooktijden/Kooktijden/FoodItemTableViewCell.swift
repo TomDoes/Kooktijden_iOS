@@ -18,5 +18,8 @@ class FoodItemTableViewCell : UITableViewCell {
         firstLetterImage?.text = foodItem.nameEN[0]
         foodItemLabel?.text = foodItem.nameEN
     }
+    
+
+
 }
 

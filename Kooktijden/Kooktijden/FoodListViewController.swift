@@ -9,9 +9,7 @@
 import UIKit
 
 class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    let kCellIdentifier: String = "FoodItemCell"
-    
+        
     @IBOutlet weak var foodListTableView: UITableView!
     
     var dataSource = DataSource()
@@ -40,9 +38,14 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var foodDetailController: FoodDetailController = segue.destinationViewController as FoodDetailController
+        var selectedFood = self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row]
+        foodDetailController.foodItem = selectedFood
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:FoodItemTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("foodCell") as FoodItemTableViewCell
-
         
         let rowData: FoodItem = self.foodItems[indexPath.row] as FoodItem
         
@@ -51,7 +54,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
 
     }
-    
+    /*
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Get the row data for the selected row
         let foodItem = self.foodItems[indexPath.row]
@@ -65,6 +68,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         alert.addButtonWithTitle("Ok")
         alert.show()
     }
+    */
     
     
 }

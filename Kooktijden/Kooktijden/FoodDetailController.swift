@@ -8,7 +8,10 @@
 
 import UIKit
 
-class FoodDetailController: UIViewController {
+class FoodDetailController: UIViewController, UITableViewDelegate{
+    
+    @IBOutlet weak var foodItemLabel: UILabel!
+    @IBOutlet weak var firstLetterImage: UILabel!
     
     var foodItem: FoodItem?
     
@@ -18,5 +21,8 @@ class FoodDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstLetterImage.text = self.foodItem?.nameEN[0]
+        foodItemLabel.text = self.foodItem?.nameEN
     }
+    
 }
