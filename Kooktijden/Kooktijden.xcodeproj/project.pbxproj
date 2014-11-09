@@ -165,7 +165,6 @@
 		E24F01521A0CF8E200372AE5 /* Kooktijden */ = {
 			isa = PBXGroup;
 			children = (
-				C403C1061A0D10BC00AFCEB6 /* database */,
 				E24F01551A0CF8E200372AE5 /* AppDelegate.swift */,
 				E24F01571A0CF8E200372AE5 /* ViewController.swift */,
 				C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */,
@@ -176,6 +175,7 @@
 				E24F01591A0CF8E200372AE5 /* Main.storyboard */,
 				E24F015C1A0CF8E200372AE5 /* Images.xcassets */,
 				E24F015E1A0CF8E200372AE5 /* LaunchScreen.xib */,
+				C403C1061A0D10BC00AFCEB6 /* database */,
 				E24F01531A0CF8E200372AE5 /* Supporting Files */,
 				C403C1021A0D07FE00AFCEB6 /* DataSource.swift */,
 				C403C1041A0D08BB00AFCEB6 /* FoodItem.swift */,
