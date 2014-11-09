@@ -39,9 +39,12 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var foodDetailController: FoodDetailController = segue.destinationViewController as FoodDetailController
-        var selectedFood = self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row]
-        foodDetailController.foodItem = selectedFood
+        if segue.identifier == "foodDetail" {
+            var foodDetailController: FoodDetailController = segue.destinationViewController as FoodDetailController
+            var selectedFood = self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row]
+            foodDetailController.foodItem = selectedFood
+        }
+
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -54,21 +57,11 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
 
     }
-    /*
+
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // Get the row data for the selected row
-        let foodItem = self.foodItems[indexPath.row]
-        
-        var name: String = foodItem.nameEN
-        var id: Int = foodItem.id
-        
-        var alert: UIAlertView = UIAlertView()
-        alert.title = name
-        alert.message = name
-        alert.addButtonWithTitle("Ok")
-        alert.show()
+        self.performSegueWithIdentifier("foodDetail", sender: self)
     }
-    */
+    
     
     
 }

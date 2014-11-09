@@ -69,9 +69,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Mw8-lx-kXv" kind="show" id="tUd-1m-hsa"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -85,6 +82,7 @@
                     <navigationItem key="navigationItem" id="IcU-QP-TMn"/>
                     <connections>
                         <outlet property="foodListTableView" destination="5G5-mM-BNR" id="UNd-Da-8Id"/>
+                        <segue destination="Mw8-lx-kXv" kind="show" identifier="foodDetail" id="8S9-5N-U7Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXL-nk-dMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,7 +108,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQw-oc-811">
-                                <rect key="frame" x="279" y="108" width="40" height="21"/>
+                                <rect key="frame" x="162" y="138" width="342" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
