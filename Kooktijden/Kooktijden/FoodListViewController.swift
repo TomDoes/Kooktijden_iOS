@@ -30,7 +30,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         foodListTableView.registerNib(nib, forCellReuseIdentifier: "foodCell")
         
-        self.tableData = dataSource.getFoods()
+        self.foodItems = dataSource.getFoods()
         self.foodListTableView!.reloadData()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -41,12 +41,10 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as UITableViewCell
-        
         var cell:FoodItemTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("foodCell") as FoodItemTableViewCell
 
         
-        let rowData: FoodItem = self.tableData[indexPath.row] as FoodItem
+        let rowData: FoodItem = self.foodItems[indexPath.row] as FoodItem
         
         cell.loadItem(rowData)
         
@@ -58,7 +56,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         // Get the row data for the selected row
         let foodItem = self.foodItems[indexPath.row]
         
-        var name: String = foodItem.nameEN!
+        var name: String = foodItem.nameEN
         var id: Int = foodItem.id
         
         var alert: UIAlertView = UIAlertView()
