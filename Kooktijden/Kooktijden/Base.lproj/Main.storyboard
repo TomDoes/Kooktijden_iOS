@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pqd-3b-dFj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0c-aN-d6z">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0c-aN-d6z">
                                 <rect key="frame" x="265" y="285" width="70" height="30"/>
                                 <state key="normal" title="Kookplaat">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,6 +28,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o0c-aN-d6z" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="OE6-Vx-pdR"/>
+                            <constraint firstItem="o0c-aN-d6z" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="hz8-Lh-iLe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Yd-M2-Bmf"/>
                 </viewController>
@@ -101,24 +106,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24n-rK-Prg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24n-rK-Prg">
                                 <rect key="frame" x="71" y="108" width="54" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="khr-0s-vgP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQw-oc-811">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQw-oc-811">
                                 <rect key="frame" x="162" y="138" width="342" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YU-GQ-YzD">
+                                <rect key="frame" x="284" y="285" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="Mw8-lx-kXv" eventType="touchUpInside" id="TyI-1V-X2b"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQk-iB-UQe">
+                                <rect key="frame" x="98" y="353" width="405" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="zst-gd-blC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6YU-GQ-YzD" firstAttribute="centerX" secondItem="74A-vL-ymD" secondAttribute="centerX" id="50k-9p-hqf"/>
+                            <constraint firstItem="24n-rK-Prg" firstAttribute="leading" secondItem="74A-vL-ymD" secondAttribute="leadingMargin" constant="55" id="Dmq-Cn-8Aq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OQw-oc-811" secondAttribute="trailing" constant="80" id="EI9-zN-ajR"/>
+                            <constraint firstItem="24n-rK-Prg" firstAttribute="top" secondItem="q1g-t0-hkZ" secondAttribute="bottom" constant="44" id="IHV-fd-zvm"/>
+                            <constraint firstItem="SQk-iB-UQe" firstAttribute="top" secondItem="6YU-GQ-YzD" secondAttribute="bottom" constant="38" id="MP1-H1-F74"/>
+                            <constraint firstItem="OQw-oc-811" firstAttribute="leading" secondItem="24n-rK-Prg" secondAttribute="trailing" constant="37" id="QHp-av-edm"/>
+                            <constraint firstItem="SQk-iB-UQe" firstAttribute="leading" secondItem="74A-vL-ymD" secondAttribute="leadingMargin" constant="82" id="XAr-7L-CBe"/>
+                            <constraint firstItem="OQw-oc-811" firstAttribute="top" secondItem="q1g-t0-hkZ" secondAttribute="bottom" constant="74" id="c2M-fo-tkw"/>
+                            <constraint firstItem="SQk-iB-UQe" firstAttribute="centerX" secondItem="6YU-GQ-YzD" secondAttribute="centerX" id="nDR-gH-EMz"/>
+                            <constraint firstItem="24n-rK-Prg" firstAttribute="baseline" secondItem="OQw-oc-811" secondAttribute="baseline" id="sgg-Ka-Rug"/>
+                            <constraint firstItem="6YU-GQ-YzD" firstAttribute="centerY" secondItem="74A-vL-ymD" secondAttribute="centerY" id="uib-IB-dog"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="firstLetterImage" destination="24n-rK-Prg" id="NLw-Av-Jhv"/>
                         <outlet property="foodItemLabel" destination="OQw-oc-811" id="kSG-Wq-tkz"/>
+                        <outlet property="timeRemainingLabel" destination="SQk-iB-UQe" id="MW6-ou-to5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFU-4s-kDW" userLabel="First Responder" sceneMemberID="firstResponder"/>

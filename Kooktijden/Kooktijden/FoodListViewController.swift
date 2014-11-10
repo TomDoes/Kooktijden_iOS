@@ -42,7 +42,9 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         if segue.identifier == "foodDetail" {
             var foodDetailController: FoodDetailController = segue.destinationViewController as FoodDetailController
             var selectedFood = self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row]
+            
             foodDetailController.foodItem = selectedFood
+            foodDetailController.timer = Timer(duration: selectedFood.cookingTimeMax, handler: foodDetailController.displayTimeRemaining)
         }
 
     }

@@ -10,10 +10,20 @@ import UIKit
 
 class FoodDetailController: UIViewController, UITableViewDelegate{
     
-    @IBOutlet weak var foodItemLabel: UILabel!
-    @IBOutlet weak var firstLetterImage: UILabel!
-    
+    var timer: Timer?
     var foodItem: FoodItem?
+    
+    @IBOutlet var timeRemainingLabel: UILabel!
+    @IBOutlet var foodItemLabel: UILabel!
+    @IBOutlet var firstLetterImage: UILabel!
+    
+    @IBAction func start(sender: AnyObject) {
+        self.timer!.start()
+    }
+    
+    func displayTimeRemaining(timeRemaining: String) -> Void {
+        self.timeRemainingLabel.text = timeRemaining
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -21,8 +31,8 @@ class FoodDetailController: UIViewController, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstLetterImage.text = self.foodItem?.nameEN[0]
-        foodItemLabel.text = self.foodItem?.nameEN
+        firstLetterImage.text = self.foodItem!.nameEN[0]
+        foodItemLabel.text = self.foodItem!.nameEN
     }
     
 }

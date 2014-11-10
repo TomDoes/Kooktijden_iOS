@@ -22,7 +22,6 @@ class DataSource {
     func getFoods() -> [FoodItem] {
         var items: [FoodItem] = []
         
-        
         let foods = db["foods"]
         
         for food in foods {

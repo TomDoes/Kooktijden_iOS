@@ -12,6 +12,7 @@
 		C403C1091A0D1DEB00AFCEB6 /* foods.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C403C1071A0D10D300AFCEB6 /* foods.sqlite */; };
 		C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */; };
 		C403C10D1A0E59BA00AFCEB6 /* FoodDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403C10C1A0E59BA00AFCEB6 /* FoodDetailController.swift */; };
+		C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC72C01A0FCF74005708DC /* Timer.swift */; };
 		E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01AF1A0F6D7F00A87561 /* Extensions.swift */; };
 		E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */; };
 		E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */; };
@@ -51,6 +52,7 @@
 		C403C1071A0D10D300AFCEB6 /* foods.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = foods.sqlite; sourceTree = "<group>"; };
 		C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		C403C10C1A0E59BA00AFCEB6 /* FoodDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailController.swift; sourceTree = "<group>"; };
+		C4EC72C01A0FCF74005708DC /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		E20C01AF1A0F6D7F00A87561 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 		E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				E24F01531A0CF8E200372AE5 /* Supporting Files */,
 				C403C1021A0D07FE00AFCEB6 /* DataSource.swift */,
 				C403C1041A0D08BB00AFCEB6 /* FoodItem.swift */,
+				C4EC72C01A0FCF74005708DC /* Timer.swift */,
 			);
 			path = Kooktijden;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */,
 				C403C1031A0D07FE00AFCEB6 /* DataSource.swift in Sources */,
 				E24F01581A0CF8E200372AE5 /* ViewController.swift in Sources */,
+				C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */,
 				E24F01561A0CF8E200372AE5 /* AppDelegate.swift in Sources */,
 				E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */,
 			);
