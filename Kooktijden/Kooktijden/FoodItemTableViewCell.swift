@@ -9,7 +9,7 @@
 import UIKit
 
 class FoodItemTableViewCell : UITableViewCell {
-
+    
     @IBOutlet var foodItemLabel: UILabel?
     @IBOutlet var firstLetterImage: UILabel?
     @IBOutlet var setTimerBtn: UIButton?

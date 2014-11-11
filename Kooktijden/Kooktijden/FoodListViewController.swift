@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol StartTimerDelegate {
+    func startTimer(foodItem:FoodItem)
+}
+
 class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-        
+    
+    var delegate:StartTimerDelegate? = nil
+    
     @IBOutlet weak var foodListTableView: UITableView!
     
     var dataSource = DataSource()
@@ -40,11 +46,8 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "foodDetail" {
-            var foodDetailController: FoodDetailController = segue.destinationViewController as FoodDetailController
-            var selectedFood = self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row]
-            
-            foodDetailController.foodItem = selectedFood
-            foodDetailController.timer = Timer(duration: selectedFood.cookingTimeMax, handler: foodDetailController.displayTimeRemaining)
+            var foodDetailController: FoodDetailController = segue.destinationViewController as FoodDetailController            
+            foodDetailController.foodItem = self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row]
         }
 
     }
@@ -53,7 +56,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         var cell:FoodItemTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("foodCell") as FoodItemTableViewCell
         
         let rowData: FoodItem = self.foodItems[indexPath.row] as FoodItem
-        
+                
         cell.loadItem(rowData)
         
         return cell
@@ -61,7 +64,11 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("foodDetail", sender: self)
+        // self.performSegueWithIdentifier("foodDetail", sender: self)
+        if (delegate != nil) {
+            delegate!.startTimer(self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row])
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
     }
     
     

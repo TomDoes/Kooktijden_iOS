@@ -34,7 +34,6 @@ class Timer {
     }
     
     @objc func tick() {
-        
         self.elapsedTime++
         self.timeRemaining = self.duration - self.elapsedTime
         
