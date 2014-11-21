@@ -1,225 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pqd-3b-dFj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pqd-3b-dFj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
     </dependencies>
     <scenes>
         <!--Cooker Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="CookerController" id="vXZ-lx-hvc" customClass="CookerController" customModule="Kooktijden" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0c-aN-d6z">
-                                <rect key="frame" x="265" y="125" width="70" height="30"/>
-                                <state key="normal" title="Kookplaat">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hH5-ck-1B7" kind="show" identifier="timer1" id="Y8E-Hr-xLA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgG-Fh-zU3">
-                                <rect key="frame" x="32" y="154" width="537" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pJ-qz-CCi">
-                                <rect key="frame" x="68" y="183" width="464" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cs-9G-t7u">
-                                <rect key="frame" x="259" y="285" width="83" height="30"/>
-                                <state key="normal" title="Kookplaat 2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hH5-ck-1B7" kind="show" identifier="timer2" id="usm-jg-y5d"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWg-ZF-ex1">
-                                <rect key="frame" x="68" y="340" width="464" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iU8-0W-l8j">
-                                <rect key="frame" x="32" y="311" width="537" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="iU8-0W-l8j" firstAttribute="trailing" secondItem="wgG-Fh-zU3" secondAttribute="trailing" id="6iB-MZ-hx6"/>
-                            <constraint firstItem="6pJ-qz-CCi" firstAttribute="top" secondItem="wgG-Fh-zU3" secondAttribute="bottom" constant="8" symbolic="YES" id="8pz-sx-gjA"/>
-                            <constraint firstItem="wgG-Fh-zU3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="HNr-sh-Ekv"/>
-                            <constraint firstItem="CWg-ZF-ex1" firstAttribute="trailing" secondItem="6pJ-qz-CCi" secondAttribute="trailing" id="SlB-Eh-Y3y"/>
-                            <constraint firstItem="6pJ-qz-CCi" firstAttribute="leading" secondItem="CWg-ZF-ex1" secondAttribute="leading" id="Sx0-mj-spn"/>
-                            <constraint firstItem="iU8-0W-l8j" firstAttribute="centerX" secondItem="3Cs-9G-t7u" secondAttribute="centerX" id="Und-cH-kgh"/>
-                            <constraint firstItem="o0c-aN-d6z" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="61" id="Wcj-tV-Uky"/>
-                            <constraint firstItem="iU8-0W-l8j" firstAttribute="leading" secondItem="wgG-Fh-zU3" secondAttribute="leading" id="YnF-U1-SVo"/>
-                            <constraint firstItem="CWg-ZF-ex1" firstAttribute="top" secondItem="iU8-0W-l8j" secondAttribute="bottom" constant="8" symbolic="YES" id="YwZ-HX-hEJ"/>
-                            <constraint firstItem="6pJ-qz-CCi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="52" id="c6P-gh-emh"/>
-                            <constraint firstItem="6pJ-qz-CCi" firstAttribute="centerX" secondItem="wgG-Fh-zU3" secondAttribute="centerX" id="eem-xR-9st"/>
-                            <constraint firstItem="CWg-ZF-ex1" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="k3d-lV-sHd"/>
-                            <constraint firstItem="o0c-aN-d6z" firstAttribute="centerX" secondItem="wgG-Fh-zU3" secondAttribute="centerX" id="rYq-h8-F7U"/>
-                            <constraint firstItem="3Cs-9G-t7u" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="rss-4r-81S"/>
-                            <constraint firstItem="6pJ-qz-CCi" firstAttribute="top" secondItem="o0c-aN-d6z" secondAttribute="bottom" constant="28" id="uCD-7t-F9r"/>
-                            <constraint firstItem="CWg-ZF-ex1" firstAttribute="top" secondItem="3Cs-9G-t7u" secondAttribute="bottom" constant="25" id="vkU-Cw-i8q"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="6Yd-M2-Bmf"/>
-                    <connections>
-                        <outlet property="foodItem1Label" destination="6pJ-qz-CCi" id="O7p-HT-b7e"/>
-                        <outlet property="foodItem2Label" destination="CWg-ZF-ex1" id="wAo-VV-uTg"/>
-                        <outlet property="timeRemaining1Label" destination="wgG-Fh-zU3" id="OfB-HE-zeb"/>
-                        <outlet property="timeRemaining2Label" destination="iU8-0W-l8j" id="Py1-SL-uLv"/>
-                    </connections>
-                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="CookerController" id="vXZ-lx-hvc" customClass="CookerController" customModule="Kooktijden" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6Yd-M2-Bmf"/>
+                </viewController>
             </objects>
             <point key="canvasLocation" x="993" y="267"/>
         </scene>
-        <!--Food List View Controller-->
-        <scene sceneID="Dug-yd-6O5">
+        <!--Page View Controller-->
+        <scene sceneID="ucx-kg-yuJ">
             <objects>
-                <viewController storyboardIdentifier="FoodItemList" id="hH5-ck-1B7" customClass="FoodListViewController" customModule="Kooktijden" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8D9-lx-M9s"/>
-                        <viewControllerLayoutGuide type="bottom" id="qUI-6y-vEi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mwC-ld-Iup">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5G5-mM-BNR">
-                                <rect key="frame" x="0.0" y="35" width="600" height="565"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodItemCell" textLabel="G5T-8Y-tFy" detailTextLabel="4vl-oh-d3z" style="IBUITableViewCellStyleSubtitle" id="8uf-Qu-g6T">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8uf-Qu-g6T" id="Ye1-Sv-NVB">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G5T-8Y-tFy">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4vl-oh-d3z">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="hH5-ck-1B7" id="ycJ-Ra-WEJ"/>
-                                    <outlet property="delegate" destination="hH5-ck-1B7" id="f7L-4h-8GG"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="5G5-mM-BNR" secondAttribute="trailing" id="RE6-gl-q2I"/>
-                            <constraint firstItem="5G5-mM-BNR" firstAttribute="bottom" secondItem="qUI-6y-vEi" secondAttribute="top" id="r4R-4W-rij"/>
-                            <constraint firstItem="5G5-mM-BNR" firstAttribute="top" secondItem="mwC-ld-Iup" secondAttribute="topMargin" constant="35" id="vuR-HV-1eB"/>
-                            <constraint firstItem="5G5-mM-BNR" firstAttribute="leading" secondItem="mwC-ld-Iup" secondAttribute="leading" id="zJB-S4-vK0"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="IcU-QP-TMn"/>
-                    <connections>
-                        <outlet property="foodListTableView" destination="5G5-mM-BNR" id="UNd-Da-8Id"/>
-                        <segue destination="Mw8-lx-kXv" kind="show" identifier="foodDetail" id="8S9-5N-U7Q"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gXL-nk-dMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController storyboardIdentifier="PageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="XoD-HL-GtV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HGd-c1-AM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655" y="267"/>
-        </scene>
-        <!--Food Detail Controller-->
-        <scene sceneID="gb0-t3-9Hd">
-            <objects>
-                <viewController storyboardIdentifier="FoodDetailController" id="Mw8-lx-kXv" customClass="FoodDetailController" customModule="Kooktijden" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="q1g-t0-hkZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="k4s-Cj-SGP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="74A-vL-ymD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24n-rK-Prg">
-                                <rect key="frame" x="71" y="108" width="54" height="57"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="54" id="khr-0s-vgP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQw-oc-811">
-                                <rect key="frame" x="162" y="138" width="342" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YU-GQ-YzD">
-                                <rect key="frame" x="284" y="285" width="33" height="30"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQk-iB-UQe">
-                                <rect key="frame" x="98" y="353" width="405" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="zst-gd-blC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6YU-GQ-YzD" firstAttribute="centerX" secondItem="74A-vL-ymD" secondAttribute="centerX" id="50k-9p-hqf"/>
-                            <constraint firstItem="24n-rK-Prg" firstAttribute="leading" secondItem="74A-vL-ymD" secondAttribute="leadingMargin" constant="55" id="Dmq-Cn-8Aq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OQw-oc-811" secondAttribute="trailing" constant="80" id="EI9-zN-ajR"/>
-                            <constraint firstItem="24n-rK-Prg" firstAttribute="top" secondItem="q1g-t0-hkZ" secondAttribute="bottom" constant="44" id="IHV-fd-zvm"/>
-                            <constraint firstItem="SQk-iB-UQe" firstAttribute="top" secondItem="6YU-GQ-YzD" secondAttribute="bottom" constant="38" id="MP1-H1-F74"/>
-                            <constraint firstItem="OQw-oc-811" firstAttribute="leading" secondItem="24n-rK-Prg" secondAttribute="trailing" constant="37" id="QHp-av-edm"/>
-                            <constraint firstItem="SQk-iB-UQe" firstAttribute="leading" secondItem="74A-vL-ymD" secondAttribute="leadingMargin" constant="82" id="XAr-7L-CBe"/>
-                            <constraint firstItem="OQw-oc-811" firstAttribute="top" secondItem="q1g-t0-hkZ" secondAttribute="bottom" constant="74" id="c2M-fo-tkw"/>
-                            <constraint firstItem="SQk-iB-UQe" firstAttribute="centerX" secondItem="6YU-GQ-YzD" secondAttribute="centerX" id="nDR-gH-EMz"/>
-                            <constraint firstItem="24n-rK-Prg" firstAttribute="baseline" secondItem="OQw-oc-811" secondAttribute="baseline" id="sgg-Ka-Rug"/>
-                            <constraint firstItem="6YU-GQ-YzD" firstAttribute="centerY" secondItem="74A-vL-ymD" secondAttribute="centerY" id="uib-IB-dog"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="firstLetterImage" destination="24n-rK-Prg" id="NLw-Av-Jhv"/>
-                        <outlet property="foodItemLabel" destination="OQw-oc-811" id="kSG-Wq-tkz"/>
-                        <outlet property="timeRemainingLabel" destination="SQk-iB-UQe" id="MW6-ou-to5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cFU-4s-kDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2352" y="267"/>
+            <point key="canvasLocation" x="993" y="923"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dBi-Yl-rnP">
@@ -237,10 +38,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lD1-oV-j04" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181" y="267"/>
+            <point key="canvasLocation" x="293" y="267"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Y8E-Hr-xLA"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -14,6 +14,9 @@ class FoodItemTableViewCell : UITableViewCell {
     @IBOutlet var firstLetterImage: UILabel?
     @IBOutlet var setTimerBtn: UIButton?
     
+    @IBAction func setTimer(sender: AnyObject) {
+        
+    }
     func loadItem(foodItem: FoodItem) {
         firstLetterImage?.text = foodItem.nameEN[0]
         foodItemLabel?.text = foodItem.nameEN

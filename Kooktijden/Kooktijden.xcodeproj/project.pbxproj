@@ -24,6 +24,10 @@
 		E24F015D1A0CF8E200372AE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24F015C1A0CF8E200372AE5 /* Images.xcassets */; };
 		E24F01601A0CF8E200372AE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24F015E1A0CF8E200372AE5 /* LaunchScreen.xib */; };
 		E24F016C1A0CF8E200372AE5 /* KooktijdenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F016B1A0CF8E200372AE5 /* KooktijdenTests.swift */; };
+		E25333081A1F781600979A13 /* CookerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25333061A1F781600979A13 /* CookerViewController.swift */; };
+		E25333091A1F781600979A13 /* Cooker1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25333071A1F781600979A13 /* Cooker1ViewController.xib */; };
+		E253330B1A1F788D00979A13 /* Cooker2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E253330A1A1F788D00979A13 /* Cooker2ViewController.xib */; };
+		E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E253D3831A1F98B000893D16 /* FoodListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		E24F01651A0CF8E200372AE5 /* KooktijdenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KooktijdenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24F016A1A0CF8E200372AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E24F016B1A0CF8E200372AE5 /* KooktijdenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooktijdenTests.swift; sourceTree = "<group>"; };
+		E25333061A1F781600979A13 /* CookerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookerViewController.swift; path = ../CookerViewController.swift; sourceTree = "<group>"; };
+		E25333071A1F781600979A13 /* Cooker1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Cooker1ViewController.xib; path = ../Cooker1ViewController.xib; sourceTree = "<group>"; };
+		E253330A1A1F788D00979A13 /* Cooker2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cooker2ViewController.xib; sourceTree = "<group>"; };
+		E253D3831A1F98B000893D16 /* FoodListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +127,11 @@
 		E24F01521A0CF8E200372AE5 /* Kooktijden */ = {
 			isa = PBXGroup;
 			children = (
-				C41D15101A16633C004CAB4B /* sound.wav */,
 				E24F01551A0CF8E200372AE5 /* AppDelegate.swift */,
 				E24F01571A0CF8E200372AE5 /* ViewController.swift */,
 				C4DF02291A12025D00C31848 /* CookerController.swift */,
 				C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */,
+				E253D3831A1F98B000893D16 /* FoodListViewController.xib */,
 				C403C10C1A0E59BA00AFCEB6 /* FoodDetailController.swift */,
 				E20C01AF1A0F6D7F00A87561 /* Extensions.swift */,
 				E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */,
@@ -131,6 +139,7 @@
 				E24F01591A0CF8E200372AE5 /* Main.storyboard */,
 				E24F015C1A0CF8E200372AE5 /* Images.xcassets */,
 				E24F015E1A0CF8E200372AE5 /* LaunchScreen.xib */,
+				E269C9C91A1F73EE00865D64 /* Cookers */,
 				C403C1061A0D10BC00AFCEB6 /* database */,
 				E24F01531A0CF8E200372AE5 /* Supporting Files */,
 				C403C1021A0D07FE00AFCEB6 /* DataSource.swift */,
@@ -143,6 +152,7 @@
 		E24F01531A0CF8E200372AE5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E292B83D1A1F67730031DD68 /* Sounds */,
 				E24F01541A0CF8E200372AE5 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -163,6 +173,24 @@
 				E24F016A1A0CF8E200372AE5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E269C9C91A1F73EE00865D64 /* Cookers */ = {
+			isa = PBXGroup;
+			children = (
+				E25333071A1F781600979A13 /* Cooker1ViewController.xib */,
+				E25333061A1F781600979A13 /* CookerViewController.swift */,
+				E253330A1A1F788D00979A13 /* Cooker2ViewController.xib */,
+			);
+			name = Cookers;
+			sourceTree = "<group>";
+		};
+		E292B83D1A1F67730031DD68 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C41D15101A16633C004CAB4B /* sound.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +278,10 @@
 				E24F015B1A0CF8E200372AE5 /* Main.storyboard in Resources */,
 				E24F01601A0CF8E200372AE5 /* LaunchScreen.xib in Resources */,
 				E24F015D1A0CF8E200372AE5 /* Images.xcassets in Resources */,
+				E25333091A1F781600979A13 /* Cooker1ViewController.xib in Resources */,
 				C41D15111A16633C004CAB4B /* sound.wav in Resources */,
+				E253330B1A1F788D00979A13 /* Cooker2ViewController.xib in Resources */,
+				E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */,
 				E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +303,7 @@
 				C4DF022A1A12025D00C31848 /* CookerController.swift in Sources */,
 				E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */,
 				C403C10D1A0E59BA00AFCEB6 /* FoodDetailController.swift in Sources */,
+				E25333081A1F781600979A13 /* CookerViewController.swift in Sources */,
 				C403C1051A0D08BB00AFCEB6 /* FoodItem.swift in Sources */,
 				C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */,
 				C403C1031A0D07FE00AFCEB6 /* DataSource.swift in Sources */,
@@ -404,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kooktijden/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -414,6 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kooktijden/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
