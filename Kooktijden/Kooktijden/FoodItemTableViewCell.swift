@@ -19,7 +19,5 @@ class FoodItemTableViewCell : UITableViewCell {
         foodItemLabel?.text = foodItem.nameEN
     }
     
-
-
 }
 
