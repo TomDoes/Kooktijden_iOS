@@ -9,12 +9,13 @@
 import UIKit
 
 protocol StartTimerDelegate {
-    func startTimer(foodItem:FoodItem)
+    func startTimer(foodItem:FoodItem, timer:String)
 }
 
 class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var delegate:StartTimerDelegate? = nil
+    var timer: String?
     
     @IBOutlet weak var foodListTableView: UITableView!
     
@@ -27,6 +28,14 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*
+        var localNotification:UILocalNotification = UILocalNotification()
+        localNotification.alertAction = "Test"
+        localNotification.alertBody = "Doet ie het?"
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 30)
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        */
         
         self.title = "Foods"
         
@@ -66,7 +75,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // self.performSegueWithIdentifier("foodDetail", sender: self)
         if (delegate != nil) {
-            delegate!.startTimer(self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row])
+            delegate!.startTimer(self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row], timer: self.timer!)
             self.navigationController?.popToRootViewControllerAnimated(true)
         }
     }

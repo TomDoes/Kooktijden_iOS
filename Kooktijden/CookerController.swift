@@ -10,35 +10,47 @@ import UIKit
 
 class CookerController: UIViewController, StartTimerDelegate {
     
-    var timer: Timer?
-    var foodItem: FoodItem?
+    var timer1: Timer?
+    var timer2: Timer?
     
-    @IBOutlet var foodItemLabel: UILabel!
-    @IBOutlet var timeRemainingLabel: UILabel!
+    @IBOutlet var foodItem1Label: UILabel!
+    @IBOutlet var foodItem2Label: UILabel!
+    @IBOutlet var timeRemaining1Label: UILabel!
+    @IBOutlet var timeRemaining2Label: UILabel!
     
-    func displayTimeRemaining(timeRemaining: String) -> Void {
-        self.timeRemainingLabel.text = timeRemaining
+    func handleTimer1(timeRemaining: String) {
+        self.timeRemaining1Label.text = timeRemaining
+    }
+    func handleTimer2(timeRemaining: String) {
+        self.timeRemaining2Label.text = timeRemaining
     }
     
-    func startTimer(foodItem: FoodItem) {
-        self.foodItemLabel.text = foodItem.nameEN
-        if (timer != nil) {
-            timer!.stop()
+    func startTimer(foodItem: FoodItem, timer: String) {
+        if (timer == "timer1") {
+            self.foodItem1Label.text = foodItem.nameEN
+            if (timer1 != nil) { timer1!.stop() }
+            timer1 = Timer(duration: foodItem.cookingTimeMax, handler: handleTimer1)
+            timer1!.start()
         }
-        timer = Timer(duration: foodItem.cookingTimeMax, handler: displayTimeRemaining)
-        timer!.start()
+        if (timer == "timer2") {
+            self.foodItem2Label.text = foodItem.nameEN
+            if (timer2 != nil) { timer2!.stop() }
+            timer2 = Timer(duration: foodItem.cookingTimeMax, handler: handleTimer2)
+            timer2!.start()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let vc = segue.destinationViewController as FoodListViewController
         vc.delegate = self
-        
+        vc.timer = segue.identifier
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "Cooking times"
+        
     }
     
     override func didReceiveMemoryWarning() {

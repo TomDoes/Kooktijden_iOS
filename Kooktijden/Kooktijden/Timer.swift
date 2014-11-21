@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+import AVFoundation
 
 class Timer {
     var timer = NSTimer()
@@ -15,6 +17,9 @@ class Timer {
     let duration: Int
     var elapsedTime: Int = 0
     var timeRemaining: Int = 0
+    
+    var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("sound", ofType: "wav")!)
+    var audioPlayer = AVAudioPlayer()
     
     init(duration: Int, handler: (String) -> ()) {
         self.duration = duration
@@ -46,6 +51,16 @@ class Timer {
         
         if self.elapsedTime == self.duration {
             self.stop()
+            
+            let alert = UIAlertView()
+            alert.title = "Food Coocked!"
+            alert.message = "Here's a message"
+            alert.addButtonWithTitle("Ok")
+            alert.show()
+            
+            //self.audioPlayer = AVAudioPlayer(contentsOfURL: self.sound, error: nil)
+            //audioPlayer.numberOfLoops = -1
+            //audioPlayer.play()
         }
     }
     

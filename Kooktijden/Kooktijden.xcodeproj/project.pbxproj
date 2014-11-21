@@ -12,6 +12,7 @@
 		C403C1091A0D1DEB00AFCEB6 /* foods.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C403C1071A0D10D300AFCEB6 /* foods.sqlite */; };
 		C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */; };
 		C403C10D1A0E59BA00AFCEB6 /* FoodDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403C10C1A0E59BA00AFCEB6 /* FoodDetailController.swift */; };
+		C41D15111A16633C004CAB4B /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C41D15101A16633C004CAB4B /* sound.wav */; };
 		C4DF022A1A12025D00C31848 /* CookerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF02291A12025D00C31848 /* CookerController.swift */; };
 		C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC72C01A0FCF74005708DC /* Timer.swift */; };
 		E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01AF1A0F6D7F00A87561 /* Extensions.swift */; };
@@ -53,6 +54,7 @@
 		C403C1071A0D10D300AFCEB6 /* foods.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = foods.sqlite; sourceTree = "<group>"; };
 		C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		C403C10C1A0E59BA00AFCEB6 /* FoodDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailController.swift; sourceTree = "<group>"; };
+		C41D15101A16633C004CAB4B /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 		C4DF02291A12025D00C31848 /* CookerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookerController.swift; path = ../CookerController.swift; sourceTree = "<group>"; };
 		C4EC72C01A0FCF74005708DC /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		E20C01AF1A0F6D7F00A87561 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		E24F01521A0CF8E200372AE5 /* Kooktijden */ = {
 			isa = PBXGroup;
 			children = (
+				C41D15101A16633C004CAB4B /* sound.wav */,
 				E24F01551A0CF8E200372AE5 /* AppDelegate.swift */,
 				E24F01571A0CF8E200372AE5 /* ViewController.swift */,
 				C4DF02291A12025D00C31848 /* CookerController.swift */,
@@ -247,6 +250,7 @@
 				E24F015B1A0CF8E200372AE5 /* Main.storyboard in Resources */,
 				E24F01601A0CF8E200372AE5 /* LaunchScreen.xib in Resources */,
 				E24F015D1A0CF8E200372AE5 /* Images.xcassets in Resources */,
+				C41D15111A16633C004CAB4B /* sound.wav in Resources */,
 				E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
