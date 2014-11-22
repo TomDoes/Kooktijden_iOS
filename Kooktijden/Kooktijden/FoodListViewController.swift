@@ -68,6 +68,10 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
                 
         cell.loadItem(rowData)
         
+        // De button van cell heeft in zijn tag de id van het foodItem
+        cell.setTimerBtn?.addTarget(self, action: "setTimerBtnPressed:", forControlEvents: .TouchUpInside)
+        cell.setTimerBtn?.tag = rowData.id
+                
         return cell
 
     }
@@ -78,6 +82,12 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
             delegate!.startTimer(self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row], timer: self.timer!)
             self.navigationController?.popToRootViewControllerAnimated(true)
         }
+    }
+    
+    func setTimerBtnPressed(sender: UIButton!) {
+        NSLog("%@", "testing..")
+        NSLog("FoodItem id = %d", sender.tag)
+
     }
     
     
