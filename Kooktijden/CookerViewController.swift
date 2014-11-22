@@ -12,21 +12,49 @@ class CookerViewController: UIViewController, StartTimerDelegate {
 
     var foodListViewController: FoodListViewController = FoodListViewController(nibName: "FoodListViewController", bundle: nil)
     
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var label2: UILabel!
+    var itemIndex = 0
+    
+    var timer1: Timer?
+    var timer2: Timer?
+    
+    @IBOutlet var foodItem1Label: UILabel!
+    @IBOutlet var foodItem2Label: UILabel!
+    @IBOutlet var timeRemaining1Label: UILabel!
+    @IBOutlet var timeRemaining2Label: UILabel!
     
     @IBAction func cookerBtn(sender: AnyObject) {
-        
         foodListViewController.timer = sender.restorationIdentifier
         foodListViewController.delegate = self
         self.navigationController?.pushViewController(foodListViewController, animated: true)
     }
     
-    func startTimer(foodItem: FoodItem, timer: String) {
-        NSLog("%@", timer)
+    /****************************************************************************************
+    *
+    *   Timer Code
+    *
+    ****************************************************************************************/
+    func handleTimer1(timeRemaining: String) {
+        self.timeRemaining1Label.text = timeRemaining
+    }
+    func handleTimer2(timeRemaining: String) {
+        self.timeRemaining2Label.text = timeRemaining
     }
     
-    var itemIndex = 0
+    func startTimer(foodItem: FoodItem, timer: String) {
+        NSLog("%@", timer)
+        if (timer == "cooker1") {
+            self.foodItem1Label.text = foodItem.nameEN
+            if (timer1 != nil) { timer1!.stop() }
+            timer1 = Timer(duration: foodItem.cookingTimeMax, handler: handleTimer1)
+            timer1!.start()
+        }
+        if (timer == "cooker2") {
+            self.foodItem2Label.text = foodItem.nameEN
+            if (timer2 != nil) { timer2!.stop() }
+            timer2 = Timer(duration: foodItem.cookingTimeMax, handler: handleTimer2)
+            timer2!.start()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

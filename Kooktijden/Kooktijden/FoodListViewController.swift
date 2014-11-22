@@ -87,6 +87,10 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     func setTimerBtnPressed(sender: UIButton!) {
         NSLog("%@", "testing..")
         NSLog("FoodItem id = %d", sender.tag)
+        if (delegate != nil) {
+            delegate!.startTimer(self.foodItems[sender.tag], timer: self.timer!)
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
 
     }
     

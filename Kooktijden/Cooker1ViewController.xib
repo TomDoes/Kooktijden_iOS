@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6221" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CookerViewController" customModule="Kooktijden" customModuleProvider="target">
             <connections>
-                <outlet property="label" destination="VFp-ma-9RZ" id="8Wg-re-NcA"/>
+                <outlet property="foodItem1Label" destination="VFp-ma-9RZ" id="pSj-SW-qNS"/>
+                <outlet property="timeRemaining1Label" destination="Qny-vx-RdY" id="eZ0-rE-QwU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,14 +16,14 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFp-ma-9RZ">
-                    <rect key="frame" x="143" y="236" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFp-ma-9RZ">
+                    <rect key="frame" x="39" y="250" width="522" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="cooker1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68D-Pz-9Sd">
-                    <rect key="frame" x="141" y="121" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="cooker1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68D-Pz-9Sd">
+                    <rect key="frame" x="50" y="226" width="500" height="30"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -30,8 +31,25 @@
                         <action selector="cookerBtn:" destination="-1" eventType="touchUpInside" id="jGH-D9-y0I"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qny-vx-RdY">
+                    <rect key="frame" x="77" y="279" width="447" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="68D-Pz-9Sd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="16q-Yu-Urb"/>
+                <constraint firstItem="Qny-vx-RdY" firstAttribute="centerX" secondItem="VFp-ma-9RZ" secondAttribute="centerX" id="9Vc-EM-B6d"/>
+                <constraint firstItem="Qny-vx-RdY" firstAttribute="top" secondItem="68D-Pz-9Sd" secondAttribute="bottom" constant="23" id="NVl-df-bo4"/>
+                <constraint firstItem="Qny-vx-RdY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="77" id="Prx-hg-LK7"/>
+                <constraint firstItem="68D-Pz-9Sd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="226" id="UDL-zn-e83"/>
+                <constraint firstItem="VFp-ma-9RZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="39" id="UVY-va-e0Y"/>
+                <constraint firstItem="Qny-vx-RdY" firstAttribute="top" secondItem="VFp-ma-9RZ" secondAttribute="bottom" constant="8" symbolic="YES" id="dfk-s9-dNE"/>
+                <constraint firstItem="68D-Pz-9Sd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="rir-RR-QnJ"/>
+                <constraint firstItem="VFp-ma-9RZ" firstAttribute="centerX" secondItem="68D-Pz-9Sd" secondAttribute="centerX" id="s9E-ac-Mdf"/>
+            </constraints>
         </view>
     </objects>
 </document>

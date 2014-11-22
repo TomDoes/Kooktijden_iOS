@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6221" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CookerViewController" customModule="Kooktijden" customModuleProvider="target">
             <connections>
-                <outlet property="label" destination="gTc-Ad-Lix" id="nXT-KL-CCK"/>
-                <outlet property="label2" destination="BiT-zB-sza" id="JWg-Ve-rjD"/>
+                <outlet property="foodItem1Label" destination="BiT-zB-sza" id="yeE-hQ-eNU"/>
+                <outlet property="foodItem2Label" destination="gTc-Ad-Lix" id="Gp7-21-rXL"/>
+                <outlet property="timeRemaining1Label" destination="hh2-fI-bL6" id="pQo-wc-yi6"/>
+                <outlet property="timeRemaining2Label" destination="F7J-Oe-wff" id="bX8-iU-ata"/>
                 <outlet property="view" destination="iN0-l3-epB" id="naQ-OY-dGW"/>
             </connections>
         </placeholder>
@@ -16,20 +18,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiT-zB-sza">
-                    <rect key="frame" x="224" y="193" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiT-zB-sza">
+                    <rect key="frame" x="6" y="126" width="133" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTc-Ad-Lix">
-                    <rect key="frame" x="224" y="141" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTc-Ad-Lix">
+                    <rect key="frame" x="451" y="126" width="129" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="cooker2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNo-LF-e7K">
-                    <rect key="frame" x="345" y="52" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="cooker2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNo-LF-e7K">
+                    <rect key="frame" x="492" y="95" width="46" height="30"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -37,8 +39,20 @@
                         <action selector="cookerBtn:" destination="-1" eventType="touchUpInside" id="R0l-nf-bfx"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="cooker1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ7-gh-C34">
-                    <rect key="frame" x="21" y="52" width="46" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh2-fI-bL6">
+                    <rect key="frame" x="13" y="155" width="118" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7J-Oe-wff">
+                    <rect key="frame" x="454" y="155" width="122" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="cooker1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ7-gh-C34">
+                    <rect key="frame" x="49" y="95" width="46" height="30"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -48,6 +62,24 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hh2-fI-bL6" firstAttribute="centerX" secondItem="BiT-zB-sza" secondAttribute="centerX" id="0n3-CE-OS9"/>
+                <constraint firstItem="NJ7-gh-C34" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="95" id="1aj-do-EIh"/>
+                <constraint firstAttribute="trailing" secondItem="F7J-Oe-wff" secondAttribute="trailing" constant="24" id="36n-K5-xqK"/>
+                <constraint firstItem="NJ7-gh-C34" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="86" id="59O-Vy-bXb"/>
+                <constraint firstItem="gTc-Ad-Lix" firstAttribute="centerX" secondItem="QNo-LF-e7K" secondAttribute="centerX" id="6dq-SE-W5a"/>
+                <constraint firstAttribute="trailing" secondItem="QNo-LF-e7K" secondAttribute="trailing" constant="134" id="EdL-J3-Glk"/>
+                <constraint firstItem="F7J-Oe-wff" firstAttribute="baseline" secondItem="hh2-fI-bL6" secondAttribute="baseline" id="M4y-DL-y9h"/>
+                <constraint firstItem="gTc-Ad-Lix" firstAttribute="top" secondItem="QNo-LF-e7K" secondAttribute="bottom" constant="8" symbolic="YES" id="NJw-uD-Ena"/>
+                <constraint firstItem="QNo-LF-e7K" firstAttribute="baseline" secondItem="NJ7-gh-C34" secondAttribute="baseline" id="Rb8-Wb-9dj"/>
+                <constraint firstAttribute="trailing" secondItem="gTc-Ad-Lix" secondAttribute="trailing" constant="20" id="ZkZ-fQ-EYA"/>
+                <constraint firstItem="hh2-fI-bL6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="ZwY-Ep-aQ9"/>
+                <constraint firstItem="F7J-Oe-wff" firstAttribute="centerX" secondItem="gTc-Ad-Lix" secondAttribute="centerX" id="f55-qy-oV7"/>
+                <constraint firstItem="BiT-zB-sza" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6" id="fvA-gD-dmW"/>
+                <constraint firstItem="BiT-zB-sza" firstAttribute="top" secondItem="NJ7-gh-C34" secondAttribute="bottom" constant="1" id="jYe-K6-ANR"/>
+                <constraint firstItem="NJ7-gh-C34" firstAttribute="centerX" secondItem="BiT-zB-sza" secondAttribute="centerX" id="kv7-jZ-pCj"/>
+                <constraint firstItem="hh2-fI-bL6" firstAttribute="top" secondItem="BiT-zB-sza" secondAttribute="bottom" constant="8" symbolic="YES" id="naI-X6-CFH"/>
+            </constraints>
         </view>
     </objects>
 </document>
