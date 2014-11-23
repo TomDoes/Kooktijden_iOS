@@ -70,8 +70,6 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var foodDetailViewController: FoodDetailViewController = FoodDetailViewController(nibName: "FoodDetailViewController", bundle: nil)
         foodDetailViewController.foodItem = self.foodItems[indexPath.row]
-        foodDetailViewController.delegate = self.delegate
-        foodDetailViewController.timer = self.timer
         self.navigationController?.pushViewController(foodDetailViewController, animated: true)
     }
     
