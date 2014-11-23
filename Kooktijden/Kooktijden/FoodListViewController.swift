@@ -53,14 +53,6 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "foodDetail" {
-            var foodDetailController: FoodDetailController = segue.destinationViewController as FoodDetailController            
-            foodDetailController.foodItem = self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row]
-        }
-
-    }
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:FoodItemTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("foodCell") as FoodItemTableViewCell
         
@@ -77,11 +69,13 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // self.performSegueWithIdentifier("foodDetail", sender: self)
-        if (delegate != nil) {
-            delegate!.startTimer(self.foodItems[foodListTableView!.indexPathForSelectedRow()!.row], timer: self.timer!)
-            self.navigationController?.popToRootViewControllerAnimated(true)
-        }
+        let rowData: FoodItem = self.foodItems[indexPath.row] as FoodItem
+        
+        var foodDetailViewController: FoodDetailViewController = FoodDetailViewController(nibName: "FoodDetailViewController", bundle: nil)
+        foodDetailViewController.foodItem = rowData;
+        self.navigationController?.pushViewController(foodDetailViewController, animated: true)
+        
+        
     }
     
     func setTimerBtnPressed(sender: UIButton!) {

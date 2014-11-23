@@ -11,7 +11,6 @@
 		C403C1051A0D08BB00AFCEB6 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403C1041A0D08BB00AFCEB6 /* FoodItem.swift */; };
 		C403C1091A0D1DEB00AFCEB6 /* foods.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C403C1071A0D10D300AFCEB6 /* foods.sqlite */; };
 		C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */; };
-		C403C10D1A0E59BA00AFCEB6 /* FoodDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403C10C1A0E59BA00AFCEB6 /* FoodDetailController.swift */; };
 		C41D15111A16633C004CAB4B /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C41D15101A16633C004CAB4B /* sound.wav */; };
 		C4DF022A1A12025D00C31848 /* CookerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF02291A12025D00C31848 /* CookerController.swift */; };
 		C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC72C01A0FCF74005708DC /* Timer.swift */; };
@@ -28,6 +27,8 @@
 		E25333091A1F781600979A13 /* Cooker1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25333071A1F781600979A13 /* Cooker1ViewController.xib */; };
 		E253330B1A1F788D00979A13 /* Cooker2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E253330A1A1F788D00979A13 /* Cooker2ViewController.xib */; };
 		E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E253D3831A1F98B000893D16 /* FoodListViewController.xib */; };
+		E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CF44161A21ED3000C0B8C4 /* FoodDetailViewController.xib */; };
+		E2CF44191A21EE9000C0B8C4 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CF44181A21EE9000C0B8C4 /* FoodDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +58,6 @@
 		C403C1041A0D08BB00AFCEB6 /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		C403C1071A0D10D300AFCEB6 /* foods.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = foods.sqlite; sourceTree = "<group>"; };
 		C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
-		C403C10C1A0E59BA00AFCEB6 /* FoodDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailController.swift; sourceTree = "<group>"; };
 		C41D15101A16633C004CAB4B /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 		C4DF02291A12025D00C31848 /* CookerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookerController.swift; path = ../CookerController.swift; sourceTree = "<group>"; };
 		C4EC72C01A0FCF74005708DC /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
@@ -78,6 +78,8 @@
 		E25333071A1F781600979A13 /* Cooker1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Cooker1ViewController.xib; path = ../Cooker1ViewController.xib; sourceTree = "<group>"; };
 		E253330A1A1F788D00979A13 /* Cooker2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cooker2ViewController.xib; sourceTree = "<group>"; };
 		E253D3831A1F98B000893D16 /* FoodListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodListViewController.xib; sourceTree = "<group>"; };
+		E2CF44161A21ED3000C0B8C4 /* FoodDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodDetailViewController.xib; sourceTree = "<group>"; };
+		E2CF44181A21EE9000C0B8C4 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +134,8 @@
 				C4DF02291A12025D00C31848 /* CookerController.swift */,
 				C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */,
 				E253D3831A1F98B000893D16 /* FoodListViewController.xib */,
-				C403C10C1A0E59BA00AFCEB6 /* FoodDetailController.swift */,
+				E2CF44181A21EE9000C0B8C4 /* FoodDetailViewController.swift */,
+				E2CF44161A21ED3000C0B8C4 /* FoodDetailViewController.xib */,
 				E20C01AF1A0F6D7F00A87561 /* Extensions.swift */,
 				E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */,
 				E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */,
@@ -281,6 +284,7 @@
 				E25333091A1F781600979A13 /* Cooker1ViewController.xib in Resources */,
 				C41D15111A16633C004CAB4B /* sound.wav in Resources */,
 				E253330B1A1F788D00979A13 /* Cooker2ViewController.xib in Resources */,
+				E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */,
 				E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */,
 				E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */,
 			);
@@ -302,7 +306,7 @@
 			files = (
 				C4DF022A1A12025D00C31848 /* CookerController.swift in Sources */,
 				E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */,
-				C403C10D1A0E59BA00AFCEB6 /* FoodDetailController.swift in Sources */,
+				E2CF44191A21EE9000C0B8C4 /* FoodDetailViewController.swift in Sources */,
 				E25333081A1F781600979A13 /* CookerViewController.swift in Sources */,
 				C403C1051A0D08BB00AFCEB6 /* FoodItem.swift in Sources */,
 				C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */,
