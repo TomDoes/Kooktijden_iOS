@@ -57,30 +57,25 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         var cell:FoodItemTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("foodCell") as FoodItemTableViewCell
         
         let rowData: FoodItem = self.foodItems[indexPath.row] as FoodItem
-                
         cell.loadItem(rowData)
         
         // De button van cell heeft in zijn tag de id van het foodItem
         cell.setTimerBtn?.addTarget(self, action: "setTimerBtnPressed:", forControlEvents: .TouchUpInside)
-        cell.setTimerBtn?.tag = rowData.id
+        cell.setTimerBtn?.tag = indexPath.row
                 
         return cell
 
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let rowData: FoodItem = self.foodItems[indexPath.row] as FoodItem
-        
         var foodDetailViewController: FoodDetailViewController = FoodDetailViewController(nibName: "FoodDetailViewController", bundle: nil)
-        foodDetailViewController.foodItem = rowData;
+        foodDetailViewController.foodItem = self.foodItems[indexPath.row]
+        foodDetailViewController.delegate = self.delegate
+        foodDetailViewController.timer = self.timer
         self.navigationController?.pushViewController(foodDetailViewController, animated: true)
-        
-        
     }
     
     func setTimerBtnPressed(sender: UIButton!) {
-        NSLog("%@", "testing..")
-        NSLog("FoodItem id = %d", sender.tag)
         if (delegate != nil) {
             delegate!.startTimer(self.foodItems[sender.tag], timer: self.timer!)
             self.navigationController?.popToRootViewControllerAnimated(true)

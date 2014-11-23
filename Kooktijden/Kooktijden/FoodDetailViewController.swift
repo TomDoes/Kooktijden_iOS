@@ -18,8 +18,14 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     
     @IBAction func setTimer(sender: AnyObject) {
-        
+        if (delegate != nil) {
+            delegate!.startTimer(foodItem, timer: self.timer!)
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
     }
+    
+    var delegate:StartTimerDelegate? = nil
+    var timer: String?
     
     var foodItem: FoodItem!
     
@@ -43,7 +49,6 @@ class FoodDetailViewController: UIViewController {
         headerView.backgroundColor = UIColor.kooktijdenGreenColor()
         timerBtn.backgroundColor = UIColor.kooktijdenPinkColor()
         timerBtn.layer.cornerRadius = timerBtn.frame.size.width / 2.0
-
     }
     
 
