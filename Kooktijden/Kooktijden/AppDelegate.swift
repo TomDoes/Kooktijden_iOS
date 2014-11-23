@@ -48,12 +48,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setUpNavigationBar() {
         // Setup Navigation bar and status bar
         var navigationBarAppearance = UINavigationBar.appearance()
+        var barButtonAppearance = UIBarButtonItem.appearance()
         
         navigationBarAppearance.tintColor = UIColor.whiteColor()
         navigationBarAppearance.barTintColor = UIColor.kooktijdenGreenColor()
-        
-        // Title color
-        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+            
+        // Title color / Font
+        navigationBarAppearance.titleTextAttributes =  [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Roboto-Medium", size: 20)!]
+        barButtonAppearance.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Roboto-Light", size: 18)!], forState: UIControlState.Normal)
+
         
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         

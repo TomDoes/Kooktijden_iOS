@@ -27,13 +27,43 @@ class FoodDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpLayout()
+        headerView.hidden = true
+        timerBtn.hidden = true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        animateViews()
         
-        // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func animateViews() {
+        UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseOut, animations: {
+            var header = self.headerView.frame
+            header.origin.y += header.size.height
+            self.headerView.hidden = false
+            
+            self.headerView.frame = header
+            }, completion: { finished in
+                println("header background animation finished")
+        })
+        
+        UIView.animateWithDuration(0.5, delay: 0.5, options: .CurveEaseOut, animations: {
+            var button = self.timerBtn.frame
+            button.origin.x -= button.size.width + 100
+            self.timerBtn.hidden = false
+            
+            self.timerBtn.frame = button
+            }, completion: { finished in
+                println("button animation finished")
+        })
+        
     }
     
     func setUpLayout() {
@@ -43,6 +73,12 @@ class FoodDetailViewController: UIViewController {
         headerView.backgroundColor = UIColor.kooktijdenGreenColor()
         timerBtn.backgroundColor = UIColor.kooktijdenPinkColor()
         timerBtn.layer.cornerRadius = timerBtn.frame.size.width / 2.0
+        
+        //Fonts
+        foodTitleLabel.font = UIFont(name: "Roboto-Light", size: 24)!
+        timeLabel.font = UIFont(name: "Roboto-Light", size: 18)!
+        descriptionTitleLabel.font = UIFont(name: "Roboto-Light", size: 20)!
+        descriptionTextView.font = UIFont(name: "Roboto-Light", size: 18)!
 
     }
     
