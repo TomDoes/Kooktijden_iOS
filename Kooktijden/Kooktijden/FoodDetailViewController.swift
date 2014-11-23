@@ -18,10 +18,14 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     
     @IBAction func setTimer(sender: AnyObject) {
-        
+        delegate!.startTimer(self.foodItem, timer: self.timer!)
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
+    var delegate:StartTimerDelegate? = nil
+    
     var foodItem: FoodItem!
+    var timer: String?
     
     
     override func viewDidLoad() {
