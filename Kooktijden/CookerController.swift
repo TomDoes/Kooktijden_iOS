@@ -8,10 +8,7 @@
 
 import UIKit
 
-class CookerController: UIViewController, StartTimerDelegate, UIPageViewControllerDataSource {
-    
-    var timer1: Timer?
-    var timer2: Timer?
+class CookerController: UIViewController, UIPageViewControllerDataSource {
     
     private var pageViewController: UIPageViewController?
     
@@ -25,12 +22,6 @@ class CookerController: UIViewController, StartTimerDelegate, UIPageViewControll
     @IBOutlet var timeRemaining1Label: UILabel!
     @IBOutlet var timeRemaining2Label: UILabel!
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let vc = segue.destinationViewController as FoodListViewController
-        vc.delegate = self
-        vc.timer = segue.identifier
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,33 +34,6 @@ class CookerController: UIViewController, StartTimerDelegate, UIPageViewControll
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    /****************************************************************************************
-    *
-    *   Timer Code
-    *
-    ****************************************************************************************/
-    func handleTimer1(timeRemaining: String) {
-        self.timeRemaining1Label.text = timeRemaining
-    }
-    func handleTimer2(timeRemaining: String) {
-        self.timeRemaining2Label.text = timeRemaining
-    }
-    
-    func startTimer(foodItem: FoodItem, timer: String) {
-        if (timer == "timer1") {
-            self.foodItem1Label.text = foodItem.nameEN
-            if (timer1 != nil) { timer1!.stop() }
-            timer1 = Timer(duration: foodItem.cookingTimeMax, handler: handleTimer1)
-            timer1!.start()
-        }
-        if (timer == "timer2") {
-            self.foodItem2Label.text = foodItem.nameEN
-            if (timer2 != nil) { timer2!.stop() }
-            timer2 = Timer(duration: foodItem.cookingTimeMax, handler: handleTimer2)
-            timer2!.start()
-        }
     }
     
     /****************************************************************************************
