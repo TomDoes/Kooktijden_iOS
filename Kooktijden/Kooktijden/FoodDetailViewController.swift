@@ -15,6 +15,7 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var descriptionTitleLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var timerBtn: UIButton!
+    @IBOutlet weak var headerView: UIView!
     
     @IBAction func setTimer(sender: AnyObject) {
         
@@ -25,8 +26,7 @@ class FoodDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        foodTitleLabel.text = foodItem.nameEN
-        descriptionTextView.text = foodItem.descriptionEN
+        setUpLayout()
         
         // Do any additional setup after loading the view.
     }
@@ -34,6 +34,16 @@ class FoodDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setUpLayout() {
+        foodTitleLabel.text = foodItem.nameEN
+        foodTitleLabel.textColor = UIColor.whiteColor()
+        descriptionTextView.text = foodItem.descriptionEN
+        headerView.backgroundColor = UIColor.kooktijdenGreenColor()
+        timerBtn.backgroundColor = UIColor.kooktijdenPinkColor()
+        timerBtn.layer.cornerRadius = timerBtn.frame.size.width / 2.0
+
     }
     
 

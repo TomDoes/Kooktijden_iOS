@@ -17,6 +17,11 @@
 		E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01AF1A0F6D7F00A87561 /* Extensions.swift */; };
 		E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */; };
 		E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */; };
+		E248DC3C1A21FB2E0011319C /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E248DC391A21FB2E0011319C /* Roboto-Light.ttf */; };
+		E248DC3D1A21FB2E0011319C /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E248DC3A1A21FB2E0011319C /* Roboto-Medium.ttf */; };
+		E248DC3E1A21FB2E0011319C /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E248DC3B1A21FB2E0011319C /* Roboto-Thin.ttf */; };
+		E248DC411A21FB720011319C /* ic_action_alarms.png in Resources */ = {isa = PBXBuildFile; fileRef = E248DC401A21FB720011319C /* ic_action_alarms.png */; };
+		E248DC431A21FBB90011319C /* ic_action_alarms_white.png in Resources */ = {isa = PBXBuildFile; fileRef = E248DC421A21FBB90011319C /* ic_action_alarms_white.png */; };
 		E24F01561A0CF8E200372AE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F01551A0CF8E200372AE5 /* AppDelegate.swift */; };
 		E24F01581A0CF8E200372AE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F01571A0CF8E200372AE5 /* ViewController.swift */; };
 		E24F015B1A0CF8E200372AE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24F01591A0CF8E200372AE5 /* Main.storyboard */; };
@@ -64,6 +69,11 @@
 		E20C01AF1A0F6D7F00A87561 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 		E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodItemTableViewCell.xib; sourceTree = "<group>"; };
+		E248DC391A21FB2E0011319C /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		E248DC3A1A21FB2E0011319C /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		E248DC3B1A21FB2E0011319C /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		E248DC401A21FB720011319C /* ic_action_alarms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_alarms.png; sourceTree = "<group>"; };
+		E248DC421A21FBB90011319C /* ic_action_alarms_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_alarms_white.png; sourceTree = "<group>"; };
 		E24F01501A0CF8E200372AE5 /* Kooktijden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooktijden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24F01541A0CF8E200372AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E24F01551A0CF8E200372AE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +116,25 @@
 				C403C1071A0D10D300AFCEB6 /* foods.sqlite */,
 			);
 			name = database;
+			sourceTree = "<group>";
+		};
+		E248DC381A21FADA0011319C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E248DC401A21FB720011319C /* ic_action_alarms.png */,
+				E248DC421A21FBB90011319C /* ic_action_alarms_white.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E248DC3F1A21FB370011319C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E248DC391A21FB2E0011319C /* Roboto-Light.ttf */,
+				E248DC3A1A21FB2E0011319C /* Roboto-Medium.ttf */,
+				E248DC3B1A21FB2E0011319C /* Roboto-Thin.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		E24F01471A0CF8E200372AE5 = {
@@ -155,6 +184,8 @@
 		E24F01531A0CF8E200372AE5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E248DC3F1A21FB370011319C /* Fonts */,
+				E248DC381A21FADA0011319C /* Images */,
 				E292B83D1A1F67730031DD68 /* Sounds */,
 				E24F01541A0CF8E200372AE5 /* Info.plist */,
 			);
@@ -278,14 +309,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C403C1091A0D1DEB00AFCEB6 /* foods.sqlite in Resources */,
+				E248DC411A21FB720011319C /* ic_action_alarms.png in Resources */,
 				E24F015B1A0CF8E200372AE5 /* Main.storyboard in Resources */,
 				E24F01601A0CF8E200372AE5 /* LaunchScreen.xib in Resources */,
+				E248DC3C1A21FB2E0011319C /* Roboto-Light.ttf in Resources */,
 				E24F015D1A0CF8E200372AE5 /* Images.xcassets in Resources */,
 				E25333091A1F781600979A13 /* Cooker1ViewController.xib in Resources */,
 				C41D15111A16633C004CAB4B /* sound.wav in Resources */,
 				E253330B1A1F788D00979A13 /* Cooker2ViewController.xib in Resources */,
+				E248DC3D1A21FB2E0011319C /* Roboto-Medium.ttf in Resources */,
 				E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */,
 				E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */,
+				E248DC431A21FBB90011319C /* ic_action_alarms_white.png in Resources */,
+				E248DC3E1A21FB2E0011319C /* Roboto-Thin.ttf in Resources */,
 				E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
