@@ -57,7 +57,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         var cell:FoodItemTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("foodCell") as FoodItemTableViewCell
         
         let rowData: FoodItem = self.foodItems[indexPath.row] as FoodItem
-        cell.loadItem(rowData)
+        cell.loadItem(rowData, index: indexPath.row)
         
         // De button van cell heeft in zijn tag de id van het foodItem
         cell.setTimerBtn?.addTarget(self, action: "setTimerBtnPressed:", forControlEvents: .TouchUpInside)

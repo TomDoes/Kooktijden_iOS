@@ -25,4 +25,21 @@ extension UIColor {
     class func kooktijdenPinkColor() -> UIColor {
         return UIColor(red: 245.0/255.0, green: 0.0/255.0, blue: 87.0/255.0, alpha: 1.0)
     }
+    
+    class func listColor0() -> UIColor {
+        return UIColor(red: 0.0/255.0, green: 150.0/255.0, blue: 136.0/255.0, alpha: 1.0)
+    }
+    
+    class func listColor1() -> UIColor {
+        return UIColor(red: 233.0/255.0, green: 30.0/255.0, blue: 99.0/255.0, alpha: 1.0)
+    }
+    
+    class func listColor2() -> UIColor {
+        return UIColor(red: 156/255.0, green: 39.0/255.0, blue: 176.0/255.0, alpha: 1.0)
+    }
+    
+    class func listColor3() -> UIColor {
+        return UIColor(red: 255.0/255.0, green: 152.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+    }
+
 }

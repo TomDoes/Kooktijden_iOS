@@ -22,7 +22,7 @@ class Timer {
     var audioPlayer = AVAudioPlayer()
     
     init(duration: Int, handler: (String) -> ()) {
-        self.duration = duration
+        self.duration = duration * 60
         self.handler = handler
     }
     

@@ -10,13 +10,25 @@ import UIKit
 
 class FoodItemTableViewCell : UITableViewCell {
     
-    @IBOutlet var foodItemLabel: UILabel?
-    @IBOutlet var firstLetterImage: UILabel?
-    @IBOutlet var setTimerBtn: UIButton?
+    @IBOutlet var foodItemLabel: UILabel!
+    @IBOutlet var firstLetterImage: UILabel!
+    @IBOutlet var setTimerBtn: UIButton!
     
-    func loadItem(foodItem: FoodItem) {
-        firstLetterImage?.text = foodItem.nameEN[0]
-        foodItemLabel?.text = foodItem.nameEN
+    func loadItem(foodItem: FoodItem, index: Int) {
+        firstLetterImage.text = foodItem.nameEN[0]
+        firstLetterImage.font = UIFont(name: "Roboto-Light", size: 20)!
+        
+        let color = index % 4
+        let colorArray = [UIColor.listColor0(), UIColor.listColor1(), UIColor.listColor2(), UIColor.listColor3()]
+        firstLetterImage.backgroundColor = colorArray[color]
+        
+        firstLetterImage.textColor = UIColor.whiteColor()
+        firstLetterImage.layer.cornerRadius = firstLetterImage.frame.size.width / 2.0
+        firstLetterImage.clipsToBounds = true
+        
+        foodItemLabel.text = foodItem.nameEN
+        foodItemLabel.font = UIFont(name: "Roboto-Light", size: 16)!
+
     }
     
 }

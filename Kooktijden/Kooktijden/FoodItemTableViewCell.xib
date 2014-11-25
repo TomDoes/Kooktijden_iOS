@@ -12,12 +12,6 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="78y-ld-lxb" id="cCa-Mq-m1h">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTg-f4-c21">
-                        <rect key="frame" x="266" y="7" width="46" height="30"/>
-                        <state key="normal" title="Button">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iy7-5O-ecH">
                         <rect key="frame" x="51" y="12" width="207" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -30,6 +24,12 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTg-f4-c21">
+                        <rect key="frame" x="282" y="10" width="25" height="25"/>
+                        <state key="normal" image="ic_action_alarms.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
@@ -37,7 +37,10 @@
                 <outlet property="foodItemLabel" destination="Iy7-5O-ecH" id="X7g-Bo-22V"/>
                 <outlet property="setTimerBtn" destination="eTg-f4-c21" id="bHU-FX-fMg"/>
             </connections>
-            <point key="canvasLocation" x="358" y="283"/>
+            <point key="canvasLocation" x="358" y="282"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_action_alarms.png" width="48" height="48"/>
+    </resources>
 </document>
