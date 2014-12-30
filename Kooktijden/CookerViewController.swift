@@ -45,13 +45,13 @@ class CookerViewController: UIViewController, StartTimerDelegate {
         if (timer == "cooker1") {
             self.foodItem1Label.text = foodItem.nameEN
             if (timer1 != nil) { timer1!.stop() }
-            timer1 = Timer(duration: foodItem.cookingTimeMax, handler: handleTimer1)
+            timer1 = Timer(foodItem: foodItem, handler: handleTimer1)
             timer1!.start()
         }
         if (timer == "cooker2") {
             self.foodItem2Label.text = foodItem.nameEN
             if (timer2 != nil) { timer2!.stop() }
-            timer2 = Timer(duration: foodItem.cookingTimeMax, handler: handleTimer2)
+            timer2 = Timer(foodItem: foodItem, handler: handleTimer2)
             timer2!.start()
         }
     }

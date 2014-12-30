@@ -15,15 +15,20 @@ class Timer {
     var handler: (String) -> ()
     
     let duration: Int
+    let foodItem: FoodItem
     var elapsedTime: Int = 0
     var timeRemaining: Int = 0
     
     var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("sound", ofType: "wav")!)
     var audioPlayer = AVAudioPlayer()
     
-    init(duration: Int, handler: (String) -> ()) {
-        self.duration = duration * 60
+    let notificationCenter = NSNotificationCenter.defaultCenter()
+    
+    init(foodItem: FoodItem, handler: (String) -> ()) {
+        self.duration = foodItem.cookingTimeMax * 60
+//        self.duration = 15 // Handig voor testen
         self.handler = handler
+        self.foodItem = foodItem
     }
     
     func start() {
@@ -53,11 +58,14 @@ class Timer {
             self.stop()
             
             let alert = UIAlertView()
-            alert.title = "Food Coocked!"
+            alert.title = "Food Cooked!"
             alert.message = "Here's a message"
             alert.addButtonWithTitle("Ok")
             alert.show()
             
+            var alertInfo: [String: String] = ["FoodNameEN": foodItem.nameEN, "FoodNameNL": foodItem.nameNL]
+            
+            notificationCenter.postNotificationName("com.deappothekers.Kooktijden.timerFinished", object: nil, userInfo: alertInfo)
             //self.audioPlayer = AVAudioPlayer(contentsOfURL: self.sound, error: nil)
             //audioPlayer.numberOfLoops = -1
             //audioPlayer.play()

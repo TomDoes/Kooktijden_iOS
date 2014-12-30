@@ -31,10 +31,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        //Add to notification center
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"showNotification:" , name:"com.deappothekers.Kooktijden.timerFinished" , object: nil)
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        
+        // Remove from notificationCenter
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "com.deappothekers.Kooktijden.timerFinished", object: nil)
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
@@ -60,6 +66,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
+    }
+    
+    func showNotification(notification: NSNotification) {
+        var alertInfo: [String: String!] = notification.userInfo as Dictionary<String,String!>
+        
+        var vegetableName = alertInfo["FoodNameEN"]!
+        var localNotification:UILocalNotification = UILocalNotification()
+        localNotification.alertAction = "Open Kooktijden"
+        localNotification.alertBody = "\(vegetableName) is ready!"
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
 
 }
