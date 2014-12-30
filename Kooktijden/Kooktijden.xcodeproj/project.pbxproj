@@ -34,6 +34,7 @@
 		E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E253D3831A1F98B000893D16 /* FoodListViewController.xib */; };
 		E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CF44161A21ED3000C0B8C4 /* FoodDetailViewController.xib */; };
 		E2CF44191A21EE9000C0B8C4 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CF44181A21EE9000C0B8C4 /* FoodDetailViewController.swift */; };
+		E2EFE5EC1A52C3B0001C45A2 /* icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2EFE5EB1A52C3B0001C45A2 /* icons.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		E253D3831A1F98B000893D16 /* FoodListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodListViewController.xib; sourceTree = "<group>"; };
 		E2CF44161A21ED3000C0B8C4 /* FoodDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodDetailViewController.xib; sourceTree = "<group>"; };
 		E2CF44181A21EE9000C0B8C4 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		E2EFE5EB1A52C3B0001C45A2 /* icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = icons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */,
 				E24F01591A0CF8E200372AE5 /* Main.storyboard */,
 				E24F015C1A0CF8E200372AE5 /* Images.xcassets */,
+				E2EFE5EB1A52C3B0001C45A2 /* icons.xcassets */,
 				E24F015E1A0CF8E200372AE5 /* LaunchScreen.xib */,
 				E269C9C91A1F73EE00865D64 /* Cookers */,
 				C403C1061A0D10BC00AFCEB6 /* database */,
@@ -314,6 +317,7 @@
 				E24F01601A0CF8E200372AE5 /* LaunchScreen.xib in Resources */,
 				E248DC3C1A21FB2E0011319C /* Roboto-Light.ttf in Resources */,
 				E24F015D1A0CF8E200372AE5 /* Images.xcassets in Resources */,
+				E2EFE5EC1A52C3B0001C45A2 /* icons.xcassets in Resources */,
 				E25333091A1F781600979A13 /* Cooker1ViewController.xib in Resources */,
 				C41D15111A16633C004CAB4B /* sound.wav in Resources */,
 				E253330B1A1F788D00979A13 /* Cooker2ViewController.xib in Resources */,
