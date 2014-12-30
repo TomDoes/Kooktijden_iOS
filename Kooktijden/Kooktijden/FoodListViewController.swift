@@ -26,6 +26,10 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         return foodItems.count
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 66.0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
