@@ -38,13 +38,13 @@ class DataSource {
         for food in foods {
             var foodItem = FoodItem()
             
-            foodItem.id = food[Expression<Int>("id")]
-            foodItem.nameEN = food[Expression<String>("name_EN")]
-            foodItem.nameNL = food[Expression<String>("name_NL")]
+            foodItem.id = food[Expression<Int>("id")]!
+            foodItem.nameEN = food[Expression<String>("name_EN")]!
+            foodItem.nameNL = food[Expression<String>("name_NL")]!
             foodItem.descriptionEN = food[Expression<String>("description_EN")]
             foodItem.descriptionNL = food[Expression<String>("description_NL")]
-            foodItem.cookingTimeMin = food[Expression<Int>("cooking_time_min")]
-            foodItem.cookingTimeMax = food[Expression<Int>("cooking_time_max")]
+            foodItem.cookingTimeMin = food[Expression<Int>("cooking_time_min")]!
+            foodItem.cookingTimeMax = food[Expression<Int>("cooking_time_max")]!
 
             items.append(foodItem)
         }
@@ -62,7 +62,7 @@ class DataSource {
         
         let foods = db["foods"]
         
-        foods.delete()?
+//        foods.delete()
         
         foods.insert(nameEN <- "Artichoke", nameNL <- "Artisjok", cookingTimeMin <- 25, cookingTimeMax <- 25, descriptionEN <- "Artichokes look more like a Flower than a vegetable. To prepare an artichoke you have to cut of the stem and remove the tougher leaves until only the soft remain.", descriptionNL <- "Artisjokken lijken meer op een bloem dan een groente. Om een artisjok te bereiden moet je de steel er af snijden en verwijder je de harde bladeren totdat er alleen nog zachte over zijn.")?
         
@@ -101,6 +101,8 @@ class DataSource {
         foods.insert(nameEN <- "Spinach", nameNL <- "Spinazie", cookingTimeMin <- 4, cookingTimeMax <- 5, descriptionEN <- "Fresh spinach is very healthy and versatile. Rinse the spinach before use to remove any left-over grains of sand. Remove the thick petioles from the leaves. Place the spinach in a large pan with a small amount of water and a pinch of salt, and bring to the boil. Note: spinach shrinks tremendously during cooking!", descriptionNL <- "Verse spinazie is bijzonder gezond en veelzijdig. Spoel voor gebruik de spinazie goed af om eventuele zandkorrels te verwijderen. Haal de dikke bladstengels van de bladeren. Plaats de spinazie in een ruime pan met een klein laagje water en een snufje zout en breng het aan de kook. Let op: spinazie slinkt enorm tijdens het koken!")?
         
         foods.insert(nameEN <- "Sweet potatoes (whole)", nameNL <- "Zoete aardappelen (heel)", cookingTimeMin <- 15, cookingTimeMax <- 20, descriptionEN <- "Boiling sweet potatoes is almost the same process as that of the normal potato. Peel and wash the potatoes and cut them into uniform pieces. Place the pieces in a pan and add water so that the majority of the potatoes are submerged. Add a pinch of salt and bring to a boil. Make sure that the potatoes are cooked with the aid of a fork. If you can easily pierce the potatoes then they are done.", descriptionNL <- "Het koken van zoete aardappelen is bijna hetzelfde proces als dat van de normale aardappel. Schil of was de aardappels en snijd ze in gelijkmatige stukken. Plaats de delen in een pan en zet ze voor het grootste deel onder water. Doe hier een snufje zout bij en breng aan de kook. Controleer of de aardappels gaar zijn met behulp van een vork. De aardappels zijn gaar als je gemakkelijk in de aardappels kunt prikken.")?
+        
+        foods.insert(nameEN <- "Test", nameNL <- "Test", cookingTimeMin <- 1, cookingTimeMax <- 1, descriptionEN <- "Boiling sweet potatoes is almost the same process as that of the normal potato. Peel and wash the potatoes and cut them into uniform pieces. Place the pieces in a pan and add water so that the majority of the potatoes are submerged. Add a pinch of salt and bring to a boil. Make sure that the potatoes are cooked with the aid of a fork. If you can easily pierce the potatoes then they are done.", descriptionNL <- "Het koken van zoete aardappelen is bijna hetzelfde proces als dat van de normale aardappel. Schil of was de aardappels en snijd ze in gelijkmatige stukken. Plaats de delen in een pan en zet ze voor het grootste deel onder water. Doe hier een snufje zout bij en breng aan de kook. Controleer of de aardappels gaar zijn met behulp van een vork. De aardappels zijn gaar als je gemakkelijk in de aardappels kunt prikken.")?
         
     }
 
