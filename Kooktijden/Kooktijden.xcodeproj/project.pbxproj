@@ -12,6 +12,7 @@
 		C403C1091A0D1DEB00AFCEB6 /* foods.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C403C1071A0D10D300AFCEB6 /* foods.sqlite */; };
 		C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */; };
 		C41D15111A16633C004CAB4B /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C41D15101A16633C004CAB4B /* sound.wav */; };
+		C42ABB801A56C19D000B8548 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42ABB7F1A56C19D000B8548 /* CircleProgressView.swift */; };
 		C4DF022A1A12025D00C31848 /* CookerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF02291A12025D00C31848 /* CookerController.swift */; };
 		C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC72C01A0FCF74005708DC /* Timer.swift */; };
 		E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01AF1A0F6D7F00A87561 /* Extensions.swift */; };
@@ -65,6 +66,7 @@
 		C403C1071A0D10D300AFCEB6 /* foods.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = foods.sqlite; sourceTree = "<group>"; };
 		C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		C41D15101A16633C004CAB4B /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
+		C42ABB7F1A56C19D000B8548 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		C4DF02291A12025D00C31848 /* CookerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookerController.swift; path = ../CookerController.swift; sourceTree = "<group>"; };
 		C4EC72C01A0FCF74005708DC /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		E20C01AF1A0F6D7F00A87561 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				C4DF02291A12025D00C31848 /* CookerController.swift */,
 				C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */,
 				E253D3831A1F98B000893D16 /* FoodListViewController.xib */,
+				C42ABB7F1A56C19D000B8548 /* CircleProgressView.swift */,
 				E2CF44181A21EE9000C0B8C4 /* FoodDetailViewController.swift */,
 				E2CF44161A21ED3000C0B8C4 /* FoodDetailViewController.xib */,
 				E20C01AF1A0F6D7F00A87561 /* Extensions.swift */,
@@ -349,6 +352,7 @@
 				E2CF44191A21EE9000C0B8C4 /* FoodDetailViewController.swift in Sources */,
 				E25333081A1F781600979A13 /* CookerViewController.swift in Sources */,
 				C403C1051A0D08BB00AFCEB6 /* FoodItem.swift in Sources */,
+				C42ABB801A56C19D000B8548 /* CircleProgressView.swift in Sources */,
 				C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */,
 				C403C1031A0D07FE00AFCEB6 /* DataSource.swift in Sources */,
 				E24F01581A0CF8E200372AE5 /* ViewController.swift in Sources */,

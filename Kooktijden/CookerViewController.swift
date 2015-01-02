@@ -22,6 +22,9 @@ class CookerViewController: UIViewController, StartTimerDelegate {
     @IBOutlet var timeRemaining1Label: UILabel!
     @IBOutlet var timeRemaining2Label: UILabel!
     
+    @IBOutlet var timer1ProgessView: CircularProgressView!
+    @IBOutlet var timer2ProgessView: CircularProgressView!
+    
     @IBAction func cookerBtn(sender: AnyObject) {
         foodListViewController.timer = sender.restorationIdentifier
         foodListViewController.delegate = self
@@ -33,11 +36,24 @@ class CookerViewController: UIViewController, StartTimerDelegate {
     *   Timer Code
     *
     ****************************************************************************************/
-    func handleTimer1(timeRemaining: String) {
-        self.timeRemaining1Label.text = timeRemaining
+    func handleTimer1(timeRemaining: Int) {
+        self.timeRemaining1Label.text = makeTimeLabel(timeRemaining)
+        timer1ProgessView.progress = Double(timeRemaining) / Double(timer1!.foodItem.cookingTimeMax * 60)
     }
-    func handleTimer2(timeRemaining: String) {
-        self.timeRemaining2Label.text = timeRemaining
+    
+    func handleTimer2(timeRemaining: Int) {
+        self.timeRemaining2Label.text = makeTimeLabel(timeRemaining)
+        timer2ProgessView.progress = Double(timeRemaining) / Double(timer2!.foodItem.cookingTimeMax * 60)
+    }
+    
+    func makeTimeLabel(timeRemaining: Int) -> NSString {
+        var secondsRemaining = timeRemaining
+        let minutes = secondsRemaining / 60
+        secondsRemaining -= (minutes * 60)
+        
+        let seconds = secondsRemaining > 9 ? String(secondsRemaining):"0" + String(secondsRemaining)
+
+        return "\(minutes):\(seconds)"
     }
     
     func startTimer(foodItem: FoodItem, timer: String) {

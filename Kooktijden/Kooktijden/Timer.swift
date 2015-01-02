@@ -12,7 +12,7 @@ import AVFoundation
 
 class Timer {
     var timer = NSTimer()
-    var handler: (String) -> ()
+    var handler: (Int) -> ()
     
     let duration: Int
     let foodItem: FoodItem
@@ -24,7 +24,7 @@ class Timer {
     
     let notificationCenter = NSNotificationCenter.defaultCenter()
     
-    init(foodItem: FoodItem, handler: (String) -> ()) {
+    init(foodItem: FoodItem, handler: (Int) -> ()) {
         self.duration = foodItem.cookingTimeMax * 60
 //        self.duration = 15 // Handig voor testen
         self.handler = handler
@@ -47,12 +47,7 @@ class Timer {
         self.elapsedTime++
         self.timeRemaining = self.duration - self.elapsedTime
         
-        let minutes = timeRemaining / 60
-        timeRemaining -= (minutes * 60)
-        
-        let seconds = timeRemaining > 9 ? String(timeRemaining):"0" + String(timeRemaining)
-        
-        self.handler("\(minutes):\(seconds)")
+        self.handler(timeRemaining)
         
         if self.elapsedTime == self.duration {
             self.stop()
