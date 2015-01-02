@@ -17,6 +17,8 @@ class CookerViewController: UIViewController, StartTimerDelegate {
     var timer1: Timer?
     var timer2: Timer?
     
+    @IBOutlet var cooker: UIView!
+    
     @IBOutlet var foodItem1Label: UILabel!
     @IBOutlet var foodItem2Label: UILabel!
     @IBOutlet var timeRemaining1Label: UILabel!
@@ -24,6 +26,8 @@ class CookerViewController: UIViewController, StartTimerDelegate {
     
     @IBOutlet var timer1ProgessView: CircularProgressView!
     @IBOutlet var timer2ProgessView: CircularProgressView!
+    
+    @IBOutlet var cookerBtn1: UIButton?
     
     @IBAction func cookerBtn(sender: AnyObject) {
         foodListViewController.timer = sender.restorationIdentifier
@@ -60,6 +64,7 @@ class CookerViewController: UIViewController, StartTimerDelegate {
         NSLog("%@", timer)
         if (timer == "cooker1") {
             self.foodItem1Label.text = foodItem.nameEN
+            self.cookerBtn1!.hidden = true
             if (timer1 != nil) { timer1!.stop() }
             timer1 = Timer(foodItem: foodItem, handler: handleTimer1)
             timer1!.start()
@@ -74,6 +79,16 @@ class CookerViewController: UIViewController, StartTimerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.cookerBtn1!.setTitle("Choose", forState: UIControlState.Normal)
+        
+        if (self.timer1ProgessView != nil) {
+            setUpCircleProgressView(self.timer1ProgessView!)
+        }
+        
+        self.cooker.layer.borderWidth = 2
+        self.cooker.layer.borderColor = UIColor.lightGrayColor().CGColor
+        self.cooker.layer.cornerRadius = 5
 
         // Do any additional setup after loading the view.
     }
@@ -93,5 +108,12 @@ class CookerViewController: UIViewController, StartTimerDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func setUpCircleProgressView(circleProgessView: CircularProgressView) {
+        circleProgessView.progress = 1
+        circleProgessView.clockwise = false
+        circleProgessView.trackBackgroundColor = UIColor.lightGrayColor()
+        circleProgessView.trackFillColor = UIColor.kooktijdenGreenColor()
+    }
+    
+    
 }
