@@ -13,6 +13,7 @@ class CookerViewController: UIViewController, StartTimerDelegate {
     var foodListViewController: FoodListViewController = FoodListViewController(nibName: "FoodListViewController", bundle: nil)
     
     var itemIndex = 0
+    var tappedTimer = 0
     
     var timer1: Timer?
     var timer2: Timer?
@@ -27,12 +28,26 @@ class CookerViewController: UIViewController, StartTimerDelegate {
     @IBOutlet var timer1ProgessView: CircularProgressView!
     @IBOutlet var timer2ProgessView: CircularProgressView!
     
-    @IBOutlet var cookerBtn1: UIButton?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.cooker.layer.borderWidth = 2
+        self.cooker.layer.borderColor = UIColor.lightGrayColor().CGColor
+        self.cooker.layer.cornerRadius = 5
+        
+        if (self.timer1ProgessView != nil) {
+            setUpCircleProgressView(self.timer1ProgessView!)
+        }
+        
+        if (self.timer2ProgessView != nil) {
+            setUpCircleProgressView(self.timer2ProgessView!)
+        }
+        
+    }
     
-    @IBAction func cookerBtn(sender: AnyObject) {
-        foodListViewController.timer = sender.restorationIdentifier
-        foodListViewController.delegate = self
-        self.navigationController?.pushViewController(foodListViewController, animated: true)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     /****************************************************************************************
@@ -64,7 +79,6 @@ class CookerViewController: UIViewController, StartTimerDelegate {
         NSLog("%@", timer)
         if (timer == "cooker1") {
             self.foodItem1Label.text = foodItem.nameEN
-            self.cookerBtn1!.hidden = true
             if (timer1 != nil) { timer1!.stop() }
             timer1 = Timer(foodItem: foodItem, handler: handleTimer1)
             timer1!.start()
@@ -77,43 +91,20 @@ class CookerViewController: UIViewController, StartTimerDelegate {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.cookerBtn1!.setTitle("Choose", forState: UIControlState.Normal)
-        
-        if (self.timer1ProgessView != nil) {
-            setUpCircleProgressView(self.timer1ProgessView!)
-        }
-        
-        self.cooker.layer.borderWidth = 2
-        self.cooker.layer.borderColor = UIColor.lightGrayColor().CGColor
-        self.cooker.layer.cornerRadius = 5
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tappedCooker(sender: UITapGestureRecognizer){
+        foodListViewController.timer = sender.view!.restorationIdentifier
+        foodListViewController.delegate = self
+        self.navigationController?.pushViewController(foodListViewController, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func setUpCircleProgressView(circleProgessView: CircularProgressView) {
         circleProgessView.progress = 1
         circleProgessView.clockwise = false
+        circleProgessView.trackWidth = 5
         circleProgessView.trackBackgroundColor = UIColor.lightGrayColor()
         circleProgessView.trackFillColor = UIColor.kooktijdenGreenColor()
+        circleProgessView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tappedCooker:"))
+        circleProgessView.userInteractionEnabled = true
     }
-    
     
 }

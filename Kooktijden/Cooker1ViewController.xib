@@ -2,12 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CookerViewController" customModule="Kooktijden" customModuleProvider="target">
             <connections>
                 <outlet property="cooker" destination="fvD-I2-xwJ" id="Ei9-tH-2TZ"/>
-                <outlet property="cookerBtn1" destination="68D-Pz-9Sd" id="2rf-fM-20K"/>
                 <outlet property="foodItem1Label" destination="VFp-ma-9RZ" id="pSj-SW-qNS"/>
                 <outlet property="timeRemaining1Label" destination="Qny-vx-RdY" id="eZ0-rE-QwU"/>
                 <outlet property="timer1ProgessView" destination="DHG-mH-ZYo" id="IED-J2-xnF"/>
@@ -19,44 +19,48 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvD-I2-xwJ">
+                <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="cooker" translatesAutoresizingMaskIntoConstraints="NO" id="fvD-I2-xwJ">
                     <rect key="frame" x="200" y="200" width="200" height="200"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DHG-mH-ZYo" customClass="CircularProgressView" customModule="Kooktijden">
+                        <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="cooker1" translatesAutoresizingMaskIntoConstraints="NO" id="DHG-mH-ZYo" customClass="CircularProgressView" customModule="Kooktijden">
                             <rect key="frame" x="38" y="37" width="125" height="125"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFp-ma-9RZ">
-                                    <rect key="frame" x="-199" y="80" width="522" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFp-ma-9RZ">
+                                    <rect key="frame" x="-199" y="69" width="522" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qny-vx-RdY">
-                                    <rect key="frame" x="-161" y="25" width="447" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="cooker1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68D-Pz-9Sd">
-                                    <rect key="frame" x="-188" y="49" width="500" height="30"/>
-                                    <state key="normal" title="Button">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="cookerBtn:" destination="-1" eventType="touchUpInside" id="jGH-D9-y0I"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="DHG-mH-ZYo" secondAttribute="height" multiplier="1:1" id="9tv-MQ-pv4"/>
+                                <constraint firstAttribute="centerX" secondItem="VFp-ma-9RZ" secondAttribute="centerX" id="JjE-Su-ebz"/>
+                            </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qny-vx-RdY">
+                            <rect key="frame" x="-123" y="89" width="447" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fvD-I2-xwJ" secondAttribute="height" multiplier="1:1" id="3Xi-fc-1xh"/>
+                        <constraint firstItem="DHG-mH-ZYo" firstAttribute="centerX" secondItem="Qny-vx-RdY" secondAttribute="centerX" id="ZvN-te-h91"/>
+                        <constraint firstItem="DHG-mH-ZYo" firstAttribute="centerY" secondItem="Qny-vx-RdY" secondAttribute="centerY" id="amB-lX-C4a"/>
+                        <constraint firstAttribute="centerY" secondItem="DHG-mH-ZYo" secondAttribute="centerY" id="dow-Yc-sK0"/>
+                        <constraint firstAttribute="trailing" secondItem="DHG-mH-ZYo" secondAttribute="trailing" constant="15" id="drP-5G-wHt"/>
+                        <constraint firstAttribute="centerX" secondItem="DHG-mH-ZYo" secondAttribute="centerX" id="hrF-V6-Jip"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="fvD-I2-xwJ" secondAttribute="trailing" constant="50" id="1WH-KU-Wvg"/>
                 <constraint firstAttribute="centerY" secondItem="fvD-I2-xwJ" secondAttribute="centerY" id="461-lc-eSV"/>
-                <constraint firstAttribute="centerX" secondItem="fvD-I2-xwJ" secondAttribute="centerX" id="RdQ-Cs-6mW"/>
+                <constraint firstAttribute="centerX" secondItem="fvD-I2-xwJ" secondAttribute="centerX" id="F7m-Ai-uic"/>
             </constraints>
         </view>
     </objects>
