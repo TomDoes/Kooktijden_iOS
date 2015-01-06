@@ -14,6 +14,7 @@
 		C41D15111A16633C004CAB4B /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C41D15101A16633C004CAB4B /* sound.wav */; };
 		C42ABB801A56C19D000B8548 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42ABB7F1A56C19D000B8548 /* CircleProgressView.swift */; };
 		C4DF022A1A12025D00C31848 /* CookerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF02291A12025D00C31848 /* CookerController.swift */; };
+		C4DFED711A5BC29600CE14A5 /* Cooker3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DFED701A5BC29600CE14A5 /* Cooker3ViewController.xib */; };
 		C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC72C01A0FCF74005708DC /* Timer.swift */; };
 		E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01AF1A0F6D7F00A87561 /* Extensions.swift */; };
 		E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */; };
@@ -68,6 +69,7 @@
 		C41D15101A16633C004CAB4B /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 		C42ABB7F1A56C19D000B8548 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		C4DF02291A12025D00C31848 /* CookerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookerController.swift; path = ../CookerController.swift; sourceTree = "<group>"; };
+		C4DFED701A5BC29600CE14A5 /* Cooker3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cooker3ViewController.xib; sourceTree = "<group>"; };
 		C4EC72C01A0FCF74005708DC /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		E20C01AF1A0F6D7F00A87561 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -218,9 +220,10 @@
 		E269C9C91A1F73EE00865D64 /* Cookers */ = {
 			isa = PBXGroup;
 			children = (
-				E25333071A1F781600979A13 /* Cooker1ViewController.xib */,
 				E25333061A1F781600979A13 /* CookerViewController.swift */,
+				E25333071A1F781600979A13 /* Cooker1ViewController.xib */,
 				E253330A1A1F788D00979A13 /* Cooker2ViewController.xib */,
+				C4DFED701A5BC29600CE14A5 /* Cooker3ViewController.xib */,
 			);
 			name = Cookers;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				E248DC431A21FBB90011319C /* ic_action_alarms_white.png in Resources */,
 				E248DC3E1A21FB2E0011319C /* Roboto-Thin.ttf in Resources */,
 				E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */,
+				C4DFED711A5BC29600CE14A5 /* Cooker3ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

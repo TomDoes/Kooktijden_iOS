@@ -12,23 +12,16 @@ class CookerController: UIViewController, UIPageViewControllerDataSource {
     
     private var pageViewController: UIPageViewController?
     
-    var cooker1Controller: CookerViewController?
-    var cooker2Controller: CookerViewController?
-    
     var cookerControllers: NSMutableArray? = NSMutableArray()
-    
-    @IBOutlet var foodItem1Label: UILabel!
-    @IBOutlet var foodItem2Label: UILabel!
-    @IBOutlet var timeRemaining1Label: UILabel!
-    @IBOutlet var timeRemaining2Label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         self.title = "Cooking times"
         createPageViewController()
-        
         setupPageControl()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +41,7 @@ class CookerController: UIViewController, UIPageViewControllerDataSource {
         
         let pageController = self.storyboard!.instantiateViewControllerWithIdentifier("PageController") as UIPageViewController
         pageController.dataSource = self
-        let startingViewControllers: NSArray = [cooker1Controller!]
+        let startingViewControllers: NSArray = [cookerControllers!.objectAtIndex(0)]
         
         pageController.setViewControllers(startingViewControllers, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         
@@ -81,6 +74,14 @@ class CookerController: UIViewController, UIPageViewControllerDataSource {
         return nil
     }
     
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return cookerControllers!.count
+    }
+    
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+    
     private func setupPageControl() {
         let appearance = UIPageControl.appearance()
         appearance.pageIndicatorTintColor = UIColor.grayColor()
@@ -89,14 +90,17 @@ class CookerController: UIViewController, UIPageViewControllerDataSource {
     }
     
     private func initializeControllers(){
-        cooker1Controller = CookerViewController(nibName: "Cooker1ViewController", bundle: nil)
-        cooker2Controller = CookerViewController(nibName: "Cooker2ViewController", bundle: nil)
+        let cooker1Controller = CookerViewController(nibName: "Cooker1ViewController", bundle: nil)
+        let cooker2Controller = CookerViewController(nibName: "Cooker2ViewController", bundle: nil)
+        let cooker3Controller = CookerViewController(nibName: "Cooker3ViewController", bundle: nil)
         
-        cooker1Controller?.itemIndex = 0
-        cooker2Controller?.itemIndex = 1
+        cooker1Controller.itemIndex = 0
+        cooker2Controller.itemIndex = 1
+        cooker3Controller.itemIndex = 2
         
-        cookerControllers!.addObject(cooker1Controller!)
-        cookerControllers!.addObject(cooker2Controller!)
+        cookerControllers!.addObject(cooker1Controller)
+        cookerControllers!.addObject(cooker2Controller)
+        cookerControllers!.addObject(cooker3Controller)
     }
     
     

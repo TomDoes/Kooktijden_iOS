@@ -22,20 +22,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bAF-t7-ZTq">
-                    <rect key="frame" x="26" y="50" width="549" height="525"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAF-t7-ZTq">
+                    <rect key="frame" x="25" y="100" width="550" height="475"/>
                     <subviews>
-                        <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="cooker2" translatesAutoresizingMaskIntoConstraints="NO" id="bSH-G6-2iA" customClass="CircularProgressView" customModule="Kooktijden" customModuleProvider="target">
-                            <rect key="frame" x="193" y="306" width="162" height="162"/>
+                        <view contentMode="scaleToFill" restorationIdentifier="cooker2" translatesAutoresizingMaskIntoConstraints="NO" id="bSH-G6-2iA" customClass="CircularProgressView" customModule="Kooktijden" customModuleProvider="target">
+                            <rect key="frame" x="50" y="10" width="450" height="450"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7J-Oe-wff">
-                                    <rect key="frame" x="20" y="70" width="122" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7J-Oe-wff">
+                                    <rect key="frame" x="195" y="214" width="60" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTc-Ad-Lix">
-                                    <rect key="frame" x="17" y="50" width="129" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTc-Ad-Lix">
+                                    <rect key="frame" x="204" y="199" width="42" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
@@ -50,17 +50,17 @@
                                 <constraint firstAttribute="width" secondItem="bSH-G6-2iA" secondAttribute="height" multiplier="1:1" id="nYY-S0-qf7"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="cooker1" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-oM-Qf4" customClass="CircularProgressView" customModule="Kooktijden" customModuleProvider="target">
-                            <rect key="frame" x="193" y="72" width="162" height="162"/>
+                        <view contentMode="scaleToFill" restorationIdentifier="cooker1" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-oM-Qf4" customClass="CircularProgressView" customModule="Kooktijden" customModuleProvider="target">
+                            <rect key="frame" x="50" y="15" width="450" height="450"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh2-fI-bL6">
-                                    <rect key="frame" x="22" y="70" width="118" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh2-fI-bL6">
+                                    <rect key="frame" x="195" y="214" width="60" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiT-zB-sza">
-                                    <rect key="frame" x="15" y="52" width="133" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiT-zB-sza">
+                                    <rect key="frame" x="204" y="199" width="42" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
@@ -79,11 +79,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="ifU-oM-Qf4" firstAttribute="top" secondItem="bAF-t7-ZTq" secondAttribute="top" constant="15" id="BLx-R2-1oB"/>
-                        <constraint firstItem="ifU-oM-Qf4" firstAttribute="leading" secondItem="bAF-t7-ZTq" secondAttribute="leading" constant="40" id="CdK-sr-F9P"/>
-                        <constraint firstItem="bSH-G6-2iA" firstAttribute="leading" secondItem="bAF-t7-ZTq" secondAttribute="leading" constant="40" id="DUB-1k-KcE"/>
+                        <constraint firstItem="ifU-oM-Qf4" firstAttribute="leading" secondItem="bAF-t7-ZTq" secondAttribute="leading" constant="50" id="CdK-sr-F9P"/>
+                        <constraint firstItem="bSH-G6-2iA" firstAttribute="leading" secondItem="bAF-t7-ZTq" secondAttribute="leading" constant="50" id="DUB-1k-KcE"/>
                         <constraint firstAttribute="bottom" secondItem="bSH-G6-2iA" secondAttribute="bottom" constant="15" id="Gxz-ab-0yE"/>
-                        <constraint firstAttribute="trailing" secondItem="bSH-G6-2iA" secondAttribute="trailing" constant="40" id="M4Y-e2-bH6"/>
-                        <constraint firstAttribute="trailing" secondItem="ifU-oM-Qf4" secondAttribute="trailing" constant="40" id="mnp-P1-jue"/>
+                        <constraint firstAttribute="trailing" secondItem="bSH-G6-2iA" secondAttribute="trailing" constant="50" id="M4Y-e2-bH6"/>
+                        <constraint firstAttribute="trailing" secondItem="ifU-oM-Qf4" secondAttribute="trailing" constant="50" id="mnp-P1-jue"/>
                     </constraints>
                 </view>
             </subviews>

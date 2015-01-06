@@ -17,6 +17,8 @@ class CookerViewController: UIViewController, StartTimerDelegate {
     
     var timer1: Timer?
     var timer2: Timer?
+    var timer3: Timer?
+    var timer4: Timer?
     
     @IBOutlet var cooker: UIView!
     
@@ -27,21 +29,13 @@ class CookerViewController: UIViewController, StartTimerDelegate {
     
     @IBOutlet var timer1ProgessView: CircularProgressView!
     @IBOutlet var timer2ProgessView: CircularProgressView!
+    @IBOutlet var timer3ProgessView: CircularProgressView!
+    @IBOutlet var timer4ProgessView: CircularProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.cooker.layer.borderWidth = 2
-        self.cooker.layer.borderColor = UIColor.lightGrayColor().CGColor
-        self.cooker.layer.cornerRadius = 5
-        
-        if (self.timer1ProgessView != nil) {
-            setUpCircleProgressView(self.timer1ProgessView!)
-        }
-        
-        if (self.timer2ProgessView != nil) {
-            setUpCircleProgressView(self.timer2ProgessView!)
-        }
+        setUpLayout()
         
     }
     
@@ -97,14 +91,41 @@ class CookerViewController: UIViewController, StartTimerDelegate {
         self.navigationController?.pushViewController(foodListViewController, animated: true)
     }
     
-    func setUpCircleProgressView(circleProgessView: CircularProgressView) {
-        circleProgessView.progress = 1
-        circleProgessView.clockwise = false
-        circleProgessView.trackWidth = 5
-        circleProgessView.trackBackgroundColor = UIColor.lightGrayColor()
-        circleProgessView.trackFillColor = UIColor.kooktijdenGreenColor()
-        circleProgessView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tappedCooker:"))
-        circleProgessView.userInteractionEnabled = true
+    func setUpLayout(){
+        self.cooker.layer.borderWidth = 2
+        self.cooker.layer.borderColor = UIColor.lightGrayColor().CGColor
+        self.cooker.layer.cornerRadius = 5
+        
+        setUpCircleProgressView(self.timer1ProgessView)
+        setUpCircleProgressView(self.timer2ProgessView)
+        setUpCircleProgressView(self.timer3ProgessView)
+        setUpCircleProgressView(self.timer4ProgessView)
+        
+        setFont(self.foodItem1Label)
+        setFont(self.foodItem2Label)
+        setFont(self.timeRemaining1Label)
+        setFont(self.timeRemaining2Label)
+
+
+    }
+    
+    func setFont(label: UILabel?) {
+        if label != nil {
+            label!.font = UIFont(name: "Roboto-Light", size: 20)!
+        }
+    }
+    
+    func setUpCircleProgressView(circleProgessView: CircularProgressView?) {
+        if circleProgessView != nil {
+            circleProgessView!.progress = 1
+            circleProgessView!.clockwise = false
+            circleProgessView!.trackWidth = 5
+            circleProgessView!.trackBackgroundColor = UIColor.lightGrayColor()
+            circleProgessView!.trackFillColor = UIColor.kooktijdenGreenColor()
+            circleProgessView!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tappedCooker:"))
+            circleProgessView!.userInteractionEnabled = true
+        }
+
     }
     
 }
