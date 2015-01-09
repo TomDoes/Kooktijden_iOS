@@ -25,8 +25,8 @@ class Timer {
     let notificationCenter = NSNotificationCenter.defaultCenter()
     
     init(foodItem: FoodItem, handler: (Int) -> ()) {
-        self.duration = foodItem.cookingTimeMax * 60
-//        self.duration = 15 // Handig voor testen
+//        self.duration = foodItem.cookingTimeMax * 60
+        self.duration = 15 // Handig voor testen
         self.handler = handler
         self.foodItem = foodItem
     }
@@ -53,8 +53,8 @@ class Timer {
             self.stop()
             
             let alert = UIAlertView()
-            alert.title = "Food Cooked!"
-            alert.message = "Here's a message"
+            alert.title = foodItem.nameEN + " cooked!"
+            alert.message = ""
             alert.addButtonWithTitle("Ok")
             alert.show()
             

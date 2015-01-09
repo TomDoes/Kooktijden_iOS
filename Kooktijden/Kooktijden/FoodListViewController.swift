@@ -9,7 +9,7 @@
 import UIKit
 
 protocol StartTimerDelegate {
-    func startTimer(foodItem:FoodItem, timer:String)
+    func startTimer(foodItem:FoodItem)
 }
 
 class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -81,7 +81,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func setTimerBtnPressed(sender: UIButton!) {
         if (delegate != nil) {
-            delegate!.startTimer(self.foodItems[sender.tag], timer: self.timer!)
+            delegate!.startTimer(self.foodItems[sender.tag])
             self.navigationController?.popToRootViewControllerAnimated(true)
         }
 

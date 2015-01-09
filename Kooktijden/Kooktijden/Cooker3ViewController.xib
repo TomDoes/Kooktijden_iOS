@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6254"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
@@ -9,14 +9,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CookerViewController" customModule="Kooktijden" customModuleProvider="target">
             <connections>
                 <outlet property="cooker" destination="Uad-2O-vOq" id="wgx-m9-NJg"/>
-                <outlet property="foodItem1Label" destination="bdZ-r9-uEV" id="F1d-dE-cRO"/>
-                <outlet property="foodItem2Label" destination="98N-WU-tIi" id="9ed-Dl-3Hp"/>
-                <outlet property="timeRemaining1Label" destination="tsf-Zz-98I" id="Lod-R8-Bip"/>
-                <outlet property="timeRemaining2Label" destination="eqb-Wo-50H" id="nEm-FU-5K5"/>
-                <outlet property="timer1ProgessView" destination="fjZ-Mm-1tL" id="tTH-DD-qUP"/>
-                <outlet property="timer2ProgessView" destination="ez8-Rb-b1F" id="d2C-B2-hxE"/>
-                <outlet property="timer3ProgessView" destination="EUg-2l-J3M" id="lmW-RD-fLY"/>
-                <outlet property="timer4ProgessView" destination="dCr-RT-czh" id="wcx-h0-FEB"/>
+                <outlet property="stove1" destination="fjZ-Mm-1tL" id="5j7-1G-MNp"/>
+                <outlet property="stove2" destination="ez8-Rb-b1F" id="rJv-2H-3Qe"/>
+                <outlet property="stove3" destination="EUg-2l-J3M" id="8tz-uB-qFt"/>
+                <outlet property="stove4" destination="dCr-RT-czh" id="UrY-WN-H9Y"/>
                 <outlet property="view" destination="zs1-wz-WG7" id="anx-ac-Uo9"/>
             </connections>
         </placeholder>
@@ -25,109 +21,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uad-2O-vOq">
-                    <rect key="frame" x="25" y="63" width="550" height="475"/>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uad-2O-vOq">
                     <subviews>
-                        <view contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="cooker1" translatesAutoresizingMaskIntoConstraints="NO" id="fjZ-Mm-1tL" customClass="CircularProgressView" customModule="Kooktijden" customModuleProvider="target">
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsf-Zz-98I">
-                                    <rect key="frame" x="195" y="214" width="60" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdZ-r9-uEV">
-                                    <rect key="frame" x="203" y="199" width="42" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="cooker1" translatesAutoresizingMaskIntoConstraints="NO" id="fjZ-Mm-1tL">
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="centerX" secondItem="tsf-Zz-98I" secondAttribute="centerX" id="8GS-EI-O9r"/>
-                                <constraint firstAttribute="centerY" secondItem="bdZ-r9-uEV" secondAttribute="centerY" constant="15" id="dSJ-ST-Rm6"/>
-                                <constraint firstAttribute="centerY" secondItem="tsf-Zz-98I" secondAttribute="centerY" id="dVj-er-ZZj"/>
-                                <constraint firstItem="bdZ-r9-uEV" firstAttribute="centerX" secondItem="tsf-Zz-98I" secondAttribute="centerX" id="ipC-jy-rRk"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="subviews">
-                                    <exclude reference="tsf-Zz-98I"/>
-                                    <exclude reference="bdZ-r9-uEV"/>
-                                </mask>
-                                <mask key="constraints">
-                                    <exclude reference="dSJ-ST-Rm6"/>
-                                    <exclude reference="ipC-jy-rRk"/>
-                                    <exclude reference="8GS-EI-O9r"/>
-                                    <exclude reference="dVj-er-ZZj"/>
-                                </mask>
-                            </variation>
-                            <variation key="widthClass=compact">
-                                <mask key="subviews">
-                                    <include reference="tsf-Zz-98I"/>
-                                    <include reference="bdZ-r9-uEV"/>
-                                </mask>
-                                <mask key="constraints">
-                                    <include reference="dSJ-ST-Rm6"/>
-                                    <include reference="ipC-jy-rRk"/>
-                                    <include reference="8GS-EI-O9r"/>
-                                    <include reference="dVj-er-ZZj"/>
-                                </mask>
-                            </variation>
                         </view>
-                        <view contentMode="scaleToFill" restorationIdentifier="cooker2" translatesAutoresizingMaskIntoConstraints="NO" id="ez8-Rb-b1F" customClass="CircularProgressView" customModule="Kooktijden" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98N-WU-tIi">
-                                    <rect key="frame" x="203" y="199" width="42" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqb-Wo-50H">
-                                    <rect key="frame" x="195" y="214" width="60" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="centerX" secondItem="eqb-Wo-50H" secondAttribute="centerX" id="E1y-4v-22k"/>
-                                <constraint firstAttribute="centerY" secondItem="eqb-Wo-50H" secondAttribute="centerY" id="Zq2-qu-J8j"/>
-                                <constraint firstAttribute="centerX" secondItem="98N-WU-tIi" secondAttribute="centerX" id="kpm-1w-wgl"/>
-                                <constraint firstAttribute="centerY" secondItem="98N-WU-tIi" secondAttribute="centerY" constant="15" id="yip-XI-bpV"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="subviews">
-                                    <exclude reference="98N-WU-tIi"/>
-                                    <exclude reference="eqb-Wo-50H"/>
-                                </mask>
-                                <mask key="constraints">
-                                    <exclude reference="kpm-1w-wgl"/>
-                                    <exclude reference="yip-XI-bpV"/>
-                                    <exclude reference="E1y-4v-22k"/>
-                                    <exclude reference="Zq2-qu-J8j"/>
-                                </mask>
-                            </variation>
-                            <variation key="widthClass=compact">
-                                <mask key="subviews">
-                                    <include reference="98N-WU-tIi"/>
-                                    <include reference="eqb-Wo-50H"/>
-                                </mask>
-                                <mask key="constraints">
-                                    <include reference="kpm-1w-wgl"/>
-                                    <include reference="yip-XI-bpV"/>
-                                    <include reference="E1y-4v-22k"/>
-                                    <include reference="Zq2-qu-J8j"/>
-                                </mask>
-                            </variation>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUg-2l-J3M" customClass="CircularProgressView" customModule="Kooktijden" customModuleProvider="target">
+                        <view contentMode="scaleToFill" restorationIdentifier="cooker2" translatesAutoresizingMaskIntoConstraints="NO" id="ez8-Rb-b1F">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCr-RT-czh" customClass="CircularProgressView" customModule="Kooktijden" customModuleProvider="target">
+                        <view contentMode="scaleToFill" restorationIdentifier="cooker3" translatesAutoresizingMaskIntoConstraints="NO" id="EUg-2l-J3M">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" restorationIdentifier="cooker4" translatesAutoresizingMaskIntoConstraints="NO" id="dCr-RT-czh">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>

@@ -18,7 +18,7 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     
     @IBAction func setTimer(sender: AnyObject) {
-        delegate!.startTimer(self.foodItem, timer: self.timer!)
+        delegate!.startTimer(self.foodItem)
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
@@ -38,8 +38,7 @@ class FoodDetailViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         animateViews()
-        
-
+    
     }
 
     override func didReceiveMemoryWarning() {

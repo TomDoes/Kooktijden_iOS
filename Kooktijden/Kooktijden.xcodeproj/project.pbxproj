@@ -12,9 +12,13 @@
 		C403C1091A0D1DEB00AFCEB6 /* foods.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C403C1071A0D10D300AFCEB6 /* foods.sqlite */; };
 		C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */; };
 		C41D15111A16633C004CAB4B /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C41D15101A16633C004CAB4B /* sound.wav */; };
+		C42779EE1A5EEC6E00BF62F8 /* StoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42779EC1A5EEC6E00BF62F8 /* StoveViewController.swift */; };
+		C42779EF1A5EEC6E00BF62F8 /* StoveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42779ED1A5EEC6E00BF62F8 /* StoveViewController.xib */; };
 		C42ABB801A56C19D000B8548 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42ABB7F1A56C19D000B8548 /* CircleProgressView.swift */; };
 		C4DF022A1A12025D00C31848 /* CookerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF02291A12025D00C31848 /* CookerController.swift */; };
 		C4DFED711A5BC29600CE14A5 /* Cooker3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DFED701A5BC29600CE14A5 /* Cooker3ViewController.xib */; };
+		C4DFED741A5C692500CE14A5 /* CookerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFED721A5C692500CE14A5 /* CookerDetailViewController.swift */; };
+		C4DFED751A5C692500CE14A5 /* CookerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DFED731A5C692500CE14A5 /* CookerDetailViewController.xib */; };
 		C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC72C01A0FCF74005708DC /* Timer.swift */; };
 		E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01AF1A0F6D7F00A87561 /* Extensions.swift */; };
 		E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */; };
@@ -67,9 +71,13 @@
 		C403C1071A0D10D300AFCEB6 /* foods.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = foods.sqlite; sourceTree = "<group>"; };
 		C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		C41D15101A16633C004CAB4B /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
+		C42779EC1A5EEC6E00BF62F8 /* StoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoveViewController.swift; sourceTree = "<group>"; };
+		C42779ED1A5EEC6E00BF62F8 /* StoveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoveViewController.xib; sourceTree = "<group>"; };
 		C42ABB7F1A56C19D000B8548 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		C4DF02291A12025D00C31848 /* CookerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookerController.swift; path = ../CookerController.swift; sourceTree = "<group>"; };
 		C4DFED701A5BC29600CE14A5 /* Cooker3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cooker3ViewController.xib; sourceTree = "<group>"; };
+		C4DFED721A5C692500CE14A5 /* CookerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookerDetailViewController.swift; sourceTree = "<group>"; };
+		C4DFED731A5C692500CE14A5 /* CookerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookerDetailViewController.xib; sourceTree = "<group>"; };
 		C4EC72C01A0FCF74005708DC /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		E20C01AF1A0F6D7F00A87561 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -185,6 +193,8 @@
 				C403C1021A0D07FE00AFCEB6 /* DataSource.swift */,
 				C403C1041A0D08BB00AFCEB6 /* FoodItem.swift */,
 				C4EC72C01A0FCF74005708DC /* Timer.swift */,
+				C4DFED721A5C692500CE14A5 /* CookerDetailViewController.swift */,
+				C4DFED731A5C692500CE14A5 /* CookerDetailViewController.xib */,
 			);
 			path = Kooktijden;
 			sourceTree = "<group>";
@@ -224,6 +234,8 @@
 				E25333071A1F781600979A13 /* Cooker1ViewController.xib */,
 				E253330A1A1F788D00979A13 /* Cooker2ViewController.xib */,
 				C4DFED701A5BC29600CE14A5 /* Cooker3ViewController.xib */,
+				C42779EC1A5EEC6E00BF62F8 /* StoveViewController.swift */,
+				C42779ED1A5EEC6E00BF62F8 /* StoveViewController.xib */,
 			);
 			name = Cookers;
 			sourceTree = "<group>";
@@ -325,12 +337,14 @@
 				E24F015D1A0CF8E200372AE5 /* Images.xcassets in Resources */,
 				E2EFE5EC1A52C3B0001C45A2 /* icons.xcassets in Resources */,
 				E25333091A1F781600979A13 /* Cooker1ViewController.xib in Resources */,
+				C42779EF1A5EEC6E00BF62F8 /* StoveViewController.xib in Resources */,
 				C41D15111A16633C004CAB4B /* sound.wav in Resources */,
 				E253330B1A1F788D00979A13 /* Cooker2ViewController.xib in Resources */,
 				E248DC3D1A21FB2E0011319C /* Roboto-Medium.ttf in Resources */,
 				E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */,
 				E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */,
 				E248DC431A21FBB90011319C /* ic_action_alarms_white.png in Resources */,
+				C4DFED751A5C692500CE14A5 /* CookerDetailViewController.xib in Resources */,
 				E248DC3E1A21FB2E0011319C /* Roboto-Thin.ttf in Resources */,
 				E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */,
 				C4DFED711A5BC29600CE14A5 /* Cooker3ViewController.xib in Resources */,
@@ -357,11 +371,13 @@
 				E25333081A1F781600979A13 /* CookerViewController.swift in Sources */,
 				C403C1051A0D08BB00AFCEB6 /* FoodItem.swift in Sources */,
 				C42ABB801A56C19D000B8548 /* CircleProgressView.swift in Sources */,
+				C4DFED741A5C692500CE14A5 /* CookerDetailViewController.swift in Sources */,
 				C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */,
 				C403C1031A0D07FE00AFCEB6 /* DataSource.swift in Sources */,
 				E24F01581A0CF8E200372AE5 /* ViewController.swift in Sources */,
 				C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */,
 				E24F01561A0CF8E200372AE5 /* AppDelegate.swift in Sources */,
+				C42779EE1A5EEC6E00BF62F8 /* StoveViewController.swift in Sources */,
 				E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
