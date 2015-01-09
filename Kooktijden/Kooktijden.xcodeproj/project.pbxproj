@@ -29,7 +29,6 @@
 		E248DC411A21FB720011319C /* ic_action_alarms.png in Resources */ = {isa = PBXBuildFile; fileRef = E248DC401A21FB720011319C /* ic_action_alarms.png */; };
 		E248DC431A21FBB90011319C /* ic_action_alarms_white.png in Resources */ = {isa = PBXBuildFile; fileRef = E248DC421A21FBB90011319C /* ic_action_alarms_white.png */; };
 		E24F01561A0CF8E200372AE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F01551A0CF8E200372AE5 /* AppDelegate.swift */; };
-		E24F01581A0CF8E200372AE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F01571A0CF8E200372AE5 /* ViewController.swift */; };
 		E24F015B1A0CF8E200372AE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24F01591A0CF8E200372AE5 /* Main.storyboard */; };
 		E24F015D1A0CF8E200372AE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24F015C1A0CF8E200372AE5 /* Images.xcassets */; };
 		E24F01601A0CF8E200372AE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24F015E1A0CF8E200372AE5 /* LaunchScreen.xib */; };
@@ -90,7 +89,6 @@
 		E24F01501A0CF8E200372AE5 /* Kooktijden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooktijden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24F01541A0CF8E200372AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E24F01551A0CF8E200372AE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E24F01571A0CF8E200372AE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E24F015A1A0CF8E200372AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E24F015C1A0CF8E200372AE5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E24F015F1A0CF8E200372AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				E24F01551A0CF8E200372AE5 /* AppDelegate.swift */,
-				E24F01571A0CF8E200372AE5 /* ViewController.swift */,
 				C4DF02291A12025D00C31848 /* CookerController.swift */,
 				C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */,
 				E253D3831A1F98B000893D16 /* FoodListViewController.xib */,
@@ -374,7 +371,6 @@
 				C4DFED741A5C692500CE14A5 /* CookerDetailViewController.swift in Sources */,
 				C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */,
 				C403C1031A0D07FE00AFCEB6 /* DataSource.swift in Sources */,
-				E24F01581A0CF8E200372AE5 /* ViewController.swift in Sources */,
 				C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */,
 				E24F01561A0CF8E200372AE5 /* AppDelegate.swift in Sources */,
 				C42779EE1A5EEC6E00BF62F8 /* StoveViewController.swift in Sources */,

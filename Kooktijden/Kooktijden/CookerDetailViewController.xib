@@ -2,10 +2,17 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CookerDetailViewController" customModule="Kooktijden" customModuleProvider="target">
             <connections>
+                <outlet property="circularProgessView" destination="zeF-xZ-4Rv" id="yF6-Kw-FkP"/>
+                <outlet property="cooker" destination="ENq-ss-bmU" id="Pr4-hM-2IG"/>
+                <outlet property="foodItemLabel" destination="Obl-rP-EJz" id="ZAE-Jw-kgv"/>
+                <outlet property="pauseBtn" destination="reZ-g4-hqR" id="TpI-GL-tdF"/>
+                <outlet property="timeRemainingLabel" destination="y5V-v8-gxr" id="ivC-KP-J18"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +20,126 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENq-ss-bmU">
+                    <rect key="frame" x="20" y="20" width="560" height="560"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeF-xZ-4Rv" customClass="CircularProgressView" customModule="Kooktijden" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5V-v8-gxr">
+                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reZ-g4-hqR">
+                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="pauseBtn:" destination="-1" eventType="touchUpInside" id="BZH-rS-UVr"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="centerX" secondItem="reZ-g4-hqR" secondAttribute="centerX" id="CWh-V9-1VD"/>
+                                <constraint firstAttribute="centerX" secondItem="y5V-v8-gxr" secondAttribute="centerX" id="LOX-Nr-XlT"/>
+                                <constraint firstAttribute="width" secondItem="zeF-xZ-4Rv" secondAttribute="height" multiplier="1:1" id="TCt-f9-2Ap"/>
+                                <constraint firstAttribute="centerY" secondItem="y5V-v8-gxr" secondAttribute="centerY" multiplier="1:1.5" id="mjJ-tX-bEr"/>
+                                <constraint firstAttribute="centerY" secondItem="reZ-g4-hqR" secondAttribute="centerY" id="uTj-bp-hhc"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="y5V-v8-gxr"/>
+                                    <exclude reference="reZ-g4-hqR"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <exclude reference="TCt-f9-2Ap"/>
+                                    <exclude reference="CWh-V9-1VD"/>
+                                    <exclude reference="uTj-bp-hhc"/>
+                                    <exclude reference="LOX-Nr-XlT"/>
+                                    <exclude reference="mjJ-tX-bEr"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular">
+                                <mask key="subviews">
+                                    <include reference="y5V-v8-gxr"/>
+                                    <include reference="reZ-g4-hqR"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <include reference="TCt-f9-2Ap"/>
+                                    <include reference="CWh-V9-1VD"/>
+                                    <include reference="uTj-bp-hhc"/>
+                                    <include reference="LOX-Nr-XlT"/>
+                                    <include reference="mjJ-tX-bEr"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="zeF-xZ-4Rv" firstAttribute="leading" secondItem="ENq-ss-bmU" secondAttribute="leading" constant="25" id="HYl-r4-s0g"/>
+                        <constraint firstAttribute="centerX" secondItem="zeF-xZ-4Rv" secondAttribute="centerX" id="S6z-2I-LJ6"/>
+                        <constraint firstAttribute="centerY" secondItem="zeF-xZ-4Rv" secondAttribute="centerY" id="cab-3y-Dns"/>
+                        <constraint firstAttribute="width" secondItem="ENq-ss-bmU" secondAttribute="height" multiplier="1:1" id="d4O-yn-E10"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="zeF-xZ-4Rv"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="HYl-r4-s0g"/>
+                            <exclude reference="S6z-2I-LJ6"/>
+                            <exclude reference="cab-3y-Dns"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="subviews">
+                            <include reference="zeF-xZ-4Rv"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="HYl-r4-s0g"/>
+                            <include reference="S6z-2I-LJ6"/>
+                            <include reference="cab-3y-Dns"/>
+                        </mask>
+                    </variation>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-rP-EJz">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="ENq-ss-bmU" secondAttribute="centerX" id="V5e-pc-QlO"/>
+                <constraint firstItem="ENq-ss-bmU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="dS7-YT-dCl"/>
+                <constraint firstAttribute="centerY" secondItem="ENq-ss-bmU" secondAttribute="centerY" id="j21-ca-Wet"/>
+                <constraint firstItem="Obl-rP-EJz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="lO5-B3-5UP"/>
+                <constraint firstItem="Obl-rP-EJz" firstAttribute="centerX" secondItem="ENq-ss-bmU" secondAttribute="centerX" id="naC-wH-kKN"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="Obl-rP-EJz"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="lO5-B3-5UP"/>
+                    <exclude reference="naC-wH-kKN"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="subviews">
+                    <include reference="Obl-rP-EJz"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="lO5-B3-5UP"/>
+                    <include reference="naC-wH-kKN"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

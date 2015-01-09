@@ -26,6 +26,17 @@ class StoveViewController: UIViewController, StartTimerDelegate {
         setUpLayout()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        if timer != nil && timer?.timeRemaining != 0 {
+            self.timeRemainingLabel.text = makeTimeLabel(self.timer!.timeRemaining)
+            self.timer!.handler = self.handleTimer
+        }
+        else {
+            timeRemainingLabel.text = "Choose"
+            timerProgessView.progress = 1
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -63,12 +74,13 @@ class StoveViewController: UIViewController, StartTimerDelegate {
     }
     
     func cookerTap(sender: UITapGestureRecognizer){
-        if timer == nil {
-            foodListViewController.delegate = self
-            self.navigationController?.pushViewController(foodListViewController, animated: true)
+        if timer != nil && timer?.timeRemaining != 0 {
+            cookerDetailViewController.timer = timer
+            self.navigationController?.pushViewController(cookerDetailViewController, animated: true)
         }
         else {
-            self.navigationController?.pushViewController(cookerDetailViewController, animated: true)
+            foodListViewController.delegate = self
+            self.navigationController?.pushViewController(foodListViewController, animated: true)
         }
         
     }
