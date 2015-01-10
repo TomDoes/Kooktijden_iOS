@@ -25,8 +25,8 @@ class Timer {
     let notificationCenter = NSNotificationCenter.defaultCenter()
     
     init(foodItem: FoodItem, handler: (Int) -> ()) {
-//        self.duration = foodItem.cookingTimeMax * 60
-        self.duration = 15 // Handig voor testen
+        self.duration = foodItem.cookingTimeMax * 60
+//        self.duration = 15 // Handig voor testen
         self.handler = handler
         self.foodItem = foodItem
     }

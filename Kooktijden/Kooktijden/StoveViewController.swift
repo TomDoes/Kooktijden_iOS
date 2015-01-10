@@ -81,6 +81,7 @@ class StoveViewController: UIViewController, TimerDelegate {
     
     func deleteTimer() {
         self.foodItemLabel.text = ""
+        self.timer!.stop()
         self.timer = nil
     }
     
