@@ -51,6 +51,7 @@ class Timer {
         
         if self.elapsedTime == self.duration {
             self.stop()
+            self.elapsedTime = 0
             
             let alert = UIAlertView()
             alert.title = foodItem.nameEN + " cooked!"

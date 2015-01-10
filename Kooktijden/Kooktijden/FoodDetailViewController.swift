@@ -22,7 +22,7 @@ class FoodDetailViewController: UIViewController {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
-    var delegate:StartTimerDelegate? = nil
+    var delegate: TimerDelegate? = nil
     
     var foodItem: FoodItem!
     var timer: String?

@@ -8,13 +8,10 @@
 
 import UIKit
 
-protocol StartTimerDelegate {
-    func startTimer(foodItem:FoodItem)
-}
 
 class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var delegate:StartTimerDelegate? = nil
+    var delegate: TimerDelegate? = nil
     var timer: String?
     
     @IBOutlet weak var foodListTableView: UITableView!

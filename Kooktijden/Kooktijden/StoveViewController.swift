@@ -6,10 +6,15 @@
 //  Copyright (c) 2015 De appothekers. All rights reserved.
 //
 
+protocol TimerDelegate {
+    func startTimer(foodItem:FoodItem)
+    func deleteTimer()
+}
+
 import UIKit
 import QuartzCore
 
-class StoveViewController: UIViewController, StartTimerDelegate {
+class StoveViewController: UIViewController, TimerDelegate {
     
     var foodListViewController: FoodListViewController = FoodListViewController(nibName: "FoodListViewController", bundle: nil)
     var cookerDetailViewController: CookerDetailViewController = CookerDetailViewController(nibName: "CookerDetailViewController", bundle: nil)
@@ -26,9 +31,10 @@ class StoveViewController: UIViewController, StartTimerDelegate {
         setUpLayout()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         if timer != nil && timer?.timeRemaining != 0 {
             self.timeRemainingLabel.text = makeTimeLabel(self.timer!.timeRemaining)
+            self.timerProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax * 60)
             self.timer!.handler = self.handleTimer
         }
         else {
@@ -73,8 +79,14 @@ class StoveViewController: UIViewController, StartTimerDelegate {
         timer!.start()
     }
     
-    func cookerTap(sender: UITapGestureRecognizer){
-        if timer != nil && timer?.timeRemaining != 0 {
+    func deleteTimer() {
+        self.foodItemLabel.text = ""
+        self.timer = nil
+    }
+    
+    func cookerTap(sender: UITapGestureRecognizer) {
+        if timer != nil {
+            cookerDetailViewController.timerDelegate = self
             cookerDetailViewController.timer = timer
             self.navigationController?.pushViewController(cookerDetailViewController, animated: true)
         }
@@ -88,6 +100,7 @@ class StoveViewController: UIViewController, StartTimerDelegate {
     func setUpLayout(){
         setUpCircleProgressView(self.timerProgessView)
         
+        self.foodItemLabel.text = ""
         self.foodItemLabel.font = UIFont(name: "Roboto-Light", size: 20)
         self.timeRemainingLabel.font = UIFont(name: "Roboto-Light", size: 20)
 

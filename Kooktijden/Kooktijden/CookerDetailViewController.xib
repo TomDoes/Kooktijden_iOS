@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="circularProgessView" destination="zeF-xZ-4Rv" id="yF6-Kw-FkP"/>
                 <outlet property="cooker" destination="ENq-ss-bmU" id="Pr4-hM-2IG"/>
+                <outlet property="deleteBtn" destination="YZg-Kh-e2v" id="MaL-9j-RJr"/>
                 <outlet property="foodItemLabel" destination="Obl-rP-EJz" id="ZAE-Jw-kgv"/>
                 <outlet property="pauseBtn" destination="reZ-g4-hqR" id="TpI-GL-tdF"/>
                 <outlet property="timeRemainingLabel" destination="y5V-v8-gxr" id="ivC-KP-J18"/>
@@ -113,31 +114,48 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZg-Kh-e2v">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="deleteBtn:" destination="-1" eventType="touchUpInside" id="QOA-Uj-AWF"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="YZg-Kh-e2v" firstAttribute="top" secondItem="Obl-rP-EJz" secondAttribute="bottom" id="AMe-o9-Emu"/>
                 <constraint firstAttribute="centerX" secondItem="ENq-ss-bmU" secondAttribute="centerX" id="V5e-pc-QlO"/>
                 <constraint firstItem="ENq-ss-bmU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="dS7-YT-dCl"/>
                 <constraint firstAttribute="centerY" secondItem="ENq-ss-bmU" secondAttribute="centerY" id="j21-ca-Wet"/>
+                <constraint firstAttribute="centerX" secondItem="YZg-Kh-e2v" secondAttribute="centerX" id="kFW-Yt-E6P"/>
                 <constraint firstItem="Obl-rP-EJz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="lO5-B3-5UP"/>
                 <constraint firstItem="Obl-rP-EJz" firstAttribute="centerX" secondItem="ENq-ss-bmU" secondAttribute="centerX" id="naC-wH-kKN"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="Obl-rP-EJz"/>
+                    <exclude reference="YZg-Kh-e2v"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="lO5-B3-5UP"/>
                     <exclude reference="naC-wH-kKN"/>
+                    <exclude reference="AMe-o9-Emu"/>
+                    <exclude reference="kFW-Yt-E6P"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
                 <mask key="subviews">
                     <include reference="Obl-rP-EJz"/>
+                    <include reference="YZg-Kh-e2v"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="lO5-B3-5UP"/>
                     <include reference="naC-wH-kKN"/>
+                    <include reference="AMe-o9-Emu"/>
+                    <include reference="kFW-Yt-E6P"/>
                 </mask>
             </variation>
         </view>

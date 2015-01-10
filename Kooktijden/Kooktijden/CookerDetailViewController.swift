@@ -18,28 +18,41 @@ class CookerDetailViewController: UIViewController {
     @IBOutlet var foodItemLabel: UILabel!
     
     @IBOutlet var pauseBtn: UIButton!
+    @IBOutlet var deleteBtn: UIButton!
     
     @IBAction func pauseBtn(sender: UIButton) {
         if timer!.timer.valid {
             self.timer!.stop()
+            self.pauseBtn.setTitle("Start!", forState: .Normal)
         }
         else {
             self.timer!.start()
+            self.pauseBtn.setTitle("Pauz!", forState: .Normal)
         }
     }
     
+    @IBAction func deleteBtn(sender: UIButton) {
+        self.timerDelegate?.deleteTimer()
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    var timerDelegate: TimerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.timer!.handler = handleTimer
+
+        self.timeRemainingLabel.text = makeTimeLabel(timer!.timeRemaining)
+        self.circularProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax * 60)
         
         setUpLayout()
 
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         self.timer!.handler = handleTimer
+        self.timeRemainingLabel.text = makeTimeLabel(timer!.timeRemaining)
+        self.circularProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax * 60)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +61,9 @@ class CookerDetailViewController: UIViewController {
     }
     
     func setUpLayout() {
+        self.pauseBtn.setTitle("Pauz!", forState: .Normal)
+        self.deleteBtn.setTitle("Delete", forState: .Normal)
+        
         self.cooker.layer.borderWidth = 2
         self.cooker.layer.borderColor = UIColor.lightGrayColor().CGColor
         self.cooker.layer.cornerRadius = 15
@@ -61,7 +77,6 @@ class CookerDetailViewController: UIViewController {
     }
 
     func setUpCircleProgressView(circleProgessView: CircularProgressView?) {
-        circleProgessView!.progress = 1
         circleProgessView!.clockwise = false
         circleProgessView!.trackWidth = 10
         circleProgessView!.trackBackgroundColor = UIColor.lightGrayColor()
