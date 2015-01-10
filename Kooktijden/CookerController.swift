@@ -93,14 +93,17 @@ class CookerController: UIViewController, UIPageViewControllerDataSource {
         var cooker1Controller = CookerViewController(nibName: "Cooker1ViewController", bundle: nil)
         var cooker2Controller = CookerViewController(nibName: "Cooker2ViewController", bundle: nil)
         var cooker3Controller = CookerViewController(nibName: "Cooker3ViewController", bundle: nil)
+        var cooker4Controller = CookerViewController(nibName: "Cooker4ViewController", bundle: nil)
         
         cooker1Controller.itemIndex = 0
         cooker2Controller.itemIndex = 1
         cooker3Controller.itemIndex = 2
+        cooker4Controller.itemIndex = 3
         
         cookerControllers.append(cooker1Controller)
         cookerControllers.append(cooker2Controller)
         cookerControllers.append(cooker3Controller)
+        cookerControllers.append(cooker4Controller)
     }
     
     

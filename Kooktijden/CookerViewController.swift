@@ -18,6 +18,7 @@ class CookerViewController: UIViewController {
     @IBOutlet var stove2: UIView!
     @IBOutlet var stove3: UIView!
     @IBOutlet var stove4: UIView!
+    @IBOutlet var stove5: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,7 @@ class CookerViewController: UIViewController {
         addViewToStove(stove2)
         addViewToStove(stove3)
         addViewToStove(stove4)
+        addViewToStove(stove5)
 
     }
     
