@@ -2,11 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="78y-ld-lxb" customClass="FoodItemTableViewCell" customModule="Kooktijden" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="78y-ld-lxb" customClass="FoodItemTableViewCell" customModule="Kooktijden" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="78y-ld-lxb" id="cCa-Mq-m1h">
@@ -18,20 +19,29 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" placeholderIntrinsicWidth="25" placeholderIntrinsicHeight="25" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTg-f4-c21">
-                        <rect key="frame" x="287" y="20" width="25" height="25"/>
-                        <state key="normal" image="ic_action_alarms.png">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iy7-5O-ecH">
                         <rect key="frame" x="49" y="22" width="230" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="25" placeholderIntrinsicHeight="25" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTg-f4-c21">
+                        <rect key="frame" x="270" y="17" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="cbr-M8-Qtl"/>
+                            <constraint firstAttribute="height" constant="32" id="p2v-5e-nfa"/>
+                        </constraints>
+                        <state key="normal" image="ic_action_alarms.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="eTg-f4-c21" secondAttribute="trailing" constant="10" id="93f-pd-vEE"/>
+                    <constraint firstAttribute="centerY" secondItem="eTg-f4-c21" secondAttribute="centerY" id="hcm-7E-DRh"/>
+                </constraints>
             </tableViewCellContentView>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
             <connections>
                 <outlet property="firstLetterImage" destination="d1D-nS-2Y5" id="ot6-WD-1Dv"/>
                 <outlet property="foodItemLabel" destination="Iy7-5O-ecH" id="X7g-Bo-22V"/>

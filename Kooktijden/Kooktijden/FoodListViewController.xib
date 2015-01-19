@@ -15,9 +15,18 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VlA-G2-MF0">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VlA-G2-MF0">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="600" id="tWT-h4-abD"/>
+                    </constraints>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="tWT-h4-abD"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="lDV-ry-eHe"/>
                         <outlet property="delegate" destination="-1" id="tfk-bi-C3m"/>
@@ -25,6 +34,12 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VlA-G2-MF0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="90z-tO-b6w"/>
+                <constraint firstAttribute="bottom" secondItem="VlA-G2-MF0" secondAttribute="bottom" id="JMv-xo-Ghj"/>
+                <constraint firstItem="VlA-G2-MF0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mOb-hb-n3W"/>
+                <constraint firstAttribute="trailing" secondItem="VlA-G2-MF0" secondAttribute="trailing" id="oNp-2u-4Ga"/>
+            </constraints>
         </view>
     </objects>
 </document>
