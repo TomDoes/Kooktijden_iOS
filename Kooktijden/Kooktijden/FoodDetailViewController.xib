@@ -22,8 +22,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wp3-89-qCj">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="237"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="j9g-Nu-I6z"/>
+                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSm-xj-RSd">
                     <rect key="frame" x="9" y="131" width="46" height="21"/>
@@ -54,7 +57,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly1-oV-beR">
-                    <rect key="frame" x="520" y="205" width="60" height="60"/>
+                    <rect key="frame" x="520" y="168" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="TUZ-6u-7no"/>
                         <constraint firstAttribute="height" constant="60" id="cge-Oz-Njd"/>
@@ -73,13 +76,14 @@
                 <constraint firstItem="aGM-WK-kzH" firstAttribute="top" secondItem="nSm-xj-RSd" secondAttribute="bottom" constant="93" id="7O7-Pv-jZy"/>
                 <constraint firstItem="vKf-gQ-c3T" firstAttribute="top" secondItem="aGM-WK-kzH" secondAttribute="bottom" constant="31" id="84Q-mO-NaT"/>
                 <constraint firstItem="nSm-xj-RSd" firstAttribute="leading" secondItem="aGM-WK-kzH" secondAttribute="leading" id="9mH-e2-jNC"/>
-                <constraint firstItem="aGM-WK-kzH" firstAttribute="top" secondItem="Wp3-89-qCj" secondAttribute="bottom" constant="8" symbolic="YES" id="BC8-ez-DqU"/>
+                <constraint firstItem="aGM-WK-kzH" firstAttribute="top" secondItem="Wp3-89-qCj" secondAttribute="bottom" constant="45" id="BC8-ez-DqU"/>
                 <constraint firstAttribute="trailing" secondItem="ly1-oV-beR" secondAttribute="trailing" constant="20" symbolic="YES" id="Hz6-YR-tBC"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8sq-qg-yRz" secondAttribute="trailing" constant="3" id="JyQ-O4-a3O"/>
                 <constraint firstAttribute="bottom" secondItem="8sq-qg-yRz" secondAttribute="bottom" constant="8" id="LMG-5x-tMc"/>
-                <constraint firstItem="8sq-qg-yRz" firstAttribute="top" secondItem="ly1-oV-beR" secondAttribute="bottom" constant="61" id="O0B-cU-bN0"/>
+                <constraint firstItem="8sq-qg-yRz" firstAttribute="top" secondItem="ly1-oV-beR" secondAttribute="bottom" constant="98" id="O0B-cU-bN0"/>
                 <constraint firstItem="Wp3-89-qCj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TUz-RI-kah"/>
                 <constraint firstAttribute="trailing" secondItem="8sq-qg-yRz" secondAttribute="trailing" constant="3" id="Ud5-br-e0Z"/>
+                <constraint firstItem="Wp3-89-qCj" firstAttribute="bottom" secondItem="ly1-oV-beR" secondAttribute="bottom" constant="-28" id="VGi-1I-OUk"/>
                 <constraint firstItem="vKf-gQ-c3T" firstAttribute="leading" secondItem="aGM-WK-kzH" secondAttribute="leading" id="XMl-DT-gQO"/>
                 <constraint firstItem="nSm-xj-RSd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="YJZ-6d-eCm"/>
                 <constraint firstItem="8sq-qg-yRz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="bOD-l6-FX1"/>
