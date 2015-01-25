@@ -15,7 +15,10 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timerPicker: UIPickerView!
+    @IBOutlet weak var closeBtn: UIButton!
 
+    @IBOutlet weak var timerBtn: UIButton!
+    @IBOutlet weak var headerView: UIView!
     @IBAction func closeTimer(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil )
     }
@@ -29,9 +32,24 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        setUpLayout()
         
-        // Do any additional setup after loading the view.
+    }
+    
+    func setUpLayout() {
+        titleLabel.textColor = UIColor.whiteColor()
+        headerView.backgroundColor = UIColor.kooktijdenGreenColor()
+        timerBtn.backgroundColor = UIColor.kooktijdenPinkColor()
+        timerBtn.setTitle("Set", forState: UIControlState.Normal)
+        timerBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        timerBtn.layer.cornerRadius = timerBtn.frame.size.width / 2.0
+
+        //Fonts
+        titleLabel.font = UIFont(name: "Roboto-Light", size: 24)!
+        timerBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
+        closeBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,8 +77,14 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
         
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-            return row.description
+
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
+        let pickerLabel = UILabel()
+        let titleData = row.description
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Roboto-Light", size: 20)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+        pickerLabel.attributedText = myTitle
+        pickerLabel.textAlignment = .Center
+        return pickerLabel
     }
     
     func getCustomFoodItem() -> FoodItem {

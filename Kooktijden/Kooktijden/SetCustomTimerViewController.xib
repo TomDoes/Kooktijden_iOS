@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetCustomTimerViewController" customModule="Kooktijden" customModuleProvider="target">
             <connections>
+                <outlet property="closeBtn" destination="SMR-iC-cOb" id="UkN-eB-nCT"/>
+                <outlet property="headerView" destination="0CL-1X-mdp" id="GOj-9o-lDW"/>
+                <outlet property="timerBtn" destination="oVd-eX-CmJ" id="PXp-fy-HEW"/>
                 <outlet property="timerPicker" destination="nVB-Oa-37b" id="Lnr-7x-UkV"/>
                 <outlet property="titleLabel" destination="ofv-d1-z65" id="Rnn-4g-pBp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -16,14 +19,35 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CL-1X-mdp">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="xZZ-jJ-pHd"/>
+                    </constraints>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Custom Timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofv-d1-z65">
                     <rect key="frame" x="231" y="109" width="139" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-iC-cOb">
-                    <rect key="frame" x="28" y="29" width="40" height="30"/>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-eX-CmJ">
+                    <rect key="frame" x="520" y="168" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="mxv-9U-hPm"/>
+                        <constraint firstAttribute="height" constant="60" id="tYV-at-XIC"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="setTimer:" destination="-1" eventType="touchUpInside" id="8sB-Iq-mnV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-iC-cOb">
+                    <rect key="frame" x="14" y="29" width="52" height="30"/>
                     <state key="normal" title="Close">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -32,32 +56,27 @@
                     </connections>
                 </button>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVB-Oa-37b">
-                    <rect key="frame" x="0.0" y="219" width="600" height="162"/>
+                    <rect key="frame" x="0.0" y="236" width="600" height="162"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="G5t-6f-kK9"/>
                         <outlet property="delegate" destination="-1" id="EYi-og-6gh"/>
                     </connections>
                 </pickerView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whz-wi-EnK">
-                    <rect key="frame" x="277" y="389" width="66" height="30"/>
-                    <state key="normal" title="Set Timer">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="setTimer:" destination="-1" eventType="touchUpInside" id="RdF-jS-8Fo"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="0CL-1X-mdp" firstAttribute="trailing" secondItem="nVB-Oa-37b" secondAttribute="trailing" id="4lo-Al-Kjr"/>
                 <constraint firstAttribute="centerX" secondItem="nVB-Oa-37b" secondAttribute="centerX" id="7Ei-fe-cXS"/>
                 <constraint firstAttribute="trailing" secondItem="nVB-Oa-37b" secondAttribute="trailing" id="Amy-JT-aXg"/>
+                <constraint firstItem="0CL-1X-mdp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="E2v-wx-caj"/>
                 <constraint firstItem="nVB-Oa-37b" firstAttribute="centerX" secondItem="ofv-d1-z65" secondAttribute="centerX" id="JcT-V4-74p"/>
-                <constraint firstItem="Whz-wi-EnK" firstAttribute="centerX" secondItem="nVB-Oa-37b" secondAttribute="centerX" constant="10" id="UAP-Ut-Jvg"/>
-                <constraint firstItem="Whz-wi-EnK" firstAttribute="top" secondItem="nVB-Oa-37b" secondAttribute="bottom" constant="8" id="ZQp-JP-Tt8"/>
                 <constraint firstItem="nVB-Oa-37b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dVI-Do-oeq"/>
+                <constraint firstAttribute="trailing" secondItem="oVd-eX-CmJ" secondAttribute="trailing" constant="20" id="ecz-50-G1v"/>
                 <constraint firstAttribute="centerY" secondItem="ofv-d1-z65" secondAttribute="centerY" constant="180.5" id="n1S-8T-5ce"/>
-                <constraint firstItem="nVB-Oa-37b" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nmk-dv-EOL"/>
+                <constraint firstItem="nVB-Oa-37b" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="17" id="nmk-dv-EOL"/>
+                <constraint firstItem="0CL-1X-mdp" firstAttribute="bottom" secondItem="oVd-eX-CmJ" secondAttribute="bottom" constant="-28" id="xbI-fS-zCy"/>
+                <constraint firstItem="nVB-Oa-37b" firstAttribute="top" secondItem="oVd-eX-CmJ" secondAttribute="bottom" constant="8" id="xqj-z2-htK"/>
+                <constraint firstItem="0CL-1X-mdp" firstAttribute="leading" secondItem="nVB-Oa-37b" secondAttribute="leading" id="yGf-CU-iYB"/>
             </constraints>
         </view>
     </objects>
