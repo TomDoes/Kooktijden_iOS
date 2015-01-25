@@ -8,8 +8,11 @@
 
 import UIKit
 
+protocol SetCustomTimerDelegate {
+    func setCustomTimer(foodItem: FoodItem)
+}
 
-class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SetCustomTimerDelegate {
     
     var delegate: TimerDelegate? = nil
     var timer: String?
@@ -20,7 +23,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     var foodItems = [FoodItem]()
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foodItems.count
+        return foodItems.count + 1
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -41,9 +44,10 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         self.title = "Foods"
         
         var nib = UINib(nibName: "FoodItemTableViewCell", bundle: nil)
+        var nib2 = UINib(nibName: "CustomTimerTableViewCell", bundle: nil)
         
         foodListTableView.registerNib(nib, forCellReuseIdentifier: "foodCell")
-        
+        foodListTableView.registerNib(nib2, forCellReuseIdentifier: "customTimerCell")
         self.foodItems = dataSource.getFoods()
         self.foodListTableView!.reloadData()
         // Do any additional setup after loading the view, typically from a nib.
@@ -55,25 +59,36 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if(indexPath.row == 0) {
+            var cell:CustomTimerTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("customTimerCell") as CustomTimerTableViewCell
+            return cell
+        }
         var cell:FoodItemTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("foodCell") as FoodItemTableViewCell
         
-        let rowData: FoodItem = self.foodItems[indexPath.row] as FoodItem
-        cell.loadItem(rowData, index: indexPath.row)
+        let rowData: FoodItem = self.foodItems[indexPath.row - 1] as FoodItem
+        cell.loadItem(rowData, index: indexPath.row - 1)
         
         // De button van cell heeft in zijn tag de id van het foodItem
         cell.setTimerBtn?.addTarget(self, action: "setTimerBtnPressed:", forControlEvents: .TouchUpInside)
-        cell.setTimerBtn?.tag = indexPath.row
+        cell.setTimerBtn?.tag = indexPath.row - 1
                 
         return cell
 
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var foodDetailViewController: FoodDetailViewController = FoodDetailViewController(nibName: "FoodDetailViewController", bundle: nil)
-        foodDetailViewController.foodItem = self.foodItems[indexPath.row]
-        foodDetailViewController.delegate = self.delegate
-        foodDetailViewController.timer = timer
-        self.navigationController?.pushViewController(foodDetailViewController, animated: true)
+        if(indexPath.row == 0) {
+            var setCustomTimerViewController: SetCustomTimerViewController = SetCustomTimerViewController(nibName: "SetCustomTimerViewController", bundle: nil)
+            setCustomTimerViewController.delegate = self;
+            self.presentViewController(setCustomTimerViewController, animated: true, completion: nil)
+        } else {
+            var foodDetailViewController: FoodDetailViewController = FoodDetailViewController(nibName: "FoodDetailViewController", bundle: nil)
+            foodDetailViewController.foodItem = self.foodItems[indexPath.row - 1]
+            foodDetailViewController.delegate = self.delegate
+            foodDetailViewController.timer = timer
+            self.navigationController?.pushViewController(foodDetailViewController, animated: true)
+        }
+        
     }
     
     func setTimerBtnPressed(sender: UIButton!) {
@@ -82,6 +97,11 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
             self.navigationController?.popToRootViewControllerAnimated(true)
         }
 
+    }
+    
+    func setCustomTimer(foodItem: FoodItem) {
+        delegate!.startTimer(foodItem)
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
     

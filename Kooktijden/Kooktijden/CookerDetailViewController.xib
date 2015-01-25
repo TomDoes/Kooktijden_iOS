@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENq-ss-bmU">
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ENq-ss-bmU">
                     <rect key="frame" x="20" y="20" width="560" height="560"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeF-xZ-4Rv" customClass="CircularProgressView" customModule="Kooktijden" customModuleProvider="target">
@@ -59,10 +59,10 @@
                                 </mask>
                                 <mask key="constraints">
                                     <exclude reference="TCt-f9-2Ap"/>
-                                    <exclude reference="CWh-V9-1VD"/>
-                                    <exclude reference="uTj-bp-hhc"/>
                                     <exclude reference="LOX-Nr-XlT"/>
                                     <exclude reference="mjJ-tX-bEr"/>
+                                    <exclude reference="CWh-V9-1VD"/>
+                                    <exclude reference="uTj-bp-hhc"/>
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular">
@@ -72,10 +72,10 @@
                                 </mask>
                                 <mask key="constraints">
                                     <include reference="TCt-f9-2Ap"/>
-                                    <include reference="CWh-V9-1VD"/>
-                                    <include reference="uTj-bp-hhc"/>
                                     <include reference="LOX-Nr-XlT"/>
                                     <include reference="mjJ-tX-bEr"/>
+                                    <include reference="CWh-V9-1VD"/>
+                                    <include reference="uTj-bp-hhc"/>
                                 </mask>
                             </variation>
                         </view>

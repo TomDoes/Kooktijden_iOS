@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetCustomTimerViewController" customModule="Kooktijden" customModuleProvider="target">
+            <connections>
+                <outlet property="timerPicker" destination="nVB-Oa-37b" id="Lnr-7x-UkV"/>
+                <outlet property="titleLabel" destination="ofv-d1-z65" id="Rnn-4g-pBp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Custom Timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofv-d1-z65">
+                    <rect key="frame" x="231" y="109" width="139" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-iC-cOb">
+                    <rect key="frame" x="28" y="29" width="40" height="30"/>
+                    <state key="normal" title="Close">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeTimer:" destination="-1" eventType="touchUpInside" id="nqm-9B-Wwg"/>
+                    </connections>
+                </button>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVB-Oa-37b">
+                    <rect key="frame" x="0.0" y="219" width="600" height="162"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="G5t-6f-kK9"/>
+                        <outlet property="delegate" destination="-1" id="EYi-og-6gh"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whz-wi-EnK">
+                    <rect key="frame" x="277" y="389" width="66" height="30"/>
+                    <state key="normal" title="Set Timer">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="setTimer:" destination="-1" eventType="touchUpInside" id="RdF-jS-8Fo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="nVB-Oa-37b" secondAttribute="centerX" id="7Ei-fe-cXS"/>
+                <constraint firstAttribute="trailing" secondItem="nVB-Oa-37b" secondAttribute="trailing" id="Amy-JT-aXg"/>
+                <constraint firstItem="nVB-Oa-37b" firstAttribute="centerX" secondItem="ofv-d1-z65" secondAttribute="centerX" id="JcT-V4-74p"/>
+                <constraint firstItem="Whz-wi-EnK" firstAttribute="centerX" secondItem="nVB-Oa-37b" secondAttribute="centerX" constant="10" id="UAP-Ut-Jvg"/>
+                <constraint firstItem="Whz-wi-EnK" firstAttribute="top" secondItem="nVB-Oa-37b" secondAttribute="bottom" constant="8" id="ZQp-JP-Tt8"/>
+                <constraint firstItem="nVB-Oa-37b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dVI-Do-oeq"/>
+                <constraint firstAttribute="centerY" secondItem="ofv-d1-z65" secondAttribute="centerY" constant="180.5" id="n1S-8T-5ce"/>
+                <constraint firstItem="nVB-Oa-37b" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nmk-dv-EOL"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

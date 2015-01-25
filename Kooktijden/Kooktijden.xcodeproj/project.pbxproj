@@ -24,6 +24,9 @@
 		E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01AF1A0F6D7F00A87561 /* Extensions.swift */; };
 		E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */; };
 		E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */; };
+		E231BE1A1A73B04900C2C3DA /* CustomTimerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E231BE181A73B04900C2C3DA /* CustomTimerTableViewCell.swift */; };
+		E231BE1B1A73B04900C2C3DA /* CustomTimerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E231BE191A73B04900C2C3DA /* CustomTimerTableViewCell.xib */; };
+		E231BE1F1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E231BE1D1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib */; };
 		E248DC3C1A21FB2E0011319C /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E248DC391A21FB2E0011319C /* Roboto-Light.ttf */; };
 		E248DC3D1A21FB2E0011319C /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E248DC3A1A21FB2E0011319C /* Roboto-Medium.ttf */; };
 		E248DC3E1A21FB2E0011319C /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E248DC3B1A21FB2E0011319C /* Roboto-Thin.ttf */; };
@@ -38,6 +41,7 @@
 		E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E253D3831A1F98B000893D16 /* FoodListViewController.xib */; };
 		E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CF44161A21ED3000C0B8C4 /* FoodDetailViewController.xib */; };
 		E2CF44191A21EE9000C0B8C4 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CF44181A21EE9000C0B8C4 /* FoodDetailViewController.swift */; };
+		E2E7958A1A73D728000EA068 /* SetCustomTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E795891A73D728000EA068 /* SetCustomTimerViewController.swift */; };
 		E2EFE5EC1A52C3B0001C45A2 /* icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2EFE5EB1A52C3B0001C45A2 /* icons.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +85,9 @@
 		E20C01AF1A0F6D7F00A87561 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 		E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodItemTableViewCell.xib; sourceTree = "<group>"; };
+		E231BE181A73B04900C2C3DA /* CustomTimerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTimerTableViewCell.swift; sourceTree = "<group>"; };
+		E231BE191A73B04900C2C3DA /* CustomTimerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTimerTableViewCell.xib; sourceTree = "<group>"; };
+		E231BE1D1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetCustomTimerViewController.xib; sourceTree = "<group>"; };
 		E248DC391A21FB2E0011319C /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		E248DC3A1A21FB2E0011319C /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		E248DC3B1A21FB2E0011319C /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
@@ -99,6 +106,7 @@
 		E253D3831A1F98B000893D16 /* FoodListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodListViewController.xib; sourceTree = "<group>"; };
 		E2CF44161A21ED3000C0B8C4 /* FoodDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodDetailViewController.xib; sourceTree = "<group>"; };
 		E2CF44181A21EE9000C0B8C4 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		E2E795891A73D728000EA068 /* SetCustomTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCustomTimerViewController.swift; sourceTree = "<group>"; };
 		E2EFE5EB1A52C3B0001C45A2 /* icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = icons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +186,8 @@
 				E20C01AF1A0F6D7F00A87561 /* Extensions.swift */,
 				E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */,
 				E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */,
+				E231BE181A73B04900C2C3DA /* CustomTimerTableViewCell.swift */,
+				E231BE191A73B04900C2C3DA /* CustomTimerTableViewCell.xib */,
 				E24F01591A0CF8E200372AE5 /* Main.storyboard */,
 				E2EFE5EB1A52C3B0001C45A2 /* icons.xcassets */,
 				E269C9C91A1F73EE00865D64 /* Cookers */,
@@ -188,6 +198,8 @@
 				C4EC72C01A0FCF74005708DC /* Timer.swift */,
 				C4DFED721A5C692500CE14A5 /* CookerDetailViewController.swift */,
 				C4DFED731A5C692500CE14A5 /* CookerDetailViewController.xib */,
+				E2E795891A73D728000EA068 /* SetCustomTimerViewController.swift */,
+				E231BE1D1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib */,
 			);
 			path = Kooktijden;
 			sourceTree = "<group>";
@@ -339,8 +351,10 @@
 				C4DFED751A5C692500CE14A5 /* CookerDetailViewController.xib in Resources */,
 				C42779F31A61640B00BF62F8 /* Cooker4ViewController.xib in Resources */,
 				E248DC3E1A21FB2E0011319C /* Roboto-Thin.ttf in Resources */,
+				E231BE1F1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib in Resources */,
 				E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */,
 				C4DFED711A5BC29600CE14A5 /* Cooker3ViewController.xib in Resources */,
+				E231BE1B1A73B04900C2C3DA /* CustomTimerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,12 +376,14 @@
 				E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */,
 				E2CF44191A21EE9000C0B8C4 /* FoodDetailViewController.swift in Sources */,
 				E25333081A1F781600979A13 /* CookerViewController.swift in Sources */,
+				E231BE1A1A73B04900C2C3DA /* CustomTimerTableViewCell.swift in Sources */,
 				C403C1051A0D08BB00AFCEB6 /* FoodItem.swift in Sources */,
 				C42ABB801A56C19D000B8548 /* CircleProgressView.swift in Sources */,
 				C4DFED741A5C692500CE14A5 /* CookerDetailViewController.swift in Sources */,
 				C403C10B1A0D249600AFCEB6 /* FoodListViewController.swift in Sources */,
 				C403C1031A0D07FE00AFCEB6 /* DataSource.swift in Sources */,
 				C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */,
+				E2E7958A1A73D728000EA068 /* SetCustomTimerViewController.swift in Sources */,
 				E24F01561A0CF8E200372AE5 /* AppDelegate.swift in Sources */,
 				C42779EE1A5EEC6E00BF62F8 /* StoveViewController.swift in Sources */,
 				E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */,
