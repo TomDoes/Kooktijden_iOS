@@ -12,7 +12,6 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
     
     var delegate: SetCustomTimerDelegate? = nil
 
-
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timerPicker: UIPickerView!
     @IBOutlet weak var closeBtn: UIButton!
@@ -47,9 +46,10 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
 
         //Fonts
         titleLabel.font = UIFont(name: "Roboto-Light", size: 24)!
+
         timerBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
         closeBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
-
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,7 +58,7 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
     }
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 3
+        return 6
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -68,11 +68,23 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
         }
         else if(component == 1) {
             // minutes
+            return 1
+        }
+        else if(component == 2) {
+            // minutes
+            return 60
+        }
+        else if(component == 3) {
+            // minutes
+            return 1
+        }
+        else if(component == 4) {
+            // minutes
             return 60
         }
         else {
             // seconds
-            return 60
+            return 1
         }
         
     }
@@ -80,7 +92,16 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
 
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
         let pickerLabel = UILabel()
-        let titleData = row.description
+        var titleData = "";
+        if(component == 1) {
+            titleData = "hour"
+        } else if (component == 3) {
+            titleData = "min."
+        } else if (component == 5) {
+            titleData = "sec."
+        } else {
+            titleData = row.description
+        }
         let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Roboto-Light", size: 20)!,NSForegroundColorAttributeName:UIColor.blackColor()])
         pickerLabel.attributedText = myTitle
         pickerLabel.textAlignment = .Center
@@ -102,8 +123,8 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
     
     func getCustomTime() -> Int {
         var hours = timerPicker.selectedRowInComponent(0)
-        var minutes = timerPicker.selectedRowInComponent(1)
-        var seconds = timerPicker.selectedRowInComponent(2)
+        var minutes = timerPicker.selectedRowInComponent(2)
+        var seconds = timerPicker.selectedRowInComponent(4)
         
         return hours * 60 * 60 + minutes * 60 + seconds
         

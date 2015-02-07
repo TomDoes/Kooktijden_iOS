@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -70,14 +70,24 @@
                 <constraint firstAttribute="trailing" secondItem="nVB-Oa-37b" secondAttribute="trailing" id="Amy-JT-aXg"/>
                 <constraint firstItem="0CL-1X-mdp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="E2v-wx-caj"/>
                 <constraint firstItem="nVB-Oa-37b" firstAttribute="centerX" secondItem="ofv-d1-z65" secondAttribute="centerX" id="JcT-V4-74p"/>
+                <constraint firstItem="ofv-d1-z65" firstAttribute="centerY" secondItem="0CL-1X-mdp" secondAttribute="centerY" constant="-91" id="Sx4-Pq-396"/>
                 <constraint firstItem="nVB-Oa-37b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dVI-Do-oeq"/>
                 <constraint firstAttribute="trailing" secondItem="oVd-eX-CmJ" secondAttribute="trailing" constant="20" id="ecz-50-G1v"/>
-                <constraint firstAttribute="centerY" secondItem="ofv-d1-z65" secondAttribute="centerY" constant="180.5" id="n1S-8T-5ce"/>
+                <constraint firstItem="ofv-d1-z65" firstAttribute="centerY" secondItem="0CL-1X-mdp" secondAttribute="centerY" constant="19.5" id="fhq-cF-oQw"/>
+                <constraint firstAttribute="centerY" secondItem="ofv-d1-z65" secondAttribute="centerY" constant="180" id="n1S-8T-5ce"/>
                 <constraint firstItem="nVB-Oa-37b" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="17" id="nmk-dv-EOL"/>
+                <constraint firstItem="ofv-d1-z65" firstAttribute="centerX" secondItem="0CL-1X-mdp" secondAttribute="centerX" constant="0.5" id="p3C-zn-rza"/>
                 <constraint firstItem="0CL-1X-mdp" firstAttribute="bottom" secondItem="oVd-eX-CmJ" secondAttribute="bottom" constant="-28" id="xbI-fS-zCy"/>
                 <constraint firstItem="nVB-Oa-37b" firstAttribute="top" secondItem="oVd-eX-CmJ" secondAttribute="bottom" constant="8" id="xqj-z2-htK"/>
                 <constraint firstItem="0CL-1X-mdp" firstAttribute="leading" secondItem="nVB-Oa-37b" secondAttribute="leading" id="yGf-CU-iYB"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="JcT-V4-74p"/>
+                    <exclude reference="Sx4-Pq-396"/>
+                    <exclude reference="n1S-8T-5ce"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

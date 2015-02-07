@@ -10,9 +10,14 @@ import UIKit
 
 class CustomTimerTableViewCell: UITableViewCell {
 
+    @IBOutlet var label: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        label.font = UIFont(name: "Roboto-Light", size: 20)!
+        
+
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
