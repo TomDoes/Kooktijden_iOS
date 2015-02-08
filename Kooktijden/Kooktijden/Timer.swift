@@ -52,14 +52,12 @@ class Timer {
         if self.elapsedTime == self.duration {
             self.stop()
             self.elapsedTime = 0
-            
-            let alert = UIAlertView()
-            alert.title = foodItem.nameEN + " cooked!"
-            alert.message = ""
-            alert.addButtonWithTitle("Ok")
-            alert.show()
-            
+                        
             var alertInfo: [String: String] = ["FoodNameEN": foodItem.nameEN, "FoodNameNL": foodItem.nameNL]
+            
+            let alert = SCLAlertView();
+            alert.showKooktijden("Timer finished!", subTitle: foodItem.nameEN + " is ready.", closeButtonTitle: "Close")
+
             
             notificationCenter.postNotificationName("com.deappothekers.Kooktijden.timerFinished", object: nil, userInfo: alertInfo)
             //self.audioPlayer = AVAudioPlayer(contentsOfURL: self.sound, error: nil)

@@ -42,6 +42,9 @@
 		E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CF44161A21ED3000C0B8C4 /* FoodDetailViewController.xib */; };
 		E2CF44191A21EE9000C0B8C4 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CF44181A21EE9000C0B8C4 /* FoodDetailViewController.swift */; };
 		E2E7958A1A73D728000EA068 /* SetCustomTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E795891A73D728000EA068 /* SetCustomTimerViewController.swift */; };
+		E2EA86E11A87790400B61705 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA86E01A87790400B61705 /* SCLAlertView.swift */; };
+		E2EA86E31A877DB300B61705 /* kooktijden_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E2EA86E21A877DB300B61705 /* kooktijden_icon.png */; };
+		E2EA86E51A87809200B61705 /* kooktijden_chef_hat.png in Resources */ = {isa = PBXBuildFile; fileRef = E2EA86E41A87809200B61705 /* kooktijden_chef_hat.png */; };
 		E2EFE5EC1A52C3B0001C45A2 /* icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2EFE5EB1A52C3B0001C45A2 /* icons.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +110,9 @@
 		E2CF44161A21ED3000C0B8C4 /* FoodDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodDetailViewController.xib; sourceTree = "<group>"; };
 		E2CF44181A21EE9000C0B8C4 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		E2E795891A73D728000EA068 /* SetCustomTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCustomTimerViewController.swift; sourceTree = "<group>"; };
+		E2EA86E01A87790400B61705 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		E2EA86E21A877DB300B61705 /* kooktijden_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kooktijden_icon.png; sourceTree = "<group>"; };
+		E2EA86E41A87809200B61705 /* kooktijden_chef_hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kooktijden_chef_hat.png; sourceTree = "<group>"; };
 		E2EFE5EB1A52C3B0001C45A2 /* icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = icons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,8 +145,10 @@
 		E248DC381A21FADA0011319C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E2EA86E41A87809200B61705 /* kooktijden_chef_hat.png */,
 				E248DC401A21FB720011319C /* ic_action_alarms.png */,
 				E248DC421A21FBB90011319C /* ic_action_alarms_white.png */,
+				E2EA86E21A877DB300B61705 /* kooktijden_icon.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -181,6 +189,7 @@
 				C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */,
 				E253D3831A1F98B000893D16 /* FoodListViewController.xib */,
 				C42ABB7F1A56C19D000B8548 /* CircleProgressView.swift */,
+				E2EA86E01A87790400B61705 /* SCLAlertView.swift */,
 				E2CF44181A21EE9000C0B8C4 /* FoodDetailViewController.swift */,
 				E2CF44161A21ED3000C0B8C4 /* FoodDetailViewController.xib */,
 				E20C01AF1A0F6D7F00A87561 /* Extensions.swift */,
@@ -347,6 +356,7 @@
 				E248DC3D1A21FB2E0011319C /* Roboto-Medium.ttf in Resources */,
 				E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */,
 				E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */,
+				E2EA86E31A877DB300B61705 /* kooktijden_icon.png in Resources */,
 				E248DC431A21FBB90011319C /* ic_action_alarms_white.png in Resources */,
 				C4DFED751A5C692500CE14A5 /* CookerDetailViewController.xib in Resources */,
 				C42779F31A61640B00BF62F8 /* Cooker4ViewController.xib in Resources */,
@@ -355,6 +365,7 @@
 				E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */,
 				C4DFED711A5BC29600CE14A5 /* Cooker3ViewController.xib in Resources */,
 				E231BE1B1A73B04900C2C3DA /* CustomTimerTableViewCell.xib in Resources */,
+				E2EA86E51A87809200B61705 /* kooktijden_chef_hat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +385,7 @@
 			files = (
 				C4DF022A1A12025D00C31848 /* CookerController.swift in Sources */,
 				E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */,
+				E2EA86E11A87790400B61705 /* SCLAlertView.swift in Sources */,
 				E2CF44191A21EE9000C0B8C4 /* FoodDetailViewController.swift in Sources */,
 				E25333081A1F781600979A13 /* CookerViewController.swift in Sources */,
 				E231BE1A1A73B04900C2C3DA /* CustomTimerTableViewCell.swift in Sources */,
