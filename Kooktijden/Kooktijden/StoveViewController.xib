@@ -29,6 +29,13 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdI-SY-XYt">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="64" y="123" width="200" height="11"/>
+                    </variation>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -37,6 +44,16 @@
                 <constraint firstAttribute="centerX" secondItem="DQk-9m-H9D" secondAttribute="centerX" id="IOl-6a-589"/>
                 <constraint firstAttribute="centerY" secondItem="DQk-9m-H9D" secondAttribute="centerY" constant="15" id="jLt-Gu-L6a"/>
             </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="gdI-SY-XYt"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="gdI-SY-XYt"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

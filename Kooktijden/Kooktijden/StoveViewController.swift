@@ -111,8 +111,8 @@ class StoveViewController: UIViewController, TimerDelegate {
     func setUpCircleProgressView(circleProgessView: CircularProgressView?) {
         circleProgessView!.progress = 1
         circleProgessView!.clockwise = false
-        circleProgessView!.trackWidth = 5
-        circleProgessView!.trackBackgroundColor = UIColor.lightGrayColor()
+        circleProgessView!.trackWidth = 9
+        circleProgessView!.trackBackgroundColor = UIColor(white:0.4, alpha:1.0)
         circleProgessView!.trackFillColor = UIColor.kooktijdenGreenColor()
         circleProgessView!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "cookerTap:"))
         circleProgessView!.userInteractionEnabled = true

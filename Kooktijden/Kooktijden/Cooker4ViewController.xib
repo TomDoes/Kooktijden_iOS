@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6254"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -80,22 +80,22 @@
                         </mask>
                         <mask key="constraints">
                             <exclude reference="D2Z-DR-1px"/>
-                            <exclude reference="AIS-iG-QAn"/>
-                            <exclude reference="BhK-qr-0Dv"/>
-                            <exclude reference="Uq2-O1-Oyn"/>
-                            <exclude reference="kBz-GJ-voG"/>
-                            <exclude reference="XL1-9D-igD"/>
-                            <exclude reference="ubB-IP-VvT"/>
-                            <exclude reference="urR-Rv-GnF"/>
-                            <exclude reference="ySC-Ph-PLj"/>
-                            <exclude reference="anC-4F-JY0"/>
-                            <exclude reference="ayp-XM-cr9"/>
-                            <exclude reference="lOS-lE-H9N"/>
-                            <exclude reference="tdk-n9-MLH"/>
                             <exclude reference="DdL-he-2e5"/>
                             <exclude reference="GnK-kt-LTE"/>
                             <exclude reference="ima-KK-SgP"/>
                             <exclude reference="p8y-fW-ZES"/>
+                            <exclude reference="anC-4F-JY0"/>
+                            <exclude reference="ayp-XM-cr9"/>
+                            <exclude reference="lOS-lE-H9N"/>
+                            <exclude reference="tdk-n9-MLH"/>
+                            <exclude reference="XL1-9D-igD"/>
+                            <exclude reference="ubB-IP-VvT"/>
+                            <exclude reference="urR-Rv-GnF"/>
+                            <exclude reference="ySC-Ph-PLj"/>
+                            <exclude reference="AIS-iG-QAn"/>
+                            <exclude reference="BhK-qr-0Dv"/>
+                            <exclude reference="Uq2-O1-Oyn"/>
+                            <exclude reference="kBz-GJ-voG"/>
                             <exclude reference="LTc-cH-ohr"/>
                             <exclude reference="QdT-E8-iHi"/>
                             <exclude reference="UL8-b5-NzC"/>
@@ -112,22 +112,22 @@
                         </mask>
                         <mask key="constraints">
                             <include reference="D2Z-DR-1px"/>
-                            <include reference="AIS-iG-QAn"/>
-                            <include reference="BhK-qr-0Dv"/>
-                            <include reference="Uq2-O1-Oyn"/>
-                            <include reference="kBz-GJ-voG"/>
-                            <include reference="XL1-9D-igD"/>
-                            <include reference="ubB-IP-VvT"/>
-                            <include reference="urR-Rv-GnF"/>
-                            <include reference="ySC-Ph-PLj"/>
-                            <include reference="anC-4F-JY0"/>
-                            <include reference="ayp-XM-cr9"/>
-                            <include reference="lOS-lE-H9N"/>
-                            <include reference="tdk-n9-MLH"/>
                             <include reference="DdL-he-2e5"/>
                             <include reference="GnK-kt-LTE"/>
                             <include reference="ima-KK-SgP"/>
                             <include reference="p8y-fW-ZES"/>
+                            <include reference="anC-4F-JY0"/>
+                            <include reference="ayp-XM-cr9"/>
+                            <include reference="lOS-lE-H9N"/>
+                            <include reference="tdk-n9-MLH"/>
+                            <include reference="XL1-9D-igD"/>
+                            <include reference="ubB-IP-VvT"/>
+                            <include reference="urR-Rv-GnF"/>
+                            <include reference="ySC-Ph-PLj"/>
+                            <include reference="AIS-iG-QAn"/>
+                            <include reference="BhK-qr-0Dv"/>
+                            <include reference="Uq2-O1-Oyn"/>
+                            <include reference="kBz-GJ-voG"/>
                             <include reference="LTc-cH-ohr"/>
                             <include reference="QdT-E8-iHi"/>
                             <include reference="UL8-b5-NzC"/>
