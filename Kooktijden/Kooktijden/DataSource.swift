@@ -36,19 +36,38 @@ class DataSource {
         
         let foods = db["foods"]
         
-        for food in foods {
-            var foodItem = FoodItem()
+        if(NSLocale.preferredLanguages()[0] as NSString == "nl") {
             
-            foodItem.id = food[Expression<Int>("id")]!
-            foodItem.nameEN = food[Expression<String>("name_EN")]!
-            foodItem.nameNL = food[Expression<String>("name_NL")]!
-            foodItem.descriptionEN = food[Expression<String>("description_EN")]
-            foodItem.descriptionNL = food[Expression<String>("description_NL")]
-            foodItem.cookingTimeMin = food[Expression<Int>("cooking_time_min")]!
-            foodItem.cookingTimeMax = food[Expression<Int>("cooking_time_max")]!
+            for food in foods {
+                var foodItem = FoodItem()
+                
+                foodItem.id = food[Expression<Int>("id")]!
+                foodItem.name = food[Expression<String>("name_NL")]!
+                foodItem.descriptionText = food[Expression<String>("description_NL")]
+                foodItem.cookingTimeMin = food[Expression<Int>("cooking_time_min")]!
+                foodItem.cookingTimeMax = food[Expression<Int>("cooking_time_max")]!
+                
+                items.append(foodItem)
+            }
+            
+        } else {
+            
+            for food in foods {
+                var foodItem = FoodItem()
+                
+                foodItem.id = food[Expression<Int>("id")]!
+                foodItem.name = food[Expression<String>("name_EN")]!
+                foodItem.descriptionText = food[Expression<String>("description_EN")]
+                foodItem.cookingTimeMin = food[Expression<Int>("cooking_time_min")]!
+                foodItem.cookingTimeMax = food[Expression<Int>("cooking_time_max")]!
+                
+                items.append(foodItem)
+            }
 
-            items.append(foodItem)
+            
         }
+        
+        items.sort({ $0.name < $1.name })
     
         return items
     }

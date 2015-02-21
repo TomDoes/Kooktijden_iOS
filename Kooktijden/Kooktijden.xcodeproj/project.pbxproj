@@ -21,12 +21,14 @@
 		C4DFED741A5C692500CE14A5 /* CookerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFED721A5C692500CE14A5 /* CookerDetailViewController.swift */; };
 		C4DFED751A5C692500CE14A5 /* CookerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DFED731A5C692500CE14A5 /* CookerDetailViewController.xib */; };
 		C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC72C01A0FCF74005708DC /* Timer.swift */; };
+		E20003021A98C39700511954 /* InfoPlist.Strings in Resources */ = {isa = PBXBuildFile; fileRef = E20003041A98C39700511954 /* InfoPlist.Strings */; };
 		E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01AF1A0F6D7F00A87561 /* Extensions.swift */; };
 		E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */; };
 		E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */; };
 		E231BE1A1A73B04900C2C3DA /* CustomTimerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E231BE181A73B04900C2C3DA /* CustomTimerTableViewCell.swift */; };
 		E231BE1B1A73B04900C2C3DA /* CustomTimerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E231BE191A73B04900C2C3DA /* CustomTimerTableViewCell.xib */; };
 		E231BE1F1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E231BE1D1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib */; };
+		E24296DE1A98AB7D00517E3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E24296E01A98AB7D00517E3A /* Localizable.strings */; };
 		E248DC3C1A21FB2E0011319C /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E248DC391A21FB2E0011319C /* Roboto-Light.ttf */; };
 		E248DC3D1A21FB2E0011319C /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E248DC3A1A21FB2E0011319C /* Roboto-Medium.ttf */; };
 		E248DC3E1A21FB2E0011319C /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E248DC3B1A21FB2E0011319C /* Roboto-Thin.ttf */; };
@@ -85,19 +87,24 @@
 		C4DFED721A5C692500CE14A5 /* CookerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookerDetailViewController.swift; sourceTree = "<group>"; };
 		C4DFED731A5C692500CE14A5 /* CookerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookerDetailViewController.xib; sourceTree = "<group>"; };
 		C4EC72C01A0FCF74005708DC /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		E20002FD1A98C0C100511954 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
+		E20003031A98C39700511954 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.Strings; sourceTree = "<group>"; };
+		E20003051A98C39800511954 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.Strings; sourceTree = "<group>"; };
 		E20C01AF1A0F6D7F00A87561 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 		E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodItemTableViewCell.xib; sourceTree = "<group>"; };
 		E231BE181A73B04900C2C3DA /* CustomTimerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTimerTableViewCell.swift; sourceTree = "<group>"; };
 		E231BE191A73B04900C2C3DA /* CustomTimerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTimerTableViewCell.xib; sourceTree = "<group>"; };
 		E231BE1D1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetCustomTimerViewController.xib; sourceTree = "<group>"; };
+		E24296DD1A98AB5000517E3A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
+		E24296DF1A98AB7D00517E3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E24296E11A98AB9C00517E3A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E248DC391A21FB2E0011319C /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		E248DC3A1A21FB2E0011319C /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		E248DC3B1A21FB2E0011319C /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		E248DC401A21FB720011319C /* ic_action_alarms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_alarms.png; sourceTree = "<group>"; };
 		E248DC421A21FBB90011319C /* ic_action_alarms_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_alarms_white.png; sourceTree = "<group>"; };
 		E24F01501A0CF8E200372AE5 /* Kooktijden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooktijden.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E24F01541A0CF8E200372AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E24F01551A0CF8E200372AE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E24F015A1A0CF8E200372AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E24F01651A0CF8E200372AE5 /* KooktijdenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KooktijdenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +216,7 @@
 				C4DFED731A5C692500CE14A5 /* CookerDetailViewController.xib */,
 				E2E795891A73D728000EA068 /* SetCustomTimerViewController.swift */,
 				E231BE1D1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib */,
+				E24296E01A98AB7D00517E3A /* Localizable.strings */,
 			);
 			path = Kooktijden;
 			sourceTree = "<group>";
@@ -219,7 +227,8 @@
 				E248DC3F1A21FB370011319C /* Fonts */,
 				E248DC381A21FADA0011319C /* Images */,
 				E292B83D1A1F67730031DD68 /* Sounds */,
-				E24F01541A0CF8E200372AE5 /* Info.plist */,
+				E20002FE1A98C0C100511954 /* Info.plist */,
+				E20003041A98C39700511954 /* InfoPlist.Strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -327,6 +336,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
 			);
 			mainGroup = E24F01471A0CF8E200372AE5;
 			productRefGroup = E24F01511A0CF8E200372AE5 /* Products */;
@@ -346,6 +356,7 @@
 			files = (
 				C403C1091A0D1DEB00AFCEB6 /* foods.sqlite in Resources */,
 				E248DC411A21FB720011319C /* ic_action_alarms.png in Resources */,
+				E24296DE1A98AB7D00517E3A /* Localizable.strings in Resources */,
 				E24F015B1A0CF8E200372AE5 /* Main.storyboard in Resources */,
 				E248DC3C1A21FB2E0011319C /* Roboto-Light.ttf in Resources */,
 				E2EFE5EC1A52C3B0001C45A2 /* icons.xcassets in Resources */,
@@ -360,6 +371,7 @@
 				E248DC431A21FBB90011319C /* ic_action_alarms_white.png in Resources */,
 				C4DFED751A5C692500CE14A5 /* CookerDetailViewController.xib in Resources */,
 				C42779F31A61640B00BF62F8 /* Cooker4ViewController.xib in Resources */,
+				E20003021A98C39700511954 /* InfoPlist.Strings in Resources */,
 				E248DC3E1A21FB2E0011319C /* Roboto-Thin.ttf in Resources */,
 				E231BE1F1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib in Resources */,
 				E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */,
@@ -421,10 +433,37 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E20002FE1A98C0C100511954 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E20002FD1A98C0C100511954 /* en */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
+		E20003041A98C39700511954 /* InfoPlist.Strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E20003031A98C39700511954 /* en */,
+				E20003051A98C39800511954 /* nl */,
+			);
+			name = InfoPlist.Strings;
+			sourceTree = "<group>";
+		};
+		E24296E01A98AB7D00517E3A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E24296DF1A98AB7D00517E3A /* en */,
+				E24296E11A98AB9C00517E3A /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		E24F01591A0CF8E200372AE5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E24F015A1A0CF8E200372AE5 /* Base */,
+				E24296DD1A98AB5000517E3A /* nl */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -516,7 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = Kooktijden/Info.plist;
+				INFOPLIST_FILE = Kooktijden/en.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -529,7 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = Kooktijden/Info.plist;
+				INFOPLIST_FILE = Kooktijden/en.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

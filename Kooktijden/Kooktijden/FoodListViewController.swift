@@ -33,15 +33,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
-        var localNotification:UILocalNotification = UILocalNotification()
-        localNotification.alertAction = "Test"
-        localNotification.alertBody = "Doet ie het?"
-        localNotification.fireDate = NSDate(timeIntervalSinceNow: 30)
-        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
-        */
-        
-        self.title = "Foods"
+        self.title = NSLocalizedString("FoodListViewController.title", comment: "Foods")
         
         var nib = UINib(nibName: "FoodItemTableViewCell", bundle: nil)
         var nib2 = UINib(nibName: "CustomTimerTableViewCell", bundle: nil)
@@ -50,12 +42,10 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         foodListTableView.registerNib(nib2, forCellReuseIdentifier: "customTimerCell")
         self.foodItems = dataSource.getFoods()
         self.foodListTableView!.reloadData()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

@@ -15,6 +15,7 @@ class CustomTimerTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         label.font = UIFont(name: "Roboto-Light", size: 20)!
+        label.text = NSLocalizedString("CustomTimerTableViewCellLabel.label", comment: "Set Custom Timer")
         
 
         

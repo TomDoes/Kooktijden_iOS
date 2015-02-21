@@ -23,11 +23,11 @@ class CookerDetailViewController: UIViewController {
     @IBAction func pauseBtn(sender: UIButton) {
         if timer!.timer.valid {
             self.timer!.stop()
-            self.pauseBtn.setTitle("Start!", forState: .Normal)
+            self.pauseBtn.setTitle(NSLocalizedString("CookerDetailViewController.startBtnTitle",comment:"Start"), forState: .Normal)
         }
         else {
             self.timer!.start()
-            self.pauseBtn.setTitle("Pauz!", forState: .Normal)
+            self.pauseBtn.setTitle(NSLocalizedString("CookerDetailViewController.pauseBtnTitle",comment:"Pause"), forState: .Normal)
         }
     }
     
@@ -61,14 +61,14 @@ class CookerDetailViewController: UIViewController {
     }
     
     func setUpLayout() {
-        self.pauseBtn.setTitle("Pauz!", forState: .Normal)
-        self.deleteBtn.setTitle("Delete", forState: .Normal)
+        self.pauseBtn.setTitle(NSLocalizedString("CookerDetailViewController.pauseBtnTitle",comment:"Pause"), forState: .Normal)
+        self.deleteBtn.setTitle(NSLocalizedString("CookerDetailViewController.deleteBtnTitle",comment:"Delete"), forState: .Normal)
         
         self.cooker.layer.borderWidth = 2
         self.cooker.layer.borderColor = UIColor.lightGrayColor().CGColor
         self.cooker.layer.cornerRadius = 15
 
-        self.foodItemLabel.text = timer!.foodItem.nameEN
+        self.foodItemLabel.text = timer!.foodItem.name
         self.foodItemLabel.font = UIFont(name: "Roboto-Light", size: 20)
         self.timeRemainingLabel.font = UIFont(name: "Roboto-Light", size: 20)
         

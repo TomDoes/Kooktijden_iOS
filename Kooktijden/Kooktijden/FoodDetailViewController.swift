@@ -70,9 +70,11 @@ class FoodDetailViewController: UIViewController {
     }
     
     func setUpLayout() {
-        foodTitleLabel.text = foodItem.nameEN
+        foodTitleLabel.text = foodItem.name
         foodTitleLabel.textColor = UIColor.whiteColor()
-        descriptionTextView.text = foodItem.descriptionEN
+        descriptionTitleLabel.text = NSLocalizedString("FoodDetailViewController.descriptionTitle", comment: "Description")
+        timeLabel.text = String(format: NSLocalizedString("FoodDetailViewController.cookingTimeLabel", comment: "Cookingtime: xx minutes"), foodItem.cookingTimeMax/60)
+        descriptionTextView.text = foodItem.descriptionText
         headerView.backgroundColor = UIColor.kooktijdenGreenColor()
         timerBtn.backgroundColor = UIColor.kooktijdenPinkColor()
         timerBtn.layer.cornerRadius = timerBtn.frame.size.width / 2.0

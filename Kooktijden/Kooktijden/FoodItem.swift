@@ -10,10 +10,8 @@ import Foundation
 
 class FoodItem: NSObject {
     var id = 0
-    var nameEN: String = ""
-    var nameNL: String = ""
+    var name: String = ""
     var cookingTimeMin = 0
     var cookingTimeMax = 0
-    var descriptionEN: String?
-    var descriptionNL: String?
+    var descriptionText: String?
 }

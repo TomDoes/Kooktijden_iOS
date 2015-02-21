@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Kooktijden
+
+  Created by Tom Doesburg on 21/2/15.
+  Copyright (c) 2015 De appothekers. All rights reserved.
+*/
+"AppDelegate.notification.alertAction" = "Open Kooktijden";
+"AppDelegate.notification.alertBody" = "%@ is klaar!";
+
+"CookerController.title" = "Kooktijden";
+
+"StoveViewController.timeRemainingLabel" = "Kies";
+
+"Timer.alertView.close" = "Sluit";
+"Timer.alertView.title" = "Timer afgelopen!";
+"Timer.alertView.subtitle" = "%@ is klaar";
+
+"CookerDetailViewController.pauseBtnTitle" = "Pauzeer";
+"CookerDetailViewController.startBtnTitle" = "Start";
+"CookerDetailViewController.deleteBtnTitle" = "Verwijder";
+
+"FoodListViewController.title" = "Etenswaren";
+
+"FoodDetailViewController.cookingTimeLabel" = "Kooktijd: %d min";
+"FoodDetailViewController.descriptionTitle" = "Beschrijving";
+
+"SetCustomTimerViewControler.titleLabel" = "Stel eigen timer in";
+"SetCustomTimerViewControler.closeBtnTitle" = "Sluit";
+"SetCustomTimerViewControler.timerBtnTitle" = "Stel in";
+"SetCustomTimerViewControler.hourLabel" = "uur";
+"SetCustomTimerViewControler.minuteLabel" = "min.";
+"SetCustomTimerViewControler.secondLabel" = "sec.";
+"SetCustomTimerViewControler.myTimerName" = "Eigen timer";
+"SetCustomTimerViewControler.myTimerDescriptionText" = "Deze eien timer is door jou ingesteld";
+
+"CustomTimerTableViewCellLabel.label" = "Stel eigen timer in";

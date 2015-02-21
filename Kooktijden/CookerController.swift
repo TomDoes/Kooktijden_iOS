@@ -18,7 +18,7 @@ class CookerController: UIViewController, UIPageViewControllerDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.title = "Cooking times"
+        self.title = NSLocalizedString("CookerController.title",comment:"Cooking Times")
         createPageViewController()
         setupPageControl()
         

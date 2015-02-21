@@ -15,7 +15,7 @@ class FoodItemTableViewCell : UITableViewCell {
     @IBOutlet var setTimerBtn: UIButton!
     
     func loadItem(foodItem: FoodItem, index: Int) {
-        firstLetterImage.text = foodItem.nameEN[0]
+        firstLetterImage.text = foodItem.name[0]
         firstLetterImage.font = UIFont(name: "Roboto-Light", size: 20)!
         
         let color = index % 4
@@ -26,7 +26,7 @@ class FoodItemTableViewCell : UITableViewCell {
         firstLetterImage.layer.cornerRadius = firstLetterImage.frame.size.width / 2.0
         firstLetterImage.clipsToBounds = true
         
-        foodItemLabel.text = foodItem.nameEN
+        foodItemLabel.text = foodItem.name
         foodItemLabel.font = UIFont(name: "Roboto-Light", size: 16)!
 
     }

@@ -38,7 +38,7 @@ class StoveViewController: UIViewController, TimerDelegate {
             self.timer!.handler = self.handleTimer
         }
         else {
-            timeRemainingLabel.text = "Choose"
+            timeRemainingLabel.text = NSLocalizedString("StoveViewController.timeRemainingLabel",comment:"Choose")
             timerProgessView.progress = 1
         }
     }
@@ -73,7 +73,7 @@ class StoveViewController: UIViewController, TimerDelegate {
     
     func startTimer(foodItem: FoodItem) {
         if (timer != nil) { timer!.stop() }
-        self.foodItemLabel.text = foodItem.nameEN
+        self.foodItemLabel.text = foodItem.name
 //        self.timerProgessView.centerFillColor = UIColor.listColor0()
         timer = Timer(foodItem: foodItem, handler: handleTimer)
         timer!.start()

@@ -53,10 +53,11 @@ class Timer {
             self.stop()
             self.elapsedTime = 0
                         
-            var alertInfo: [String: String] = ["FoodNameEN": foodItem.nameEN, "FoodNameNL": foodItem.nameNL]
+            var alertInfo: [String: String] = ["FoodName": foodItem.name]
             
             let alert = SCLAlertView();
-            alert.showKooktijden("Timer finished!", subTitle: foodItem.nameEN + " is ready.", closeButtonTitle: "Close")
+            alert.showKooktijden(NSLocalizedString("Timer.alertView.title",comment:"Timer is finished!")
+                , subTitle: String(format: NSLocalizedString("Timer.alertView.subtitle",comment:" is ready"), foodItem.name), closeButtonTitle: NSLocalizedString("Timer.alertView.close",comment:"Close"))
 
             
             notificationCenter.postNotificationName("com.deappothekers.Kooktijden.timerFinished", object: nil, userInfo: alertInfo)

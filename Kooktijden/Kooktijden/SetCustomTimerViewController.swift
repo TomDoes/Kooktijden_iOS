@@ -38,9 +38,11 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
     
     func setUpLayout() {
         titleLabel.textColor = UIColor.whiteColor()
+        titleLabel.text = NSLocalizedString("SetCustomTimerViewControler.titleLabel", comment: "Set custom timer")
+        closeBtn.setTitle(NSLocalizedString("SetCustomTimerViewControler.closeBtnTitle", comment: "Close"), forState: UIControlState.Normal)
         headerView.backgroundColor = UIColor.kooktijdenGreenColor()
         timerBtn.backgroundColor = UIColor.kooktijdenPinkColor()
-        timerBtn.setTitle("Set", forState: UIControlState.Normal)
+        timerBtn.setTitle(NSLocalizedString("SetCustomTimerViewControler.timerBtnTitle", comment: "Set"), forState: UIControlState.Normal)
         timerBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         timerBtn.layer.cornerRadius = timerBtn.frame.size.width / 2.0
 
@@ -94,11 +96,11 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
         let pickerLabel = UILabel()
         var titleData = "";
         if(component == 1) {
-            titleData = "hour"
+            titleData = NSLocalizedString("SetCustomTimerViewControler.hourLabel",comment:"hour")
         } else if (component == 3) {
-            titleData = "min."
+            titleData = NSLocalizedString("SetCustomTimerViewControler.minuteLabel",comment:"min.")
         } else if (component == 5) {
-            titleData = "sec."
+            titleData = NSLocalizedString("SetCustomTimerViewControler.secondLabel",comment:"sec.")
         } else {
             titleData = row.description
         }
@@ -111,10 +113,8 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
     func getCustomFoodItem() -> FoodItem {
         var foodItem = FoodItem()
         foodItem.id = -1
-        foodItem.nameEN = "My timer"
-        foodItem.nameNL = "Mijn timer"
-        foodItem.descriptionEN = "My timer"
-        foodItem.descriptionNL = "Mijn timer"
+        foodItem.name = NSLocalizedString("SetCustomTimerViewControler.myTimerName", comment: "My timer")
+        foodItem.descriptionText = NSLocalizedString("SetCustomTimerViewControler.myTimerDescriptionText", comment: "My timer")
         foodItem.cookingTimeMin = getCustomTime()
         foodItem.cookingTimeMax = foodItem.cookingTimeMin
         

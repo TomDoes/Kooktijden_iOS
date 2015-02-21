@@ -71,10 +71,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func showNotification(notification: NSNotification) {
         var alertInfo: [String: String!] = notification.userInfo as Dictionary<String,String!>
         
-        var vegetableName = alertInfo["FoodNameEN"]!
+        var vegetableName = alertInfo["FoodName"]!
         var localNotification:UILocalNotification = UILocalNotification()
-        localNotification.alertAction = "Open Kooktijden"
-        localNotification.alertBody = "\(vegetableName) is ready!"
+        localNotification.alertAction = NSLocalizedString("AppDelegate.notification.alertAction", comment:"Open app")
+        localNotification.alertBody = String(format: NSLocalizedString("AppDelegate.notification.alertBody", comment:"is ready!"), vegetableName)
         localNotification.soundName = UILocalNotificationDefaultSoundName
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
