@@ -22,6 +22,9 @@
 		C4DFED751A5C692500CE14A5 /* CookerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DFED731A5C692500CE14A5 /* CookerDetailViewController.xib */; };
 		C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC72C01A0FCF74005708DC /* Timer.swift */; };
 		E20003021A98C39700511954 /* InfoPlist.Strings in Resources */ = {isa = PBXBuildFile; fileRef = E20003041A98C39700511954 /* InfoPlist.Strings */; };
+		E20003111A99E2CB00511954 /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = E200030E1A99E2CB00511954 /* cog.png */; };
+		E20003121A99E2CB00511954 /* cog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E200030F1A99E2CB00511954 /* cog@2x.png */; };
+		E20003131A99E2CB00511954 /* cog@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E20003101A99E2CB00511954 /* cog@3x.png */; };
 		E20C01B21A0F6D7F00A87561 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01AF1A0F6D7F00A87561 /* Extensions.swift */; };
 		E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */; };
 		E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */; };
@@ -90,6 +93,9 @@
 		E20002FD1A98C0C100511954 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
 		E20003031A98C39700511954 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.Strings; sourceTree = "<group>"; };
 		E20003051A98C39800511954 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.Strings; sourceTree = "<group>"; };
+		E200030E1A99E2CB00511954 /* cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog.png; sourceTree = "<group>"; };
+		E200030F1A99E2CB00511954 /* cog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cog@2x.png"; sourceTree = "<group>"; };
+		E20003101A99E2CB00511954 /* cog@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cog@3x.png"; sourceTree = "<group>"; };
 		E20C01AF1A0F6D7F00A87561 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E20C01B01A0F6D7F00A87561 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 		E20C01B11A0F6D7F00A87561 /* FoodItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -153,6 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				E2EA86E41A87809200B61705 /* kooktijden_chef_hat.png */,
+				E200030E1A99E2CB00511954 /* cog.png */,
+				E200030F1A99E2CB00511954 /* cog@2x.png */,
+				E20003101A99E2CB00511954 /* cog@3x.png */,
 				E248DC401A21FB720011319C /* ic_action_alarms.png */,
 				E248DC421A21FBB90011319C /* ic_action_alarms_white.png */,
 				E2EA86E21A877DB300B61705 /* kooktijden_icon.png */,
@@ -354,9 +363,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E20003111A99E2CB00511954 /* cog.png in Resources */,
 				C403C1091A0D1DEB00AFCEB6 /* foods.sqlite in Resources */,
 				E248DC411A21FB720011319C /* ic_action_alarms.png in Resources */,
 				E24296DE1A98AB7D00517E3A /* Localizable.strings in Resources */,
+				E20003121A99E2CB00511954 /* cog@2x.png in Resources */,
 				E24F015B1A0CF8E200372AE5 /* Main.storyboard in Resources */,
 				E248DC3C1A21FB2E0011319C /* Roboto-Light.ttf in Resources */,
 				E2EFE5EC1A52C3B0001C45A2 /* icons.xcassets in Resources */,
@@ -371,6 +382,7 @@
 				E248DC431A21FBB90011319C /* ic_action_alarms_white.png in Resources */,
 				C4DFED751A5C692500CE14A5 /* CookerDetailViewController.xib in Resources */,
 				C42779F31A61640B00BF62F8 /* Cooker4ViewController.xib in Resources */,
+				E20003131A99E2CB00511954 /* cog@3x.png in Resources */,
 				E20003021A98C39700511954 /* InfoPlist.Strings in Resources */,
 				E248DC3E1A21FB2E0011319C /* Roboto-Thin.ttf in Resources */,
 				E231BE1F1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib in Resources */,

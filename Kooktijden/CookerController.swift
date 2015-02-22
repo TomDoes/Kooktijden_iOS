@@ -19,6 +19,8 @@ class CookerController: UIViewController, UIPageViewControllerDataSource {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.title = NSLocalizedString("CookerController.title",comment:"Cooking Times")
+        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(image: UIImage(named: "cog"), style: UIBarButtonItemStyle.Plain, target: self, action: "settingsBtnClicked"),animated:true)
+
         createPageViewController()
         setupPageControl()
         
@@ -104,6 +106,11 @@ class CookerController: UIViewController, UIPageViewControllerDataSource {
         cookerControllers.append(cooker2Controller)
         cookerControllers.append(cooker3Controller)
         cookerControllers.append(cooker4Controller)
+    }
+    
+    func settingsBtnClicked() {
+        println("settings need to be implemented")
+        
     }
     
     
