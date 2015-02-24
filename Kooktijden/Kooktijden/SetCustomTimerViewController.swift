@@ -117,6 +117,7 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
         foodItem.descriptionText = NSLocalizedString("SetCustomTimerViewControler.myTimerDescriptionText", comment: "My timer")
         foodItem.cookingTimeMin = getCustomTime()
         foodItem.cookingTimeMax = foodItem.cookingTimeMin
+        foodItem.letterColor = UIColor.kooktijdenGreenColor()
         
         return foodItem
     }
@@ -126,8 +127,13 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
         var minutes = timerPicker.selectedRowInComponent(2)
         var seconds = timerPicker.selectedRowInComponent(4)
         
-        return hours * 60 * 60 + minutes * 60 + seconds
+        var total = hours * 60 * 60 + minutes * 60 + seconds
         
+        if total == 0 {
+            total = 1
+        }
+        
+        return total
     }
     
 }

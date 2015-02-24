@@ -41,11 +41,11 @@ class DataSource {
             for food in foods {
                 var foodItem = FoodItem()
                 
-                foodItem.id = food[Expression<Int>("id")]!
-                foodItem.name = food[Expression<String>("name_NL")]!
+                foodItem.id = food[Expression<Int>("id")]
+                foodItem.name = food[Expression<String>("name_NL")]
                 foodItem.descriptionText = food[Expression<String>("description_NL")]
-                foodItem.cookingTimeMin = food[Expression<Int>("cooking_time_min")]!
-                foodItem.cookingTimeMax = food[Expression<Int>("cooking_time_max")]!
+                foodItem.cookingTimeMin = food[Expression<Int>("cooking_time_min")]
+                foodItem.cookingTimeMax = food[Expression<Int>("cooking_time_max")]
                 
                 items.append(foodItem)
             }
@@ -55,11 +55,11 @@ class DataSource {
             for food in foods {
                 var foodItem = FoodItem()
                 
-                foodItem.id = food[Expression<Int>("id")]!
-                foodItem.name = food[Expression<String>("name_EN")]!
+                foodItem.id = food[Expression<Int>("id")]
+                foodItem.name = food[Expression<String>("name_EN")]
                 foodItem.descriptionText = food[Expression<String>("description_EN")]
-                foodItem.cookingTimeMin = food[Expression<Int>("cooking_time_min")]!
-                foodItem.cookingTimeMax = food[Expression<Int>("cooking_time_max")]!
+                foodItem.cookingTimeMin = food[Expression<Int>("cooking_time_min")]
+                foodItem.cookingTimeMax = food[Expression<Int>("cooking_time_max")]
                 
                 items.append(foodItem)
             }

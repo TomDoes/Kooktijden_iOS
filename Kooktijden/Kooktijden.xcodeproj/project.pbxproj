@@ -20,6 +20,14 @@
 		C4DFED711A5BC29600CE14A5 /* Cooker3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DFED701A5BC29600CE14A5 /* Cooker3ViewController.xib */; };
 		C4DFED741A5C692500CE14A5 /* CookerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFED721A5C692500CE14A5 /* CookerDetailViewController.swift */; };
 		C4DFED751A5C692500CE14A5 /* CookerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DFED731A5C692500CE14A5 /* CookerDetailViewController.xib */; };
+		C4EAFBEF1A9BB2950091F3FE /* ic_action_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBEC1A9BB2950091F3FE /* ic_action_pause.png */; };
+		C4EAFBF01A9BB2950091F3FE /* ic_action_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBED1A9BB2950091F3FE /* ic_action_pause@2x.png */; };
+		C4EAFBF11A9BB2950091F3FE /* ic_action_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBEE1A9BB2950091F3FE /* ic_action_pause@3x.png */; };
+		C4EAFBF51A9BB2BA0091F3FE /* ic_action_play.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBF21A9BB2BA0091F3FE /* ic_action_play.png */; };
+		C4EAFBF61A9BB2BA0091F3FE /* ic_action_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBF31A9BB2BA0091F3FE /* ic_action_play@2x.png */; };
+		C4EAFBF71A9BB2BA0091F3FE /* ic_action_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBF41A9BB2BA0091F3FE /* ic_action_play@3x.png */; };
+		C4EAFBFA1A9BB6550091F3FE /* ic_action_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBF81A9BB6550091F3FE /* ic_action_delete.png */; };
+		C4EAFBFB1A9BB6550091F3FE /* ic_action_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBF91A9BB6550091F3FE /* ic_action_delete@2x.png */; };
 		C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC72C01A0FCF74005708DC /* Timer.swift */; };
 		E20003021A98C39700511954 /* InfoPlist.Strings in Resources */ = {isa = PBXBuildFile; fileRef = E20003041A98C39700511954 /* InfoPlist.Strings */; };
 		E20003111A99E2CB00511954 /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = E200030E1A99E2CB00511954 /* cog.png */; };
@@ -89,6 +97,14 @@
 		C4DFED701A5BC29600CE14A5 /* Cooker3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cooker3ViewController.xib; sourceTree = "<group>"; };
 		C4DFED721A5C692500CE14A5 /* CookerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookerDetailViewController.swift; sourceTree = "<group>"; };
 		C4DFED731A5C692500CE14A5 /* CookerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookerDetailViewController.xib; sourceTree = "<group>"; };
+		C4EAFBEC1A9BB2950091F3FE /* ic_action_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_pause.png; sourceTree = "<group>"; };
+		C4EAFBED1A9BB2950091F3FE /* ic_action_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_pause@2x.png"; sourceTree = "<group>"; };
+		C4EAFBEE1A9BB2950091F3FE /* ic_action_pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_pause@3x.png"; sourceTree = "<group>"; };
+		C4EAFBF21A9BB2BA0091F3FE /* ic_action_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_play.png; sourceTree = "<group>"; };
+		C4EAFBF31A9BB2BA0091F3FE /* ic_action_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_play@2x.png"; sourceTree = "<group>"; };
+		C4EAFBF41A9BB2BA0091F3FE /* ic_action_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_play@3x.png"; sourceTree = "<group>"; };
+		C4EAFBF81A9BB6550091F3FE /* ic_action_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_delete.png; sourceTree = "<group>"; };
+		C4EAFBF91A9BB6550091F3FE /* ic_action_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_delete@2x.png"; sourceTree = "<group>"; };
 		C4EC72C01A0FCF74005708DC /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		E20002FD1A98C0C100511954 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
 		E20003031A98C39700511954 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.Strings; sourceTree = "<group>"; };
@@ -158,6 +174,14 @@
 		E248DC381A21FADA0011319C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C4EAFBF81A9BB6550091F3FE /* ic_action_delete.png */,
+				C4EAFBF91A9BB6550091F3FE /* ic_action_delete@2x.png */,
+				C4EAFBF21A9BB2BA0091F3FE /* ic_action_play.png */,
+				C4EAFBF31A9BB2BA0091F3FE /* ic_action_play@2x.png */,
+				C4EAFBF41A9BB2BA0091F3FE /* ic_action_play@3x.png */,
+				C4EAFBEC1A9BB2950091F3FE /* ic_action_pause.png */,
+				C4EAFBED1A9BB2950091F3FE /* ic_action_pause@2x.png */,
+				C4EAFBEE1A9BB2950091F3FE /* ic_action_pause@3x.png */,
 				E2EA86E41A87809200B61705 /* kooktijden_chef_hat.png */,
 				E200030E1A99E2CB00511954 /* cog.png */,
 				E200030F1A99E2CB00511954 /* cog@2x.png */,
@@ -369,24 +393,32 @@
 				E24296DE1A98AB7D00517E3A /* Localizable.strings in Resources */,
 				E20003121A99E2CB00511954 /* cog@2x.png in Resources */,
 				E24F015B1A0CF8E200372AE5 /* Main.storyboard in Resources */,
+				C4EAFBF01A9BB2950091F3FE /* ic_action_pause@2x.png in Resources */,
 				E248DC3C1A21FB2E0011319C /* Roboto-Light.ttf in Resources */,
 				E2EFE5EC1A52C3B0001C45A2 /* icons.xcassets in Resources */,
 				E25333091A1F781600979A13 /* Cooker1ViewController.xib in Resources */,
 				C42779EF1A5EEC6E00BF62F8 /* StoveViewController.xib in Resources */,
 				C41D15111A16633C004CAB4B /* sound.wav in Resources */,
 				E253330B1A1F788D00979A13 /* Cooker2ViewController.xib in Resources */,
+				C4EAFBF61A9BB2BA0091F3FE /* ic_action_play@2x.png in Resources */,
 				E248DC3D1A21FB2E0011319C /* Roboto-Medium.ttf in Resources */,
 				E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */,
 				E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */,
+				C4EAFBFB1A9BB6550091F3FE /* ic_action_delete@2x.png in Resources */,
+				C4EAFBF71A9BB2BA0091F3FE /* ic_action_play@3x.png in Resources */,
 				E2EA86E31A877DB300B61705 /* kooktijden_icon.png in Resources */,
+				C4EAFBF51A9BB2BA0091F3FE /* ic_action_play.png in Resources */,
 				E248DC431A21FBB90011319C /* ic_action_alarms_white.png in Resources */,
 				C4DFED751A5C692500CE14A5 /* CookerDetailViewController.xib in Resources */,
+				C4EAFBF11A9BB2950091F3FE /* ic_action_pause@3x.png in Resources */,
 				C42779F31A61640B00BF62F8 /* Cooker4ViewController.xib in Resources */,
+				C4EAFBFA1A9BB6550091F3FE /* ic_action_delete.png in Resources */,
 				E20003131A99E2CB00511954 /* cog@3x.png in Resources */,
 				E20003021A98C39700511954 /* InfoPlist.Strings in Resources */,
 				E248DC3E1A21FB2E0011319C /* Roboto-Thin.ttf in Resources */,
 				E231BE1F1A73D1BC00C2C3DA /* SetCustomTimerViewController.xib in Resources */,
 				E20C01B41A0F6D7F00A87561 /* FoodItemTableViewCell.xib in Resources */,
+				C4EAFBEF1A9BB2950091F3FE /* ic_action_pause.png in Resources */,
 				C4DFED711A5BC29600CE14A5 /* Cooker3ViewController.xib in Resources */,
 				E231BE1B1A73B04900C2C3DA /* CustomTimerTableViewCell.xib in Resources */,
 				E2EA86E51A87809200B61705 /* kooktijden_chef_hat.png in Resources */,

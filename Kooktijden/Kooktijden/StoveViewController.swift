@@ -12,13 +12,12 @@ protocol TimerDelegate {
 }
 
 import UIKit
-import QuartzCore
 
 class StoveViewController: UIViewController, TimerDelegate {
     
     var foodListViewController: FoodListViewController = FoodListViewController(nibName: "FoodListViewController", bundle: nil)
     var cookerDetailViewController: CookerDetailViewController = CookerDetailViewController(nibName: "CookerDetailViewController", bundle: nil)
-
+    
     var timer: Timer?
     
     @IBOutlet var foodItemLabel: UILabel!
@@ -31,10 +30,15 @@ class StoveViewController: UIViewController, TimerDelegate {
         setUpLayout()
     }
     
+    // Op dit moment is de frame.width pas beschikbaar
+    override func viewDidLayoutSubviews() {
+        setUpScalableLayout()
+    }
+    
     override func viewWillAppear(animated: Bool) {
-        if timer != nil && timer?.timeRemaining != 0 {
+        if timer != nil {
             self.timeRemainingLabel.text = makeTimeLabel(self.timer!.timeRemaining)
-            self.timerProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax * 60)
+            self.timerProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax)
             self.timer!.handler = self.handleTimer
         }
         else {
@@ -54,8 +58,8 @@ class StoveViewController: UIViewController, TimerDelegate {
     *
     ****************************************************************************************/
     func handleTimer(timeRemaining: Int) {
-        self.timeRemainingLabel.text = makeTimeLabel(timeRemaining)
-        timerProgessView.progress = Double(timeRemaining) / Double(timer!.foodItem.cookingTimeMax * 60)
+        self.timeRemainingLabel.text = makeTimeLabel(self.timer!.timeRemaining)
+        timerProgessView.progress = Double(timeRemaining) / Double(timer!.foodItem.cookingTimeMax)
         if timeRemaining == 0 {
             shakeView(timerProgessView)
         }
@@ -73,14 +77,21 @@ class StoveViewController: UIViewController, TimerDelegate {
     
     func startTimer(foodItem: FoodItem) {
         if (timer != nil) { timer!.stop() }
-        self.foodItemLabel.text = foodItem.name
-//        self.timerProgessView.centerFillColor = UIColor.listColor0()
+        
+        self.foodItemLabel.text = foodItem.name[0]
+        self.timerProgessView.trackFillColor = UIColor(white:0.4, alpha:1.0)
+        self.timerProgessView.centerFillColor = UIColor(white:0.9, alpha:1.0)
+        self.timerProgessView.trackBackgroundColor = foodItem.letterColor!
         timer = Timer(foodItem: foodItem, handler: handleTimer)
         timer!.start()
     }
     
     func deleteTimer() {
         self.foodItemLabel.text = ""
+        timerProgessView.trackBackgroundColor = UIColor(white:0.4, alpha:1.0)
+        timerProgessView.centerFillColor = UIColor.whiteColor()
+        timerProgessView.trackFillColor = UIColor.kooktijdenGreenColor()
+        
         self.timer!.stop()
         self.timer = nil
     }
@@ -98,24 +109,26 @@ class StoveViewController: UIViewController, TimerDelegate {
         
     }
     
-    func setUpLayout(){
-        setUpCircleProgressView(self.timerProgessView)
-        
+    func setUpLayout() {
         self.foodItemLabel.text = ""
-        self.foodItemLabel.font = UIFont(name: "Roboto-Light", size: 20)
-        self.timeRemainingLabel.font = UIFont(name: "Roboto-Light", size: 20)
-
+        self.foodItemLabel.textColor = UIColor(white:0.95, alpha:1.0)
+        
+        timerProgessView.progress = 1
+        timerProgessView.clockwise = false
+        timerProgessView.trackBackgroundColor = UIColor(white:0.4, alpha:1.0)
+        timerProgessView.centerFillColor = UIColor.whiteColor()
+        timerProgessView.trackFillColor = UIColor.kooktijdenGreenColor()
+        
+        timerProgessView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "cookerTap:"))
+        timerProgessView.userInteractionEnabled = true
     }
     
-    
-    func setUpCircleProgressView(circleProgessView: CircularProgressView?) {
-        circleProgessView!.progress = 1
-        circleProgessView!.clockwise = false
-        circleProgessView!.trackWidth = 9
-        circleProgessView!.trackBackgroundColor = UIColor(white:0.4, alpha:1.0)
-        circleProgessView!.trackFillColor = UIColor.kooktijdenGreenColor()
-        circleProgessView!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "cookerTap:"))
-        circleProgessView!.userInteractionEnabled = true
+    // Buiten setUpLayout omdat deze als de timer actief steeds wordt aangeroepen
+    func setUpScalableLayout() {
+        timerProgessView.trackWidth = self.view.frame.width / 13
+        
+        self.foodItemLabel.font = UIFont(name: "Roboto-Light", size: (self.view.frame.width / 1.5) )
+        self.timeRemainingLabel.font = UIFont(name: "Roboto-Light", size: (self.view.frame.width / 7) )
     }
     
     func shakeView(view: UIView) {

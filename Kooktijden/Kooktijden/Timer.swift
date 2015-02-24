@@ -43,6 +43,15 @@ class Timer {
         timer.invalidate()
     }
     
+    func add30Seconds() {
+        if self.elapsedTime > 30 {
+            self.elapsedTime -= 30
+        }
+        else {
+            self.elapsedTime = 0
+        }
+    }
+    
     @objc func tick() {
         self.elapsedTime++
         self.timeRemaining = self.duration - self.elapsedTime

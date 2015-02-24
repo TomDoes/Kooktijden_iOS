@@ -43,7 +43,7 @@ class CookerController: UIViewController, UIPageViewControllerDataSource {
         
         let pageController = self.storyboard!.instantiateViewControllerWithIdentifier("PageController") as UIPageViewController
         pageController.dataSource = self
-        let startingViewControllers: NSArray = [cookerControllers[0]]
+        let startingViewControllers: NSArray = [cookerControllers[2]]
         
         pageController.setViewControllers(startingViewControllers, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         
@@ -81,7 +81,7 @@ class CookerController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 0
+        return 2
     }
     
     private func setupPageControl() {

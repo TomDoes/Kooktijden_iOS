@@ -22,7 +22,6 @@ class CookerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpLayout()
     }
     
@@ -41,7 +40,6 @@ class CookerViewController: UIViewController {
         addViewToStove(stove3)
         addViewToStove(stove4)
         addViewToStove(stove5)
-
     }
     
     func addViewToStove(stove: UIView?) {

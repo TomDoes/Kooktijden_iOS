@@ -19,15 +19,18 @@ class CookerDetailViewController: UIViewController {
     
     @IBOutlet var pauseBtn: UIButton!
     @IBOutlet var deleteBtn: UIButton!
+    @IBOutlet var plus30: UILabel!
     
     @IBAction func pauseBtn(sender: UIButton) {
         if timer!.timer.valid {
             self.timer!.stop()
-            self.pauseBtn.setTitle(NSLocalizedString("CookerDetailViewController.startBtnTitle",comment:"Start"), forState: .Normal)
+            self.pauseBtn.setImage(UIImage(named: "ic_action_play.png"), forState: .Normal)
+            //self.pauseBtn.setTitle(NSLocalizedString("CookerDetailViewController.startBtnTitle",comment:"Start"), forState: .Normal)
         }
         else {
             self.timer!.start()
-            self.pauseBtn.setTitle(NSLocalizedString("CookerDetailViewController.pauseBtnTitle",comment:"Pause"), forState: .Normal)
+            self.pauseBtn.setImage(UIImage(named: "ic_action_pause.png"), forState: .Normal)
+            //self.pauseBtn.setTitle(NSLocalizedString("CookerDetailViewController.pauseBtnTitle",comment:"Pause"), forState: .Normal)
         }
     }
     
@@ -38,21 +41,22 @@ class CookerDetailViewController: UIViewController {
     
     var timerDelegate: TimerDelegate?
     
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
+    
+    let pauseImage: UIImage? = UIImage(named: "ic_action_pause.png")
+    let playImage: UIImage? = UIImage(named: "ic_action_play.png")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.timeRemainingLabel.text = makeTimeLabel(timer!.timeRemaining)
-        self.circularProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax * 60)
-        
         setUpLayout()
 
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
+        setUpLayout()
         self.timer!.handler = handleTimer
-        self.timeRemainingLabel.text = makeTimeLabel(timer!.timeRemaining)
-        self.circularProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax * 60)
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,33 +65,51 @@ class CookerDetailViewController: UIViewController {
     }
     
     func setUpLayout() {
-        self.pauseBtn.setTitle(NSLocalizedString("CookerDetailViewController.pauseBtnTitle",comment:"Pause"), forState: .Normal)
-        self.deleteBtn.setTitle(NSLocalizedString("CookerDetailViewController.deleteBtnTitle",comment:"Delete"), forState: .Normal)
+        //self.pauseBtn.setTitle(NSLocalizedString("CookerDetailViewController.pauseBtnTitle",comment:"Pause"), forState: .Normal)
+        
+        if timer!.timer.valid { self.pauseBtn.setImage(pauseImage, forState: .Normal) }
+        else { self.pauseBtn.setImage(playImage, forState: .Normal) }
         
         self.cooker.layer.borderWidth = 2
         self.cooker.layer.borderColor = UIColor.lightGrayColor().CGColor
-        self.cooker.layer.cornerRadius = 15
+        self.cooker.layer.cornerRadius = 20
 
-        self.foodItemLabel.text = timer!.foodItem.name
-        self.foodItemLabel.font = UIFont(name: "Roboto-Light", size: 20)
-        self.timeRemainingLabel.font = UIFont(name: "Roboto-Light", size: 20)
-        
+        self.foodItemLabel.textColor = UIColor(white:0.95, alpha:1.0)
+        self.foodItemLabel.font = UIFont(name: "Roboto-Light", size: (screenSize.width / 2.2) )
+        self.foodItemLabel.text = timer!.foodItem.name[0]
+
+        self.timeRemainingLabel.font = UIFont(name: "Roboto-Thin", size: (screenSize.width / 4.5) )
+        self.timeRemainingLabel.text = makeTimeLabel(timer!.timeRemaining)
         
         setUpCircleProgressView(circularProgessView)
+        
+        //self.deleteBtn.setTitle(NSLocalizedString("CookerDetailViewController.deleteBtnTitle",comment:"Delete"), forState: .Normal)
+        var removeImage = UIImage(named: "ic_action_delete")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        
+        self.deleteBtn.setImage(removeImage, forState: .Normal)
+        self.deleteBtn.tintColor = UIColor(white:0.5, alpha:1.0)
+        
+        self.plus30.font = UIFont(name: "Roboto-Thin", size: (screenSize.width / 13) )
+        self.plus30.userInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: "add30Seconds:")
+        self.plus30.addGestureRecognizer(tapGesture)
     }
 
     func setUpCircleProgressView(circleProgessView: CircularProgressView?) {
         circleProgessView!.clockwise = false
-        circleProgessView!.trackWidth = 10
-        circleProgessView!.trackBackgroundColor = UIColor.lightGrayColor()
-        circleProgessView!.trackFillColor = UIColor.kooktijdenGreenColor()
+        circleProgessView!.trackWidth = screenSize.width / 20
+        circleProgessView!.trackFillColor = UIColor(white:0.4, alpha:1.0)
+        circleProgessView!.centerFillColor = UIColor(white:0.8, alpha:1.0)
+        circleProgessView!.trackBackgroundColor = self.timer!.foodItem.letterColor!
+        circleProgessView!.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax)
     }
     
     func handleTimer(timeRemaining: Int) {
         self.timeRemainingLabel.text = makeTimeLabel(timeRemaining)
-        circularProgessView.progress = Double(timeRemaining) / Double(timer!.foodItem.cookingTimeMax * 60)
+        circularProgessView.progress = Double(timeRemaining) / Double(timer!.foodItem.cookingTimeMax)
         if timeRemaining == 0 {
             shakeView(circularProgessView)
+            self.pauseBtn.setImage(playImage, forState: .Normal)
         }
     }
     
@@ -111,6 +133,10 @@ class CookerDetailViewController: UIViewController {
         shake.toValue = NSValue(CGPoint: CGPointMake(view.center.x + 3, view.center.y))
         
         view.layer.addAnimation(shake, forKey: "position")
+    }
+    
+    func add30Seconds(sender:UITapGestureRecognizer) {
+        self.timer!.add30Seconds()
     }
     
 
