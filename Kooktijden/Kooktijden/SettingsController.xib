@@ -70,8 +70,11 @@
                 <constraint firstItem="vYn-FT-d0m" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E0o-Qc-KTh"/>
                 <constraint firstAttribute="centerX" secondItem="q97-JC-OD3" secondAttribute="centerX" id="EwR-Zs-kVl"/>
                 <constraint firstItem="q97-JC-OD3" firstAttribute="centerY" secondItem="vYn-FT-d0m" secondAttribute="centerY" id="G5D-gY-17N"/>
+                <constraint firstItem="wfy-BP-aJR" firstAttribute="bottom" secondItem="z8O-gW-mJW" secondAttribute="top" id="LFD-N7-uRj">
+                    <variation key="heightClass=regular" constant="0.0"/>
+                </constraint>
                 <constraint firstAttribute="trailing" secondItem="vYn-FT-d0m" secondAttribute="trailing" id="P4n-qO-q6G"/>
-                <constraint firstItem="vYn-FT-d0m" firstAttribute="bottom" secondItem="z8O-gW-mJW" secondAttribute="top" constant="-40" id="USe-4C-joZ"/>
+                <constraint firstItem="vYn-FT-d0m" firstAttribute="bottom" secondItem="z8O-gW-mJW" secondAttribute="top" id="USe-4C-joZ"/>
                 <constraint firstAttribute="trailing" secondItem="z8O-gW-mJW" secondAttribute="trailing" id="UT4-X3-vML"/>
                 <constraint firstItem="jUS-ox-k9N" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="lbR-hJ-mvf"/>
                 <constraint firstItem="vYn-FT-d0m" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lsF-DY-d9x"/>
@@ -85,10 +88,11 @@
                     <exclude reference="q97-JC-OD3"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="EwR-Zs-kVl"/>
-                    <exclude reference="G5D-gY-17N"/>
                     <exclude reference="4lh-F3-dlD"/>
                     <exclude reference="lsF-DY-d9x"/>
+                    <exclude reference="EwR-Zs-kVl"/>
+                    <exclude reference="G5D-gY-17N"/>
+                    <exclude reference="LFD-N7-uRj"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -96,8 +100,10 @@
                     <include reference="q97-JC-OD3"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="USe-4C-joZ"/>
                     <include reference="EwR-Zs-kVl"/>
                     <include reference="G5D-gY-17N"/>
+                    <include reference="LFD-N7-uRj"/>
                 </mask>
             </variation>
         </view>
