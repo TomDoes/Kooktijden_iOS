@@ -34,4 +34,8 @@
 "SetCustomTimerViewControler.myTimerName" = "Eigen timer";
 "SetCustomTimerViewControler.myTimerDescriptionText" = "Deze eien timer is door jou ingesteld";
 
+"SettingsController.titleLabel" = "Aantal pitten";
+"SettingsController.closeBtnTitle" = "Sluit";
+"SettingsController.setBtnTitle" = "Stel in";
+
 "CustomTimerTableViewCellLabel.label" = "Stel eigen timer in";

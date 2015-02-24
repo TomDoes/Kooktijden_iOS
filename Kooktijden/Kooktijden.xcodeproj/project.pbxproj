@@ -20,6 +20,7 @@
 		C4DFED711A5BC29600CE14A5 /* Cooker3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DFED701A5BC29600CE14A5 /* Cooker3ViewController.xib */; };
 		C4DFED741A5C692500CE14A5 /* CookerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFED721A5C692500CE14A5 /* CookerDetailViewController.swift */; };
 		C4DFED751A5C692500CE14A5 /* CookerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DFED731A5C692500CE14A5 /* CookerDetailViewController.xib */; };
+		C4EAE3411A9C852600A7D949 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAFBFC1A9C77910091F3FE /* SettingsController.swift */; };
 		C4EAFBEF1A9BB2950091F3FE /* ic_action_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBEC1A9BB2950091F3FE /* ic_action_pause.png */; };
 		C4EAFBF01A9BB2950091F3FE /* ic_action_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBED1A9BB2950091F3FE /* ic_action_pause@2x.png */; };
 		C4EAFBF11A9BB2950091F3FE /* ic_action_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBEE1A9BB2950091F3FE /* ic_action_pause@3x.png */; };
@@ -28,6 +29,7 @@
 		C4EAFBF71A9BB2BA0091F3FE /* ic_action_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBF41A9BB2BA0091F3FE /* ic_action_play@3x.png */; };
 		C4EAFBFA1A9BB6550091F3FE /* ic_action_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBF81A9BB6550091F3FE /* ic_action_delete.png */; };
 		C4EAFBFB1A9BB6550091F3FE /* ic_action_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBF91A9BB6550091F3FE /* ic_action_delete@2x.png */; };
+		C4EAFBFF1A9C77910091F3FE /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4EAFBFD1A9C77910091F3FE /* SettingsController.xib */; };
 		C4EC72C11A0FCF74005708DC /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC72C01A0FCF74005708DC /* Timer.swift */; };
 		E20003021A98C39700511954 /* InfoPlist.Strings in Resources */ = {isa = PBXBuildFile; fileRef = E20003041A98C39700511954 /* InfoPlist.Strings */; };
 		E20003111A99E2CB00511954 /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = E200030E1A99E2CB00511954 /* cog.png */; };
@@ -105,6 +107,8 @@
 		C4EAFBF41A9BB2BA0091F3FE /* ic_action_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_play@3x.png"; sourceTree = "<group>"; };
 		C4EAFBF81A9BB6550091F3FE /* ic_action_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_delete.png; sourceTree = "<group>"; };
 		C4EAFBF91A9BB6550091F3FE /* ic_action_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_delete@2x.png"; sourceTree = "<group>"; };
+		C4EAFBFC1A9C77910091F3FE /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		C4EAFBFD1A9C77910091F3FE /* SettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsController.xib; sourceTree = "<group>"; };
 		C4EC72C01A0FCF74005708DC /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		E20002FD1A98C0C100511954 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
 		E20003031A98C39700511954 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.Strings; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 			children = (
 				E24F01551A0CF8E200372AE5 /* AppDelegate.swift */,
 				C4DF02291A12025D00C31848 /* CookerController.swift */,
+				C4EAFBFC1A9C77910091F3FE /* SettingsController.swift */,
+				C4EAFBFD1A9C77910091F3FE /* SettingsController.xib */,
 				C403C10A1A0D249600AFCEB6 /* FoodListViewController.swift */,
 				E253D3831A1F98B000893D16 /* FoodListViewController.xib */,
 				C42ABB7F1A56C19D000B8548 /* CircleProgressView.swift */,
@@ -403,6 +409,7 @@
 				C4EAFBF61A9BB2BA0091F3FE /* ic_action_play@2x.png in Resources */,
 				E248DC3D1A21FB2E0011319C /* Roboto-Medium.ttf in Resources */,
 				E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */,
+				C4EAFBFF1A9C77910091F3FE /* SettingsController.xib in Resources */,
 				E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */,
 				C4EAFBFB1A9BB6550091F3FE /* ic_action_delete@2x.png in Resources */,
 				C4EAFBF71A9BB2BA0091F3FE /* ic_action_play@3x.png in Resources */,
@@ -439,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4EAE3411A9C852600A7D949 /* SettingsController.swift in Sources */,
 				C4DF022A1A12025D00C31848 /* CookerController.swift in Sources */,
 				E20C01B31A0F6D7F00A87561 /* FoodItemTableViewCell.swift in Sources */,
 				E2EA86E11A87790400B61705 /* SCLAlertView.swift in Sources */,

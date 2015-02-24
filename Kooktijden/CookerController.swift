@@ -6,9 +6,13 @@
 //  Copyright (c) 2014 De appothekers. All rights reserved.
 //
 
+protocol SettingsDelegate {
+    func selectCooker(index: Int)
+}
+
 import UIKit
 
-class CookerController: UIViewController, UIPageViewControllerDataSource {
+class CookerController: UIViewController, UIPageViewControllerDataSource, SettingsDelegate {
     
     private var pageViewController: UIPageViewController?
     
@@ -108,9 +112,14 @@ class CookerController: UIViewController, UIPageViewControllerDataSource {
         cookerControllers.append(cooker4Controller)
     }
     
+    func selectCooker(index: Int) {
+        println(index)
+    }
+    
     func settingsBtnClicked() {
-        println("settings need to be implemented")
-        
+        var settingsController: SettingsController = SettingsController(nibName: "SettingsController", bundle: nil)
+        settingsController.delegate = self;
+        self.presentViewController(settingsController, animated: true, completion: nil)
     }
     
     

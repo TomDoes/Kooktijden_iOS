@@ -35,4 +35,8 @@
 "SetCustomTimerViewControler.myTimerName" = "Custom timer";
 "SetCustomTimerViewControler.myTimerDescriptionText" = "This custom timer is set by you";
 
+"SettingsController.titleLabel" = "Number of stoves";
+"SettingsController.closeBtnTitle" = "Close";
+"SettingsController.setBtnTitle" = "Set";
+
 "CustomTimerTableViewCellLabel.label" = "Set custom timer";
