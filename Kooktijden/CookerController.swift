@@ -27,7 +27,14 @@ class CookerController: UIViewController, SettingsDelegate {
         initializeControllers()
         
         // Starting cookerController
-        self.view.addSubview(cookerControllers[2].view)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let index: AnyObject = defaults.objectForKey("stoveIndex") {
+            self.view.addSubview(cookerControllers[index as Int].view)
+        }
+        else {
+            self.view.addSubview(cookerControllers[2].view)
+        }
         
     }
     
@@ -54,6 +61,10 @@ class CookerController: UIViewController, SettingsDelegate {
     
     func selectCooker(index: Int) {
         self.view.addSubview(cookerControllers[index].view)
+        
+        // Add index to User Defaults
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(index, forKey: "stoveIndex")
     }
     
     func settingsBtnClicked() {

@@ -9,9 +9,7 @@
 import UIKit
 
 class CookerViewController: UIViewController {
-    
-    var itemIndex = 0
-    
+        
     @IBOutlet var cooker: UIView!
     
     @IBOutlet var stove1: UIView!
