@@ -58,6 +58,8 @@ class SettingsController: UIViewController, UIPickerViewDataSource, UIPickerView
         setBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
         closeBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
         
+        stovePicker.selectRow(NSUserDefaults.standardUserDefaults().integerForKey("stoveIndex"), inComponent: 0, animated: true)
+        
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -68,6 +70,11 @@ class SettingsController: UIViewController, UIPickerViewDataSource, UIPickerView
         return 4
     }
     
+    /*
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 20
+    }
+    */
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
         let pickerLabel = UILabel()
