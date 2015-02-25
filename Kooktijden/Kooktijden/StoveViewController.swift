@@ -84,6 +84,8 @@ class StoveViewController: UIViewController, TimerDelegate {
         self.timerProgessView.trackBackgroundColor = foodItem.letterColor!
         timer = Timer(foodItem: foodItem, handler: handleTimer)
         timer!.start()
+        
+        self.view.superview?.superview?.bringSubviewToFront(self.view.superview!)
     }
     
     func deleteTimer() {
@@ -94,6 +96,8 @@ class StoveViewController: UIViewController, TimerDelegate {
         
         self.timer!.stop()
         self.timer = nil
+        
+        self.view.superview?.superview?.sendSubviewToBack(self.view.superview!)
     }
     
     func cookerTap(sender: UITapGestureRecognizer) {
