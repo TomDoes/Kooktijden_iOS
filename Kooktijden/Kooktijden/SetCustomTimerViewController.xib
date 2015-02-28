@@ -19,6 +19,13 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVB-Oa-37b">
+                    <rect key="frame" x="0.0" y="236" width="600" height="162"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="G5t-6f-kK9"/>
+                        <outlet property="delegate" destination="-1" id="EYi-og-6gh"/>
+                    </connections>
+                </pickerView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CL-1X-mdp">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,6 +39,15 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-iC-cOb">
+                    <rect key="frame" x="14" y="29" width="52" height="30"/>
+                    <state key="normal" title="Close">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeTimer:" destination="-1" eventType="touchUpInside" id="nqm-9B-Wwg"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-eX-CmJ">
                     <rect key="frame" x="520" y="168" width="60" height="60"/>
                     <constraints>
@@ -46,22 +62,6 @@
                         <action selector="setTimer:" destination="-1" eventType="touchUpInside" id="8sB-Iq-mnV"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-iC-cOb">
-                    <rect key="frame" x="14" y="29" width="52" height="30"/>
-                    <state key="normal" title="Close">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="closeTimer:" destination="-1" eventType="touchUpInside" id="nqm-9B-Wwg"/>
-                    </connections>
-                </button>
-                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVB-Oa-37b">
-                    <rect key="frame" x="0.0" y="236" width="600" height="162"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="G5t-6f-kK9"/>
-                        <outlet property="delegate" destination="-1" id="EYi-og-6gh"/>
-                    </connections>
-                </pickerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
