@@ -71,11 +71,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func showNotification(notification: NSNotification) {
         var alertInfo: [String: String!] = notification.userInfo as Dictionary<String,String!>
         
+        var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("alarm", ofType: "mp3")!)
+        
         var vegetableName = alertInfo["FoodName"]!
         var localNotification:UILocalNotification = UILocalNotification()
         localNotification.alertAction = NSLocalizedString("AppDelegate.notification.alertAction", comment:"Open app")
         localNotification.alertBody = String(format: NSLocalizedString("AppDelegate.notification.alertBody", comment:"is ready!"), vegetableName)
-        localNotification.soundName = UILocalNotificationDefaultSoundName
+        localNotification.soundName = "alarm.wav"
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
 
