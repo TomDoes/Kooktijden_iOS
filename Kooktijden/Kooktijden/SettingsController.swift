@@ -58,7 +58,13 @@ class SettingsController: UIViewController, UIPickerViewDataSource, UIPickerView
         setBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
         closeBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
         
-        stovePicker.selectRow(NSUserDefaults.standardUserDefaults().integerForKey("stoveIndex"), inComponent: 0, animated: true)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if(defaults.objectForKey("stoveIndex") == nil) {
+            stovePicker.selectRow(2, inComponent: 0, animated: true)
+        } else {
+            stovePicker.selectRow(defaults.integerForKey("stoveIndex"), inComponent: 0, animated: true)
+        }
         
     }
     

@@ -29,6 +29,11 @@ class CookerController: UIViewController, SettingsDelegate {
         // Starting cookerController
         let defaults = NSUserDefaults.standardUserDefaults()
         
+        if(defaults.objectForKey("firstRun") == nil) {
+            defaults.setObject(false, forKey: "firstRun")
+            self.settingsBtnClicked()
+        }
+        
         if let index: AnyObject = defaults.objectForKey("stoveIndex") {
             self.view.addSubview(cookerControllers[index as Int].view)
         }
