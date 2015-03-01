@@ -41,6 +41,10 @@ class StoveViewController: UIViewController, TimerDelegate {
                 self.timeRemainingLabel.text = makeTimeLabel(self.timer!.timeRemaining)
                 self.timerProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax)
                 self.timer!.handler = self.handleTimer
+            } else if (timer!.finished) {
+                deleteTimer()
+                timeRemainingLabel.text = NSLocalizedString("StoveViewController.timeRemainingLabel",comment:"Choose")
+                timerProgessView.progress = 1
             } else {
                 self.timeRemainingLabel.text = NSLocalizedString("StoveViewController.timeRemainingLabel.start",comment:"Start")
             }
@@ -109,6 +113,8 @@ class StoveViewController: UIViewController, TimerDelegate {
                 cookerDetailViewController.timerDelegate = self
                 cookerDetailViewController.timer = timer
                 self.navigationController?.pushViewController(cookerDetailViewController, animated: true)
+            } else if (timer!.finished){
+                self.navigationController?.pushViewController(foodListViewController, animated: true)
             } else {
                 timer!.start()
             }

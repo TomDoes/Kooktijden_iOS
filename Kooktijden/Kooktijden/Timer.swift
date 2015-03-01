@@ -61,6 +61,7 @@ class Timer {
         if self.elapsedTime == self.duration {
             self.stop()
             self.elapsedTime = 0
+            self.finished = true;
                         
             var alertInfo: [String: String] = ["FoodName": foodItem.name]
             

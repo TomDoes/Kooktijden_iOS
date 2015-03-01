@@ -49,6 +49,7 @@
 		E248DC3E1A21FB2E0011319C /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E248DC3B1A21FB2E0011319C /* Roboto-Thin.ttf */; };
 		E248DC411A21FB720011319C /* ic_action_alarms.png in Resources */ = {isa = PBXBuildFile; fileRef = E248DC401A21FB720011319C /* ic_action_alarms.png */; };
 		E248DC431A21FBB90011319C /* ic_action_alarms_white.png in Resources */ = {isa = PBXBuildFile; fileRef = E248DC421A21FBB90011319C /* ic_action_alarms_white.png */; };
+		E24EE1891AA3683300C1CFC9 /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = E24EE1881AA3683300C1CFC9 /* alarm.wav */; };
 		E24F01561A0CF8E200372AE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F01551A0CF8E200372AE5 /* AppDelegate.swift */; };
 		E24F015B1A0CF8E200372AE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24F01591A0CF8E200372AE5 /* Main.storyboard */; };
 		E24F016C1A0CF8E200372AE5 /* KooktijdenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F016B1A0CF8E200372AE5 /* KooktijdenTests.swift */; };
@@ -169,6 +170,7 @@
 		E248DC3B1A21FB2E0011319C /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		E248DC401A21FB720011319C /* ic_action_alarms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_alarms.png; sourceTree = "<group>"; };
 		E248DC421A21FBB90011319C /* ic_action_alarms_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_alarms_white.png; sourceTree = "<group>"; };
+		E24EE1881AA3683300C1CFC9 /* alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm.wav; sourceTree = "<group>"; };
 		E24F01501A0CF8E200372AE5 /* Kooktijden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooktijden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24F01551A0CF8E200372AE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E24F015A1A0CF8E200372AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 		E292B83D1A1F67730031DD68 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				E24EE1881AA3683300C1CFC9 /* alarm.wav */,
 				C41D15101A16633C004CAB4B /* sound.wav */,
 			);
 			name = Sounds;
@@ -414,6 +417,7 @@
 				TargetAttributes = {
 					E24F014F1A0CF8E200372AE5 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = G2ZAGTX887;
 					};
 					E24F01641A0CF8E200372AE5 = {
 						CreatedOnToolsVersion = 6.1;
@@ -497,6 +501,7 @@
 				C41D15111A16633C004CAB4B /* sound.wav in Resources */,
 				E253330B1A1F788D00979A13 /* Cooker2ViewController.xib in Resources */,
 				C4EAFBF61A9BB2BA0091F3FE /* ic_action_play@2x.png in Resources */,
+				E24EE1891AA3683300C1CFC9 /* alarm.wav in Resources */,
 				E248DC3D1A21FB2E0011319C /* Roboto-Medium.ttf in Resources */,
 				E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */,
 				C4EAFBFF1A9C77910091F3FE /* SettingsController.xib in Resources */,
@@ -703,10 +708,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Kooktijden/en.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -717,10 +724,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Kooktijden/en.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
