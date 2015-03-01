@@ -36,10 +36,14 @@ class StoveViewController: UIViewController, TimerDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        if timer != nil {
-            self.timeRemainingLabel.text = makeTimeLabel(self.timer!.timeRemaining)
-            self.timerProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax)
-            self.timer!.handler = self.handleTimer
+        if (timer != nil) {
+            if(timer!.timer.valid || timer!.elapsedTime > 0) {
+                self.timeRemainingLabel.text = makeTimeLabel(self.timer!.timeRemaining)
+                self.timerProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax)
+                self.timer!.handler = self.handleTimer
+            } else {
+                self.timeRemainingLabel.text = NSLocalizedString("StoveViewController.timeRemainingLabel.start",comment:"Start")
+            }
         }
         else {
             timeRemainingLabel.text = NSLocalizedString("StoveViewController.timeRemainingLabel",comment:"Choose")
@@ -60,7 +64,7 @@ class StoveViewController: UIViewController, TimerDelegate {
     func handleTimer(timeRemaining: Int) {
         self.timeRemainingLabel.text = makeTimeLabel(self.timer!.timeRemaining)
         timerProgessView.progress = Double(timeRemaining) / Double(timer!.foodItem.cookingTimeMax)
-        if timeRemaining == 0 {
+        if (timeRemaining == 0) {
             shakeView(timerProgessView)
         }
     }
@@ -83,7 +87,6 @@ class StoveViewController: UIViewController, TimerDelegate {
         self.timerProgessView.centerFillColor = UIColor(white:0.9, alpha:1.0)
         self.timerProgessView.trackBackgroundColor = foodItem.letterColor!
         timer = Timer(foodItem: foodItem, handler: handleTimer)
-        timer!.start()
         
         self.view.superview?.superview?.bringSubviewToFront(self.view.superview!)
     }
@@ -101,10 +104,15 @@ class StoveViewController: UIViewController, TimerDelegate {
     }
     
     func cookerTap(sender: UITapGestureRecognizer) {
-        if timer != nil {
-            cookerDetailViewController.timerDelegate = self
-            cookerDetailViewController.timer = timer
-            self.navigationController?.pushViewController(cookerDetailViewController, animated: true)
+        if (timer != nil) {
+            if (timer!.timer.valid || timer!.elapsedTime > 0) {
+                cookerDetailViewController.timerDelegate = self
+                cookerDetailViewController.timer = timer
+                self.navigationController?.pushViewController(cookerDetailViewController, animated: true)
+            } else {
+                timer!.start()
+            }
+            
         }
         else {
             foodListViewController.delegate = self

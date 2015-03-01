@@ -12,6 +12,7 @@
 "CookerController.title" = "Cooking times";
 
 "StoveViewController.timeRemainingLabel" = "Choose";
+"StoveViewController.timeRemainingLabel.start" = "Start";
 
 "Timer.alert.close" = "Close";
 "Timer.alert.title" = "Timer finished!";
