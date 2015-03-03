@@ -33,18 +33,19 @@ class CookerViewController: UIViewController {
         self.cooker.layer.borderColor = UIColor(white:0.8, alpha:1.0).CGColor
         self.cooker.layer.cornerRadius = 10
         
-        addViewToStove(stove1)
-        addViewToStove(stove2)
-        addViewToStove(stove3)
-        addViewToStove(stove4)
-        addViewToStove(stove5)
+        addViewToStove(stove1, stoveIdentifier: "stove1")
+        addViewToStove(stove2, stoveIdentifier: "stove2")
+        addViewToStove(stove3, stoveIdentifier: "stove3")
+        addViewToStove(stove4, stoveIdentifier: "stove4")
+        addViewToStove(stove5, stoveIdentifier: "stove5")
     }
     
-    func addViewToStove(stove: UIView?) {
+    func addViewToStove(stove: UIView?, stoveIdentifier: NSString?) {
         if stove != nil {
             let viewController: StoveViewController = StoveViewController(nibName: "StoveViewController", bundle: nil)
             self.addChildViewController(viewController)
             stove!.addSubview(viewController.view)
+            viewController.stove = stoveIdentifier
             viewController.view.frame.size = stove!.frame.size
         }
     }

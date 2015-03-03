@@ -20,6 +20,8 @@ class StoveViewController: UIViewController, TimerDelegate {
     
     var timer: Timer?
     
+    var stove: NSString?
+    
     @IBOutlet var foodItemLabel: UILabel!
     @IBOutlet var timeRemainingLabel: UILabel!
     
@@ -39,7 +41,7 @@ class StoveViewController: UIViewController, TimerDelegate {
         if (timer != nil) {
             if(timer!.timer.valid || timer!.elapsedTime > 0) {
                 self.timeRemainingLabel.text = makeTimeLabel(self.timer!.timeRemaining)
-                self.timerProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.foodItem.cookingTimeMax)
+                self.timerProgessView.progress = Double(timer!.timeRemaining) / Double(timer!.duration)
                 self.timer!.handler = self.handleTimer
             } else if (timer!.finished) {
                 deleteTimer()
@@ -66,8 +68,8 @@ class StoveViewController: UIViewController, TimerDelegate {
     *
     ****************************************************************************************/
     func handleTimer(timeRemaining: Int) {
-        self.timeRemainingLabel.text = makeTimeLabel(self.timer!.timeRemaining)
-        timerProgessView.progress = Double(timeRemaining) / Double(timer!.foodItem.cookingTimeMax)
+        self.timeRemainingLabel.text = makeTimeLabel(timeRemaining)
+        timerProgessView.progress = Double(timeRemaining) / Double(timer!.duration)
         if (timeRemaining == 0) {
             shakeView(timerProgessView)
         }
@@ -90,7 +92,7 @@ class StoveViewController: UIViewController, TimerDelegate {
         self.timerProgessView.trackFillColor = UIColor(white:0.4, alpha:1.0)
         self.timerProgessView.centerFillColor = UIColor(white:0.9, alpha:1.0)
         self.timerProgessView.trackBackgroundColor = foodItem.letterColor!
-        timer = Timer(foodItem: foodItem, handler: handleTimer)
+        timer = Timer(foodItem: foodItem, handler: handleTimer, stove: self.stove!)
         
         self.view.superview?.superview?.bringSubviewToFront(self.view.superview!)
     }
