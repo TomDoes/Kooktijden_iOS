@@ -34,13 +34,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Add to notification center
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"showNotification:" , name:"com.deappothekers.Kooktijden.timerFinished" , object: nil)
+        
+        let stoves = ["stove1","stove2","stove3","stove4","stove5"]
+        
+        var keys = NSUserDefaults.standardUserDefaults().dictionaryWithValuesForKeys(stoves)
+        for (stoveId, value) in keys {
+            if let alertInfo = value as? NSDictionary {
+                println(alertInfo)
+                setNotification(alertInfo)
+            }
+        }
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
         
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        
         // Remove from notificationCenter
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "com.deappothekers.Kooktijden.timerFinished", object: nil)
+        // NSNotificationCenter.defaultCenter().removeObserver(self, name: "com.deappothekers.Kooktijden.timerFinished", object: nil)
+        
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
@@ -68,16 +81,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    func showNotification(notification: NSNotification) {
-        var alertInfo: [String: String!] = notification.userInfo as Dictionary<String,String!>
-        
-        var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("alarm", ofType: "mp3")!)
-        
-        var vegetableName = alertInfo["FoodName"]!
+    func setNotification(alertInfo: NSDictionary) {
         var localNotification:UILocalNotification = UILocalNotification()
         localNotification.alertAction = NSLocalizedString("AppDelegate.notification.alertAction", comment:"Open app")
-        localNotification.alertBody = String(format: NSLocalizedString("AppDelegate.notification.alertBody", comment:"is ready!"), vegetableName)
+        localNotification.alertBody = alertInfo["body"] as? String
+        localNotification.fireDate = alertInfo["date"] as? NSDate
         localNotification.soundName = "alarm.wav"
+        localNotification.category = "invite"
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
 

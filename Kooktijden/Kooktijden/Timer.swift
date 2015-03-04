@@ -25,6 +25,7 @@ class Timer {
     
     var finished = false
     
+    var userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("alarm", ofType: "wav")!)
     var audioPlayer = AVAudioPlayer()
     
@@ -41,21 +42,26 @@ class Timer {
     
     func start() {
         self.startTime = NSDate()
+        self.tick()
         self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0,
             target: self,
             selector: Selector("tick"),
             userInfo: nil,
             repeats: true)
-        // NSUserDefaults.standardUserDefaults().setObject(self.startTime, forKey: stove)
+        self.setUserDefaults()
     }
     
     func pause() {
         self.timeElapsedBeforePause = self.elapsedTime
         timer.invalidate()
+        NSUserDefaults().removeObjectForKey(stove)
     }
     
     func stop() {
         timer.invalidate()
+        self.elapsedTime = 0
+        self.finished = true
+        self.userDefaults.removeObjectForKey(stove)
     }
     
     func add30Seconds() {
@@ -66,27 +72,37 @@ class Timer {
         self.elapsedTime = Int(NSDate().timeIntervalSinceDate(self.startTime)) + self.timeElapsedBeforePause
         self.timeRemaining = self.duration - self.elapsedTime
         
-        if (self.timeRemaining < 0) { self.timeRemaining = 0 }
+        if self.timeRemaining == 0 {
+            self.stop()
+            self.showAlert()
+        }
+        if (self.timeRemaining < 0) {
+            self.timeRemaining = 0
+            self.stop()
+        }
         
         self.handler(timeRemaining)
+    }
+    
+    func showAlert() {
+        let alert = SCLAlertView();
+        alert.showKooktijden(NSLocalizedString("Timer.alertView.title",comment:"Timer is finished!")
+            , subTitle: String(format: NSLocalizedString("Timer.alertView.subtitle",comment:" is ready"), foodItem.name), closeButtonTitle: NSLocalizedString("Timer.alertView.close",comment:"Close"))
         
-        if self.elapsedTime >= self.duration {
-            self.stop()
-            self.elapsedTime = 0
-            self.finished = true
-                        
-            var alertInfo: [String: String] = ["FoodName": foodItem.name]
-            
-            let alert = SCLAlertView();
-            alert.showKooktijden(NSLocalizedString("Timer.alertView.title",comment:"Timer is finished!")
-                , subTitle: String(format: NSLocalizedString("Timer.alertView.subtitle",comment:" is ready"), foodItem.name), closeButtonTitle: NSLocalizedString("Timer.alertView.close",comment:"Close"))
-
-            
-            // notificationCenter.postNotificationName("com.deappothekers.Kooktijden.timerFinished", object: nil, userInfo: alertInfo)
-            self.audioPlayer = AVAudioPlayer(contentsOfURL: self.sound, error: nil)
-            audioPlayer.numberOfLoops = 3
-            audioPlayer.play()
-        }
+        self.audioPlayer = AVAudioPlayer(contentsOfURL: self.sound, error: nil)
+        audioPlayer.numberOfLoops = 3
+        audioPlayer.play()
+    }
+    
+    func setUserDefaults() {
+        let timeInterval = NSTimeInterval(self.timeRemaining)
+        var alertInfo = [
+            "date": NSDate(timeIntervalSinceNow: timeInterval),
+            "foodName": foodItem.name,
+            "title": NSLocalizedString("Timer.alertView.title",comment:"Timer is finished!"),
+            "body": String(format: NSLocalizedString("Timer.alertView.subtitle",comment:" is ready"), foodItem.name)
+        ]
+        self.userDefaults.setObject(alertInfo, forKey: stove)
     }
     
     deinit {
