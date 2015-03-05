@@ -14,8 +14,16 @@ import UIKit
 
 class CookerController: UIViewController, SettingsDelegate {
     
+    var cookerXibs: [String] = [
+        "Cooker1ViewController",
+        "Cooker2ViewController",
+        "Cooker3ViewController",
+        "Cooker4ViewController",
+    ]
     
-    var cookerControllers: [CookerViewController] = []
+    var cookerController = CookerViewController(nibName: "Cooker3ViewController", bundle: nil)
+    
+    var currentIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +32,14 @@ class CookerController: UIViewController, SettingsDelegate {
         self.title = NSLocalizedString("CookerController.title",comment:"Cooking Times")
         self.navigationItem.setRightBarButtonItem(UIBarButtonItem(image: UIImage(named: "cog"), style: UIBarButtonItemStyle.Plain, target: self, action: "settingsBtnClicked"),animated:true)
         
-        initializeControllers()
-        
         // Starting cookerController
         let defaults = NSUserDefaults.standardUserDefaults()
-        
-        if(defaults.objectForKey("firstRun") == nil) {
-            defaults.setObject(false, forKey: "firstRun")
-            self.settingsBtnClicked()
-        }
-        
         if let index: AnyObject = defaults.objectForKey("stoveIndex") {
-            self.view.addSubview(cookerControllers[index as Int].view)
+            selectCooker(index as Int)
         }
         else {
-            self.view.addSubview(cookerControllers[2].view)
+            // First run only
+            self.settingsBtnClicked()
         }
         
     }
@@ -47,29 +48,36 @@ class CookerController: UIViewController, SettingsDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    private func initializeControllers(){
-        cookerControllers.append(CookerViewController(nibName: "Cooker1ViewController", bundle: nil))
-        cookerControllers.append(CookerViewController(nibName: "Cooker2ViewController", bundle: nil))
-        cookerControllers.append(CookerViewController(nibName: "Cooker3ViewController", bundle: nil))
-        cookerControllers.append(CookerViewController(nibName: "Cooker4ViewController", bundle: nil))
-        
-        addControllersAsChild(cookerControllers)
-    }
-    
-    private func addControllersAsChild(controllers: [CookerViewController]) {
-        for controller in controllers {
-            self.addChildViewController(controller)
-            controller.view.frame.size = self.view.frame.size
+
+    func selectCooker(index: Int) {
+        // If same cooker is selected do nothing
+        if self.currentIndex != index {
+            // Remove controller from view
+            self.cookerController.view.removeFromSuperview()
+            self.cookerController.removeFromParentViewController()
+            
+            // Add new controller to view
+            self.cookerController = CookerViewController(nibName: cookerXibs[index], bundle: nil)
+            self.addChildViewController(self.cookerController)
+            cookerController.view.frame.size = self.view.frame.size
+            self.view.addSubview(self.cookerController.view)
+            
+            // Add index to User Defaults
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setInteger(index, forKey: "stoveIndex")
+            
+            // Remove timers from user defaults
+            removeTimersUserDefaults()
+            
+            self.currentIndex = index
         }
     }
     
-    func selectCooker(index: Int) {
-        self.view.addSubview(cookerControllers[index].view)
-        
-        // Add index to User Defaults
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(index, forKey: "stoveIndex")
+    func removeTimersUserDefaults() {
+        let stoves = ["stove1","stove2","stove3","stove4","stove5"]
+        for stove in stoves {
+            NSUserDefaults.standardUserDefaults().removeObjectForKey(stove)
+        }
     }
     
     func settingsBtnClicked() {
