@@ -37,21 +37,26 @@ class SetCustomTimerViewController: UIViewController, UIPickerViewDataSource, UI
     }
     
     func setUpLayout() {
+        headerView.backgroundColor = UIColor.kooktijdenGreenColor()
+        
+        titleLabel.font = UIFont(name: "Roboto-Light", size: 24)!
         titleLabel.textColor = UIColor.whiteColor()
         titleLabel.text = NSLocalizedString("SetCustomTimerViewControler.titleLabel", comment: "Set custom timer")
-        closeBtn.setTitle(NSLocalizedString("SetCustomTimerViewControler.closeBtnTitle", comment: "Close"), forState: UIControlState.Normal)
-        headerView.backgroundColor = UIColor.kooktijdenGreenColor()
+        
         timerBtn.backgroundColor = UIColor.kooktijdenPinkColor()
         timerBtn.setTitle(NSLocalizedString("SetCustomTimerViewControler.timerBtnTitle", comment: "Set"), forState: UIControlState.Normal)
         timerBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         timerBtn.layer.cornerRadius = timerBtn.frame.size.width / 2.0
 
-        //Fonts
-        titleLabel.font = UIFont(name: "Roboto-Light", size: 24)!
-
         timerBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
-        closeBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
+        
+        closeBtn.layer.borderWidth = 1.5
+        closeBtn.layer.borderColor = UIColor(white:1.0, alpha:0.8).CGColor
     
+    }
+    
+    override func viewDidLayoutSubviews() {
+        closeBtn.layer.cornerRadius = closeBtn.bounds.width / 2.0
     }
     
     override func didReceiveMemoryWarning() {

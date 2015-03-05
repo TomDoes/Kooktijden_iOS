@@ -18,6 +18,9 @@
 		C42ABB801A56C19D000B8548 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42ABB7F1A56C19D000B8548 /* CircleProgressView.swift */; };
 		C44A0A391AA4F25400084000 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C44A0A301AA4F20600084000 /* SQLite.framework */; };
 		C44A0A3A1AA4F26700084000 /* SQLite.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C44A0A301AA4F20600084000 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C44A0A3F1AA84FF100084000 /* ic_action_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = C44A0A3C1AA84FF100084000 /* ic_action_cancel.png */; };
+		C44A0A401AA84FF100084000 /* ic_action_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C44A0A3D1AA84FF100084000 /* ic_action_cancel@2x.png */; };
+		C44A0A411AA84FF100084000 /* ic_action_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C44A0A3E1AA84FF100084000 /* ic_action_cancel@3x.png */; };
 		C4DF022A1A12025D00C31848 /* CookerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF02291A12025D00C31848 /* CookerController.swift */; };
 		C4DFED711A5BC29600CE14A5 /* Cooker3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DFED701A5BC29600CE14A5 /* Cooker3ViewController.xib */; };
 		C4DFED741A5C692500CE14A5 /* CookerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFED721A5C692500CE14A5 /* CookerDetailViewController.swift */; };
@@ -135,6 +138,9 @@
 		C42779F21A61640B00BF62F8 /* Cooker4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cooker4ViewController.xib; sourceTree = "<group>"; };
 		C42ABB7F1A56C19D000B8548 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		C44A0A271AA4F20500084000 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = ../../Frameworks/SQLite.swift/SQLite.xcodeproj; sourceTree = "<group>"; };
+		C44A0A3C1AA84FF100084000 /* ic_action_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_action_cancel.png; path = "../../../../../Downloads/Android Design - Icons 20131120/Action Bar Icons/holo_dark/01_core_cancel/drawable-mdpi/ic_action_cancel.png"; sourceTree = "<group>"; };
+		C44A0A3D1AA84FF100084000 /* ic_action_cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_action_cancel@2x.png"; path = "../../../../../Downloads/Android Design - Icons 20131120/Action Bar Icons/holo_dark/01_core_cancel/drawable-xhdpi/ic_action_cancel@2x.png"; sourceTree = "<group>"; };
+		C44A0A3E1AA84FF100084000 /* ic_action_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_action_cancel@3x.png"; path = "../../../../../Downloads/Android Design - Icons 20131120/Action Bar Icons/holo_dark/01_core_cancel/drawable-xxhdpi/ic_action_cancel@3x.png"; sourceTree = "<group>"; };
 		C4DF02291A12025D00C31848 /* CookerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CookerController.swift; path = ../CookerController.swift; sourceTree = "<group>"; };
 		C4DFED701A5BC29600CE14A5 /* Cooker3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cooker3ViewController.xib; sourceTree = "<group>"; };
 		C4DFED721A5C692500CE14A5 /* CookerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookerDetailViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +245,9 @@
 				C4EAFBEC1A9BB2950091F3FE /* ic_action_pause.png */,
 				C4EAFBED1A9BB2950091F3FE /* ic_action_pause@2x.png */,
 				C4EAFBEE1A9BB2950091F3FE /* ic_action_pause@3x.png */,
+				C44A0A3C1AA84FF100084000 /* ic_action_cancel.png */,
+				C44A0A3D1AA84FF100084000 /* ic_action_cancel@2x.png */,
+				C44A0A3E1AA84FF100084000 /* ic_action_cancel@3x.png */,
 				E2EA86E41A87809200B61705 /* kooktijden_chef_hat.png */,
 				E200030E1A99E2CB00511954 /* cog.png */,
 				E200030F1A99E2CB00511954 /* cog@2x.png */,
@@ -495,7 +504,9 @@
 				E24F015B1A0CF8E200372AE5 /* Main.storyboard in Resources */,
 				C4EAFBF01A9BB2950091F3FE /* ic_action_pause@2x.png in Resources */,
 				E248DC3C1A21FB2E0011319C /* Roboto-Light.ttf in Resources */,
+				C44A0A401AA84FF100084000 /* ic_action_cancel@2x.png in Resources */,
 				E2EFE5EC1A52C3B0001C45A2 /* icons.xcassets in Resources */,
+				C44A0A3F1AA84FF100084000 /* ic_action_cancel.png in Resources */,
 				E25333091A1F781600979A13 /* Cooker1ViewController.xib in Resources */,
 				C42779EF1A5EEC6E00BF62F8 /* StoveViewController.xib in Resources */,
 				C41D15111A16633C004CAB4B /* sound.wav in Resources */,
@@ -504,6 +515,7 @@
 				E24EE1891AA3683300C1CFC9 /* alarm.wav in Resources */,
 				E248DC3D1A21FB2E0011319C /* Roboto-Medium.ttf in Resources */,
 				E2CF44171A21ED3000C0B8C4 /* FoodDetailViewController.xib in Resources */,
+				C44A0A411AA84FF100084000 /* ic_action_cancel@3x.png in Resources */,
 				C4EAFBFF1A9C77910091F3FE /* SettingsController.xib in Resources */,
 				E253D3841A1F98B000893D16 /* FoodListViewController.xib in Resources */,
 				C4EAFBFB1A9BB6550091F3FE /* ic_action_delete@2x.png in Resources */,
