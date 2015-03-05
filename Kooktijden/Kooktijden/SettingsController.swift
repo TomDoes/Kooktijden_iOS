@@ -35,6 +35,10 @@ class SettingsController: UIViewController, UIPickerViewDataSource, UIPickerView
         setUpLayout()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidLayoutSubviews() {
+        closeBtn.layer.cornerRadius = closeBtn.bounds.width / 2.0
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,20 +47,19 @@ class SettingsController: UIViewController, UIPickerViewDataSource, UIPickerView
 
     
     func setUpLayout() {
+        headerView.backgroundColor = UIColor.kooktijdenGreenColor()
+        
+        titleLabel.font = UIFont(name: "Roboto-Light", size: 24)!
         titleLabel.textColor = UIColor.whiteColor()
         titleLabel.text = NSLocalizedString("SettingsController.titleLabel", comment: "Set custom timer")
-        closeBtn.setTitle(NSLocalizedString("SettingsController.closeBtnTitle", comment: "Close"), forState: UIControlState.Normal)
-        headerView.backgroundColor = UIColor.kooktijdenGreenColor()
+        
         setBtn.backgroundColor = UIColor.kooktijdenPinkColor()
         setBtn.setTitle(NSLocalizedString("SettingsController.setBtnTitle", comment: "Set"), forState: UIControlState.Normal)
         setBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         setBtn.layer.cornerRadius = setBtn.frame.size.width / 2.0
-        
-        //Fonts
-        titleLabel.font = UIFont(name: "Roboto-Light", size: 24)!
-        
-        setBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
-        closeBtn.titleLabel?.font = UIFont(name: "Roboto-Light", size: 20)!
+                
+        closeBtn.layer.borderWidth = 1.5
+        closeBtn.layer.borderColor = UIColor(white:1.0, alpha:0.8).CGColor
         
         let defaults = NSUserDefaults.standardUserDefaults()
         
@@ -65,7 +68,6 @@ class SettingsController: UIViewController, UIPickerViewDataSource, UIPickerView
         } else {
             stovePicker.selectRow(defaults.integerForKey("stoveIndex"), inComponent: 0, animated: true)
         }
-        
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

@@ -46,16 +46,16 @@
                         <action selector="setBtn:" destination="-1" eventType="touchUpInside" id="nEZ-z2-sS8"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUS-ox-k9N" userLabel="Close Button">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUS-ox-k9N" userLabel="Close Button">
                     <rect key="frame" x="10" y="10" width="46" height="34"/>
-                    <state key="normal" title="Close">
+                    <state key="normal" image="ic_action_cancel.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="closeBtn:" destination="-1" eventType="touchUpInside" id="JqT-Lc-x2G"/>
                     </connections>
                 </button>
-                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8O-gW-mJW">
+                <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8O-gW-mJW">
                     <rect key="frame" x="0.0" y="240" width="600" height="162"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="OUq-Zy-r9T"/>
@@ -88,10 +88,10 @@
                     <exclude reference="q97-JC-OD3"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="4lh-F3-dlD"/>
-                    <exclude reference="lsF-DY-d9x"/>
                     <exclude reference="EwR-Zs-kVl"/>
                     <exclude reference="G5D-gY-17N"/>
+                    <exclude reference="4lh-F3-dlD"/>
+                    <exclude reference="lsF-DY-d9x"/>
                     <exclude reference="LFD-N7-uRj"/>
                 </mask>
             </variation>
@@ -100,12 +100,15 @@
                     <include reference="q97-JC-OD3"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="USe-4C-joZ"/>
                     <include reference="EwR-Zs-kVl"/>
                     <include reference="G5D-gY-17N"/>
+                    <exclude reference="USe-4C-joZ"/>
                     <include reference="LFD-N7-uRj"/>
                 </mask>
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="ic_action_cancel.png" width="32" height="32"/>
+    </resources>
 </document>
