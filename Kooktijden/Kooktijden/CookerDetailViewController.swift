@@ -35,6 +35,12 @@ class CookerDetailViewController: UIViewController {
     }
     
     @IBAction func deleteBtn(sender: UIButton) {
+        let alertView = SCLAlertView()
+        alertView.addButton(NSLocalizedString("CookerDetailViewController.alertYes",comment:"Yes"), target: self, selector: "deleteTimer")
+        alertView.showKooktijden(NSLocalizedString("CookerDetailViewController.alertTitle",comment:"Delete timer"), subTitle: NSLocalizedString("CookerDetailViewController.alertSubTitle",comment:"Are you sure?"), closeButtonTitle: NSLocalizedString("CookerDetailViewController.alertNo",comment:"No"))
+    }
+    
+    func deleteTimer() {
         self.timerDelegate?.deleteTimer()
         self.navigationController?.popToRootViewControllerAnimated(true)
     }

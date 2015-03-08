@@ -37,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var keys = NSUserDefaults.standardUserDefaults().dictionaryWithValuesForKeys(stoves)
         for (stoveId, value) in keys {
             if let alertInfo = value as? NSDictionary {
-                println(alertInfo)
                 setNotification(alertInfo)
             }
         }
@@ -79,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         localNotification.alertAction = NSLocalizedString("AppDelegate.notification.alertAction", comment:"Open app")
         localNotification.alertBody = alertInfo["body"] as? String
         localNotification.fireDate = alertInfo["date"] as? NSDate
-        localNotification.soundName = "alarm.wav"
+        localNotification.soundName = "alarm_long.wav"
         localNotification.category = "invite"
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }

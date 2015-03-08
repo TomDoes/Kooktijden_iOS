@@ -32,6 +32,7 @@ class CookerViewController: UIViewController {
         self.cooker.layer.borderWidth = 2
         self.cooker.layer.borderColor = UIColor(white:0.8, alpha:1.0).CGColor
         self.cooker.layer.cornerRadius = 10
+        self.view.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
         
         addViewToStove(stove1, stoveIdentifier: "stove1")
         addViewToStove(stove2, stoveIdentifier: "stove2")

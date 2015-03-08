@@ -15,23 +15,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Lx-PT-Gus">
-                        <rect key="frame" x="4" y="3" width="312" height="59"/>
+                        <rect key="frame" x="3" y="4" width="314" height="57"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Custom timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaE-6A-l91">
-                        <rect key="frame" x="8" y="24" width="304" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaE-6A-l91">
+                        <rect key="frame" x="108" y="24" width="104" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="centerY" secondItem="GaE-6A-l91" secondAttribute="centerY" constant="-1.5" id="AsV-gj-wRx"/>
+                    <constraint firstAttribute="centerY" secondItem="GaE-6A-l91" secondAttribute="centerY" constant="-2" id="AsV-gj-wRx"/>
                     <constraint firstAttribute="centerX" secondItem="GaE-6A-l91" secondAttribute="centerX" id="Qkw-E2-zjz"/>
-                    <constraint firstItem="6Lx-PT-Gus" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-5" id="ZbQ-fH-1e5"/>
+                    <constraint firstItem="6Lx-PT-Gus" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="ZbQ-fH-1e5"/>
                     <constraint firstItem="6Lx-PT-Gus" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eA7-CW-dvH"/>
-                    <constraint firstItem="6Lx-PT-Gus" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-4" id="hP9-Lh-4Jr"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="6Lx-PT-Gus" secondAttribute="trailing" constant="-4" id="odN-ud-2AF"/>
+                    <constraint firstItem="6Lx-PT-Gus" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-5" id="hP9-Lh-4Jr"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6Lx-PT-Gus" secondAttribute="trailing" constant="-5" id="odN-ud-2AF"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.87843143940000001" green="0.88235300780000003" blue="0.88235300780000003" alpha="1" colorSpace="deviceRGB"/>

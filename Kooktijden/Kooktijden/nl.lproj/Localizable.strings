@@ -20,6 +20,10 @@
 "CookerDetailViewController.pauseBtnTitle" = "Pauzeer";
 "CookerDetailViewController.startBtnTitle" = "Start";
 "CookerDetailViewController.deleteBtnTitle" = "Verwijder";
+"CookerDetailViewController.alertTitle" = "Verwijder timer";
+"CookerDetailViewController.alertSubTitle" = "Weet je het zeker?";
+"CookerDetailViewController.alertYes" = "Ja, verwijder";
+"CookerDetailViewController.alertNo" = "Nee";
 
 "FoodListViewController.title" = "Etenswaren";
 

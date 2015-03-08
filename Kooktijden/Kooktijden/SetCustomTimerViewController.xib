@@ -34,6 +34,34 @@
                         <constraint firstAttribute="height" constant="200" id="xZZ-jJ-pHd"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FC8-TN-fd3" userLabel="Close View" customClass="UIButton">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="568" id="ASG-jo-lc1">
+                            <variation key="heightClass=regular" constant="75"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="75" id="VWI-4q-3KY"/>
+                        <constraint firstAttribute="width" constant="320" id="XLJ-F5-a9I">
+                            <variation key="heightClass=regular" constant="75"/>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="75" id="anS-bz-LJy"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ASG-jo-lc1"/>
+                            <exclude reference="XLJ-F5-a9I"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="ASG-jo-lc1"/>
+                            <include reference="XLJ-F5-a9I"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="closeTimer:" destination="-1" eventType="touchUpInside" id="7ad-2U-Ksk"/>
+                    </connections>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Custom Timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofv-d1-z65">
                     <rect key="frame" x="231" y="90" width="139" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -41,17 +69,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-iC-cOb" userLabel="Close Button">
-                    <rect key="frame" x="20" y="20" width="32" height="32"/>
+                    <rect key="frame" x="20" y="25" width="25" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="32" id="26p-rJ-pli"/>
-                        <constraint firstAttribute="width" constant="32" id="h83-cg-xBm"/>
+                        <constraint firstAttribute="height" constant="25" id="26p-rJ-pli"/>
+                        <constraint firstAttribute="width" constant="25" id="h83-cg-xBm"/>
                     </constraints>
                     <state key="normal" image="ic_action_cancel.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <connections>
-                        <action selector="closeTimer:" destination="-1" eventType="touchUpInside" id="nqm-9B-Wwg"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-eX-CmJ" userLabel="Set Button">
                     <rect key="frame" x="520" y="170" width="60" height="60"/>
@@ -70,6 +95,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="FC8-TN-fd3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2RO-oq-54w"/>
                 <constraint firstItem="0CL-1X-mdp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H3X-Rc-seI"/>
                 <constraint firstAttribute="leading" secondItem="SMR-iC-cOb" secondAttribute="leading" constant="-20" id="IBK-Yg-we6"/>
                 <constraint firstAttribute="centerX" secondItem="nVB-Oa-37b" secondAttribute="centerX" id="Jtb-M5-hkl"/>
@@ -80,10 +106,19 @@
                 <constraint firstItem="ofv-d1-z65" firstAttribute="centerY" secondItem="0CL-1X-mdp" secondAttribute="centerY" id="ZRb-yA-eGN"/>
                 <constraint firstItem="0CL-1X-mdp" firstAttribute="bottom" secondItem="oVd-eX-CmJ" secondAttribute="centerY" id="dY6-f9-TXm"/>
                 <constraint firstAttribute="trailing" secondItem="oVd-eX-CmJ" secondAttribute="trailing" constant="20" id="ecz-50-G1v"/>
+                <constraint firstItem="FC8-TN-fd3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="f3z-fb-dzl"/>
+                <constraint firstItem="SMR-iC-cOb" firstAttribute="centerX" secondItem="FC8-TN-fd3" secondAttribute="centerX" constant="-5" id="fvO-MP-dei"/>
                 <constraint firstAttribute="trailing" secondItem="0CL-1X-mdp" secondAttribute="trailing" id="sIN-Z9-ngs"/>
+                <constraint firstItem="SMR-iC-cOb" firstAttribute="centerY" secondItem="FC8-TN-fd3" secondAttribute="centerY" id="wEZ-4N-aR6"/>
                 <constraint firstItem="nVB-Oa-37b" firstAttribute="top" secondItem="oVd-eX-CmJ" secondAttribute="bottom" id="wsL-pH-4ck"/>
                 <constraint firstItem="0CL-1X-mdp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zTG-eJ-l1I"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="IBK-Yg-we6"/>
+                    <exclude reference="WMQ-oV-G9M"/>
+                </mask>
+            </variation>
         </view>
     </objects>
     <resources>

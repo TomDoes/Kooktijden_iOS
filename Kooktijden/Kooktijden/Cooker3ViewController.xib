@@ -407,7 +407,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="Uad-2O-vOq" secondAttribute="centerY" id="ayC-1c-CkW"/>
+                <constraint firstAttribute="centerY" secondItem="Uad-2O-vOq" secondAttribute="centerY" constant="-30" id="ayC-1c-CkW"/>
                 <constraint firstAttribute="centerX" secondItem="Uad-2O-vOq" secondAttribute="centerX" id="fT9-4W-xWH"/>
                 <constraint firstItem="Uad-2O-vOq" firstAttribute="leading" secondItem="zs1-wz-WG7" secondAttribute="leading" constant="25" id="g3p-9w-xvW"/>
                 <constraint firstAttribute="trailing" secondItem="Uad-2O-vOq" secondAttribute="trailing" constant="25" id="r62-w5-QZM"/>
