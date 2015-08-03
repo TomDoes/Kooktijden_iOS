@@ -28,8 +28,7 @@ class FoodDetailViewController: UIViewController {
     var delegate: TimerDelegate? = nil
     
     var foodItem: FoodItem!
-    var timer: String?
-    
+    var timerId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()

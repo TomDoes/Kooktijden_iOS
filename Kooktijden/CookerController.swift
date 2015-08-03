@@ -35,7 +35,7 @@ class CookerController: UIViewController, SettingsDelegate {
         // Starting cookerController
         let defaults = NSUserDefaults.standardUserDefaults()
         if let index: AnyObject = defaults.objectForKey("stoveIndex") {
-            selectCooker(index as Int)
+            selectCooker(index as! Int)
         }
         else {
             // First run only

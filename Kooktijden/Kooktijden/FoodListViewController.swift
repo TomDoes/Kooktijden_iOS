@@ -50,10 +50,10 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if(indexPath.row == 0) {
-            var cell:CustomTimerTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("customTimerCell") as CustomTimerTableViewCell
+            var cell:CustomTimerTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("customTimerCell") as! CustomTimerTableViewCell
             return cell
         }
-        var cell:FoodItemTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("foodCell") as FoodItemTableViewCell
+        var cell:FoodItemTableViewCell = self.foodListTableView.dequeueReusableCellWithIdentifier("foodCell") as! FoodItemTableViewCell
         
         let rowData: FoodItem = self.foodItems[indexPath.row - 1] as FoodItem
         cell.loadItem(rowData, index: indexPath.row - 1)
@@ -75,7 +75,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
             var foodDetailViewController: FoodDetailViewController = FoodDetailViewController(nibName: "FoodDetailViewController", bundle: nil)
             foodDetailViewController.foodItem = self.foodItems[indexPath.row - 1]
             foodDetailViewController.delegate = self.delegate
-            foodDetailViewController.timer = timer
+            foodDetailViewController.timerId = timer
             self.navigationController?.pushViewController(foodDetailViewController, animated: true)
         }
         

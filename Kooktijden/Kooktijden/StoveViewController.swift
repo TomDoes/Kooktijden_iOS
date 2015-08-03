@@ -20,7 +20,7 @@ class StoveViewController: UIViewController, TimerDelegate {
     
     var timer: Timer?
     
-    var stove: NSString?
+    var stove: String?
     
     @IBOutlet var foodItemLabel: UILabel!
     @IBOutlet var timeRemainingLabel: UILabel!
@@ -75,7 +75,7 @@ class StoveViewController: UIViewController, TimerDelegate {
         }
     }
     
-    func makeTimeLabel(timeRemaining: Int) -> NSString {
+    func makeTimeLabel(timeRemaining: Int) -> String {
         var secondsRemaining = timeRemaining
         let minutes = secondsRemaining / 60
         secondsRemaining -= (minutes * 60)

@@ -41,7 +41,7 @@ class CookerViewController: UIViewController {
         addViewToStove(stove5, stoveIdentifier: "stove5")
     }
     
-    func addViewToStove(stove: UIView?, stoveIdentifier: NSString?) {
+    func addViewToStove(stove: UIView?, stoveIdentifier: String?) {
         if stove != nil {
             let viewController: StoveViewController = StoveViewController(nibName: "StoveViewController", bundle: nil)
             self.addChildViewController(viewController)

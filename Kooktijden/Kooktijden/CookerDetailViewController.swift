@@ -118,7 +118,7 @@ class CookerDetailViewController: UIViewController {
         }
     }
     
-    func makeTimeLabel(timeRemaining: Int) -> NSString {
+    func makeTimeLabel(timeRemaining: Int) -> String {
         var secondsRemaining = timeRemaining
         let minutes = secondsRemaining / 60
         secondsRemaining -= (minutes * 60)
