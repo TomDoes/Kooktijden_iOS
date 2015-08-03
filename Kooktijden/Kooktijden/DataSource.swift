@@ -15,7 +15,7 @@ class DataSource {
     let db: Database
     
     init() {
-        let documentsDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first as! String
+        let documentsDirectory = NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true).first as! String
         path = documentsDirectory.stringByAppendingPathComponent("foods.sqlite")
         
         let fileManager = NSFileManager.defaultManager()
